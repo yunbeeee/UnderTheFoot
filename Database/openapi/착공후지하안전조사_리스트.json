@@ -1,0 +1,50 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "0",
+      "resultMsg": "NORMAL_CODE"
+    },
+    "numOfRows": "5",
+    "pageNo": "1",
+    "totalCount": "812",
+    "body": {
+      "items": [
+        {
+          "evalNo": "E10000000003",
+          "evalNm": "북오송 S/S 배전인출 전력구공사 사후 지하안전영향조사 ",
+          "maxDigDepth": "21.75",
+          "proStage": "진행중",
+          "no": "1"
+        },
+        {
+          "evalNo": "E00084000003",
+          "evalNm": "청주지역 전기공급시설 관로공사(1-1차, 목련로구간)",
+          "maxDigDepth": "22.00",
+          "proStage": "작성중",
+          "no": "2"
+        },
+        {
+          "evalNo": "E00226000010",
+          "evalNm": "동구 신천동 327-3,4 근린생활시설 및 오피스텔 신축공사",
+          "maxDigDepth": "28.35",
+          "proStage": "진행중",
+          "no": "3"
+        },
+        {
+          "evalNo": "E00038000079",
+          "evalNm": "평택 고덕지구 11-1-1BL 복합시설 신축공사 사후지하안전영향조사",
+          "maxDigDepth": "25.90",
+          "proStage": "진행중",
+          "no": "4"
+        },
+        {
+          "evalNo": "E00038000080",
+          "evalNm": "광진구 화양동 111-85번지 일원 오피스텔 신축공사 사후지하안전영향조사",
+          "maxDigDepth": "27.40",
+          "proStage": "작성중",
+          "no": "5"
+        }
+      ]
+    }
+  }
+}
