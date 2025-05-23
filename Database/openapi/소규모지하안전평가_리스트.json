@@ -1,0 +1,50 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "0",
+      "resultMsg": "NORMAL_CODE"
+    },
+    "numOfRows": "5",
+    "pageNo": "1",
+    "totalCount": "3655",
+    "body": {
+      "items": [
+        {
+          "evalNo": "E00126000025",
+          "evalNm": "유성웰니스재활전문병원 신축공사 소규모 지하안전영향평가",
+          "maxDigDepth": "19.91",
+          "proStage": "진행중",
+          "no": "1"
+        },
+        {
+          "evalNo": "E00150000003",
+          "evalNm": "연산5구역 재개발정비사업조합 소규모 지하안전영향평가 용역",
+          "maxDigDepth": "13.82",
+          "proStage": "진행중",
+          "no": "2"
+        },
+        {
+          "evalNo": "E00150000004",
+          "evalNm": "부산 초량오피스텔 개발사업 소규모지하안전영향평가",
+          "maxDigDepth": "19.00",
+          "proStage": "진행중",
+          "no": "3"
+        },
+        {
+          "evalNo": "E10009000001",
+          "evalNm": "금화호텔 신축공사",
+          "maxDigDepth": "18.00",
+          "proStage": "진행중",
+          "no": "4"
+        },
+        {
+          "evalNo": "E00129000004",
+          "evalNm": "대구광역시 중구 대신동 주상복합 신축공사",
+          "maxDigDepth": "19.20",
+          "proStage": "진행중",
+          "no": "5"
+        }
+      ]
+    }
+  }
+}

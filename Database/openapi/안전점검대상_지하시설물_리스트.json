@@ -1,0 +1,55 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "0",
+      "resultMsg": "NORMAL_CODE"
+    },
+    "numOfRows": "5",
+    "pageNo": "1",
+    "totalCount": "6257",
+    "body": {
+      "items": [
+        {
+          "facilNo": "CAP1977-000001",
+          "facilNm": "Steam 이송배관 (지하 공동구)",
+          "startYmd": "20191206",
+          "endYmd": "20191206",
+          "dignGbn": "육안조사",
+          "no": "1"
+        },
+        {
+          "facilNo": "CAP1977-000001",
+          "facilNm": "Steam 이송배관 (지하 공동구)",
+          "startYmd": "20201205",
+          "endYmd": "20201205",
+          "dignGbn": "육안조사",
+          "no": "2"
+        },
+        {
+          "facilNo": "CAP1977-000001",
+          "facilNm": "Steam 이송배관 (지하 공동구)",
+          "startYmd": "20211101",
+          "endYmd": "20211101",
+          "dignGbn": "육안조사",
+          "no": "3"
+        },
+        {
+          "facilNo": "CAP1980-000001",
+          "facilNm": "예비 공업용수 관로",
+          "startYmd": "20191219",
+          "endYmd": "20191219",
+          "dignGbn": "육안조사",
+          "no": "4"
+        },
+        {
+          "facilNo": "CAP1980-000002",
+          "facilNm": "해수 배수관",
+          "startYmd": "20191217",
+          "endYmd": "20191227",
+          "dignGbn": "육안조사",
+          "no": "5"
+        }
+      ]
+    }
+  }
+}
