@@ -4,7 +4,7 @@
       "resultCode": "0",
       "resultMsg": "NORMAL_CODE"
     },
-    "numOfRows": "10",
+    "numOfRows": "5",
     "pageNo": "1",
     "totalCount": "881",
     "body": {
@@ -43,41 +43,6 @@
           "maxDigDepth": "18.59",
           "proStage": "진행중",
           "no": "5"
-        },
-        {
-          "evalNo": "E00113000007",
-          "evalNm": "인천 부평구 삼산동 325-370외 부평정수장 도수관로 정비공사",
-          "maxDigDepth": "12.00",
-          "proStage": "진행중",
-          "no": "6"
-        },
-        {
-          "evalNo": "E00243000034",
-          "evalNm": "마곡일반산업단지 D32-8 연구시설 신축공사 중 소규모지하안전영향평가 용역",
-          "maxDigDepth": "13.82",
-          "proStage": "진행중",
-          "no": "7"
-        },
-        {
-          "evalNo": "E00137000009",
-          "evalNm": "양동 지역주택조합아파트 신축공사",
-          "maxDigDepth": "14.49",
-          "proStage": "진행중",
-          "no": "8"
-        },
-        {
-          "evalNo": "E00137000010",
-          "evalNm": "남구 월산동 36-8번지 일원 주상복합 신축공사 소규모 지하안전영향평가",
-          "maxDigDepth": "12.80",
-          "proStage": "진행중",
-          "no": "9"
-        },
-        {
-          "evalNo": "E00149000038",
-          "evalNm": "천안시 서북구 불당동 1486번지 업무시설 신축공사",
-          "maxDigDepth": "19.57",
-          "proStage": "진행중",
-          "no": "10"
         }
       ]
     }

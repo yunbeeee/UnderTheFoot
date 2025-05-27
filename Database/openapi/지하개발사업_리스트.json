@@ -4,7 +4,7 @@
       "resultCode": "0",
       "resultMsg": "NORMAL_CODE"
     },
-    "numOfRows": "10",
+    "numOfRows": "5",
     "pageNo": "1",
     "totalCount": "1179",
     "body": {
@@ -43,41 +43,6 @@
           "proStage": "협의요청",
           "maxDigDepth": "19.00",
           "no": "5"
-        },
-        {
-          "saupNo": "20192099",
-          "saupNm": "광주광역시 동구 지산동 지역주택조합 아파트 신축공사",
-          "proStage": "제출완료",
-          "maxDigDepth": "31.17",
-          "no": "6"
-        },
-        {
-          "saupNo": "20192131",
-          "saupNm": "과천주공4단지 주택재건축정비사업조합",
-          "proStage": "제출완료",
-          "maxDigDepth": "15.45",
-          "no": "7"
-        },
-        {
-          "saupNo": "20200037",
-          "saupNm": "반여4구역 주택재건축 정비사업",
-          "proStage": "승인요청",
-          "maxDigDepth": "14.00",
-          "no": "8"
-        },
-        {
-          "saupNo": "20200068",
-          "saupNm": "문화동 8구역 주택재개발 정비사업",
-          "proStage": "제출완료",
-          "maxDigDepth": "18.10",
-          "no": "9"
-        },
-        {
-          "saupNo": "20200143",
-          "saupNm": "서대문경찰서 청사 신축공사",
-          "proStage": "제출완료",
-          "maxDigDepth": "18.74",
-          "no": "10"
         }
       ]
     }

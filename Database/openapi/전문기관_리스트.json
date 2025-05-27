@@ -1,0 +1,25 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "0",
+      "resultMsg": "NORMAL_CODE"
+    },
+    "numOfRows": "5",
+    "pageNo": "1",
+    "totalCount": "2",
+    "body": {
+      "items": [
+        {
+          "corpCd": "E10053",
+          "corpNm": "(주)에스티",
+          "no": "1"
+        },
+        {
+          "corpCd": "E10124",
+          "corpNm": "(주)에이티맥스",
+          "no": "2"
+        }
+      ]
+    }
+  }
+}

@@ -4,7 +4,7 @@
       "resultCode": "0",
       "resultMsg": "NORMAL_CODE"
     },
-    "numOfRows": "10",
+    "numOfRows": "5",
     "pageNo": "1",
     "totalCount": "476",
     "body": {
@@ -43,41 +43,6 @@
           "maxDigDepth": "21.05",
           "proStage": "진행중",
           "no": "5"
-        },
-        {
-          "evalNo": "E00020000016",
-          "evalNm": "여수시 학동 74번지 일원 주상복합 신축공사 지하안전영향평가",
-          "maxDigDepth": "22.10",
-          "proStage": "진행중",
-          "no": "6"
-        },
-        {
-          "evalNo": "E00044000026",
-          "evalNm": "논현동 98번지 외 2필지 신축공사에 따른 지하안전영향평가 용역",
-          "maxDigDepth": "30.07",
-          "proStage": "진행중",
-          "no": "7"
-        },
-        {
-          "evalNo": "E00080000031",
-          "evalNm": "동대문구 신설동 98-18번지 청년주택 신축공사 지하안전영향평가",
-          "maxDigDepth": "25.10",
-          "proStage": "진행중",
-          "no": "8"
-        },
-        {
-          "evalNo": "E00102000086",
-          "evalNm": "고양 식사2지구 오피스텔 신축공사",
-          "maxDigDepth": "26.65",
-          "proStage": "진행중",
-          "no": "9"
-        },
-        {
-          "evalNo": "E00010000030",
-          "evalNm": "아산시 배방읍 장재리 1752번지 오피스텔 신축공사",
-          "maxDigDepth": "26.24",
-          "proStage": "진행중",
-          "no": "10"
         }
       ]
     }

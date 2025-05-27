@@ -4,7 +4,7 @@
       "resultCode": "0",
       "resultMsg": "NORMAL_CODE"
     },
-    "numOfRows": "10",
+    "numOfRows": "5",
     "pageNo": "1",
     "totalCount": "182",
     "body": {
@@ -43,41 +43,6 @@
           "maxDigDepth": "24.33",
           "proStage": "진행중",
           "no": "5"
-        },
-        {
-          "evalNo": "E00203000047",
-          "evalNm": "고덕 국제화계획지구 업무시설용지 12-2-1BL 판매시설 및 근린생활시설 신축공사",
-          "maxDigDepth": "22.28",
-          "proStage": "진행중",
-          "no": "6"
-        },
-        {
-          "evalNo": "E00102000090",
-          "evalNm": "동국제약 청담동 사옥 신축공사",
-          "maxDigDepth": "21.09",
-          "proStage": "진행중",
-          "no": "7"
-        },
-        {
-          "evalNo": "E00130000009",
-          "evalNm": "도봉산~옥정 광역철도 건설공사 사후지하안전영향조사",
-          "maxDigDepth": "52.02",
-          "proStage": "진행중",
-          "no": "8"
-        },
-        {
-          "evalNo": "E00226000015",
-          "evalNm": "뉴 센트럴 두산 위브 더제니스 아파트",
-          "maxDigDepth": "20.70",
-          "proStage": "진행중",
-          "no": "9"
-        },
-        {
-          "evalNo": "E00004000014",
-          "evalNm": "전주에코시티1,2블럭 주상복합 신축공사 사후지하안전영향조사 용역",
-          "maxDigDepth": "26.06",
-          "proStage": "진행중",
-          "no": "10"
         }
       ]
     }

@@ -1,0 +1,32 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "0",
+      "resultMsg": "NORMAL_CODE"
+    },
+    "numOfRows": "5",
+    "pageNo": "1",
+    "totalCount": "1",
+    "body": {
+      "items": [
+        {
+          "corpCd": "E00010",
+          "corpNm": "(주)에스텍컨설팅그룹",
+          "entryYmd": "20180126",
+          "corpRegNo": "1101112202911",
+          "saupjaNo": "2208609157",
+          "pubYn": "민간",
+          "zipNo": "04099",
+          "addr": "서울특별시 마포구 서강로 82, 정상JLS빌딩 6층 (창전동)",
+          "otherBizType": "",
+          "businessType": "",
+          "subBusiness": "",
+          "signStatus": "승인완료",
+          "signDate": "",
+          "useStatus": "정상",
+          "no": "1"
+        }
+      ]
+    }
+  }
+}

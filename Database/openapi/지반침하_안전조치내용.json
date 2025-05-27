@@ -1,0 +1,28 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "0",
+      "resultMsg": "NORMAL_CODE"
+    },
+    "numOfRows": "5",
+    "pageNo": "1",
+    "totalCount": "1",
+    "body": {
+      "items": [
+        {
+          "facilNo": "ROT1990-000009",
+          "facilNm": "섬안로",
+          "orderSeq": "",
+          "orderDate": "",
+          "orderReason": "",
+          "actDetail": "",
+          "actMethod": "",
+          "actLimitYmd": "",
+          "actResult": "",
+          "notiDate": "",
+          "no": "1"
+        }
+      ]
+    }
+  }
+}

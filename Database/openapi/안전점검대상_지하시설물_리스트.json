@@ -4,7 +4,7 @@
       "resultCode": "0",
       "resultMsg": "NORMAL_CODE"
     },
-    "numOfRows": "10",
+    "numOfRows": "5",
     "pageNo": "1",
     "totalCount": "636",
     "body": {
@@ -48,46 +48,6 @@
           "endYmd": "20210930",
           "dignGbn": "육안조사",
           "no": "5"
-        },
-        {
-          "facilNo": "CAP1993-000013",
-          "facilNm": "열수송관(난방)",
-          "startYmd": "20210901",
-          "endYmd": "20210930",
-          "dignGbn": "육안조사",
-          "no": "6"
-        },
-        {
-          "facilNo": "CAP2005-000001",
-          "facilNm": "지역난방 열수송관",
-          "startYmd": "20210402",
-          "endYmd": "20210402",
-          "dignGbn": "육안조사",
-          "no": "7"
-        },
-        {
-          "facilNo": "CAP2005-000001",
-          "facilNm": "지역난방 열수송관",
-          "startYmd": "20210405",
-          "endYmd": "20210405",
-          "dignGbn": "육안조사",
-          "no": "8"
-        },
-        {
-          "facilNo": "CAP2005-000001",
-          "facilNm": "지역난방 열수송관",
-          "startYmd": "20210405",
-          "endYmd": "20210405",
-          "dignGbn": "육안조사",
-          "no": "9"
-        },
-        {
-          "facilNo": "CAP2005-000001",
-          "facilNm": "지역난방 열수송관",
-          "startYmd": "20210405",
-          "endYmd": "20210405",
-          "dignGbn": "육안조사",
-          "no": "10"
         }
       ]
     }
