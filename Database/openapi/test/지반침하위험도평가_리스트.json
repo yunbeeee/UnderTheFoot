@@ -1,30 +1,8 @@
 {
   "response": {
     "header": {
-      "resultCode": "0",
-      "resultMsg": "NORMAL_CODE"
-    },
-    "numOfRows": "1000",
-    "pageNo": "1",
-    "totalCount": "3",
-    "body": {
-      "items": [
-        {
-          "evalNo": "E00098000019",
-          "evalNm": "포항철강산업단지(1,2,3단지) 완충저류시설 설치공사",
-          "no": "1"
-        },
-        {
-          "evalNo": "E00098000023",
-          "evalNm": "포항 득량동 신원아침도시 신축공사",
-          "no": "2"
-        },
-        {
-          "evalNo": "E10098000001",
-          "evalNm": "올림픽교차로 일원 지반침하위험도평가 용역",
-          "no": "3"
-        }
-      ]
+      "resultCode": "3",
+      "resultMsg": "NODATA_ERROR"
     }
   }
 }
