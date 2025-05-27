@@ -1,0 +1,23 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "0",
+      "resultMsg": "NORMAL_CODE"
+    },
+    "numOfRows": "1000",
+    "pageNo": "1",
+    "totalCount": "1",
+    "body": {
+      "items": [
+        {
+          "facilNo": "ELE2015-000008",
+          "facilNm": "154kV",
+          "mngMain": "(주)지에스포천그린에너지",
+          "facilClass": "기타",
+          "facilKind": "전기시설",
+          "no": "1"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "0",
+      "resultMsg": "NORMAL_CODE"
+    },
+    "numOfRows": "1000",
+    "pageNo": "1",
+    "totalCount": "1",
+    "body": {
+      "items": [
+        {
+          "evalNo": "E10132000007",
+          "evalNm": "위례신도시 노인아동복합 커뮤니티센터 신축공사 소규모지하안전평가",
+          "constCost": "30000.00",
+          "maxDigDepth": "16.20",
+          "digCapacity": "0.00",
+          "startYmd": "20221012",
+          "endYmd": "20230223",
+          "evalCost": "44000.00",
+          "proStage": "진행중",
+          "digArea": "0",
+          "no": "1"
+        }
+      ]
+    }
+  }
+}

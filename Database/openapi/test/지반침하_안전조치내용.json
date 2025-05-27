@@ -4,7 +4,7 @@
       "resultCode": "0",
       "resultMsg": "NORMAL_CODE"
     },
-    "numOfRows": "5",
+    "numOfRows": "1000",
     "pageNo": "1",
     "totalCount": "1",
     "body": {
@@ -15,11 +15,10 @@
           "orderSeq": "",
           "orderDate": "",
           "orderReason": "",
-          "actContent": "",
-          "workPeriod": "",
-          "workPlace": "",
-          "workContent": "",
-          "etcOrder": "",
+          "actDetail": "",
+          "actMethod": "",
+          "actLimitYmd": "",
+          "actResult": "",
           "notiDate": "",
           "no": "1"
         }

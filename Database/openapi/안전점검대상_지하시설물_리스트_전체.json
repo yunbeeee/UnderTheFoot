@@ -1,0 +1,5602 @@
+[
+  {
+    "facilNo": "CAP1977-000001",
+    "facilNm": "Steam 이송배관 (지하 공동구)",
+    "startYmd": "20191206",
+    "endYmd": "20191206",
+    "dignGbn": "육안조사",
+    "no": "1"
+  },
+  {
+    "facilNo": "CAP1977-000001",
+    "facilNm": "Steam 이송배관 (지하 공동구)",
+    "startYmd": "20201205",
+    "endYmd": "20201205",
+    "dignGbn": "육안조사",
+    "no": "2"
+  },
+  {
+    "facilNo": "CAP1977-000001",
+    "facilNm": "Steam 이송배관 (지하 공동구)",
+    "startYmd": "20211101",
+    "endYmd": "20211101",
+    "dignGbn": "육안조사",
+    "no": "3"
+  },
+  {
+    "facilNo": "CAP1980-000001",
+    "facilNm": "예비 공업용수 관로",
+    "startYmd": "20191219",
+    "endYmd": "20191219",
+    "dignGbn": "육안조사",
+    "no": "4"
+  },
+  {
+    "facilNo": "CAP1980-000002",
+    "facilNm": "해수 배수관",
+    "startYmd": "20191217",
+    "endYmd": "20191227",
+    "dignGbn": "육안조사",
+    "no": "5"
+  },
+  {
+    "facilNo": "CAP1980-000002",
+    "facilNm": "해수 배수관",
+    "startYmd": "20191217",
+    "endYmd": "20191220",
+    "dignGbn": "공동조사",
+    "no": "6"
+  },
+  {
+    "facilNo": "CAP1980-000002",
+    "facilNm": "해수 배수관",
+    "startYmd": "20201207",
+    "endYmd": "20201209",
+    "dignGbn": "육안조사",
+    "no": "7"
+  },
+  {
+    "facilNo": "CAP1980-000002",
+    "facilNm": "해수 배수관",
+    "startYmd": "20211101",
+    "endYmd": "20211105",
+    "dignGbn": "육안조사",
+    "no": "8"
+  },
+  {
+    "facilNo": "CAP1980-000002",
+    "facilNm": "해수 배수관",
+    "startYmd": "20211101",
+    "endYmd": "20211105",
+    "dignGbn": "육안조사",
+    "no": "9"
+  },
+  {
+    "facilNo": "CAP1987-000002",
+    "facilNm": "열수송관",
+    "startYmd": "20180903",
+    "endYmd": "20180907",
+    "dignGbn": "육안조사",
+    "no": "10"
+  },
+  {
+    "facilNo": "CAP1987-000002",
+    "facilNm": "열수송관",
+    "startYmd": "20190902",
+    "endYmd": "20190904",
+    "dignGbn": "육안조사",
+    "no": "11"
+  },
+  {
+    "facilNo": "CAP1987-000002",
+    "facilNm": "열수송관",
+    "startYmd": "20200921",
+    "endYmd": "20200922",
+    "dignGbn": "육안조사",
+    "no": "12"
+  },
+  {
+    "facilNo": "CAP1987-000002",
+    "facilNm": "열수송관",
+    "startYmd": "20210906",
+    "endYmd": "20210910",
+    "dignGbn": "육안조사",
+    "no": "13"
+  },
+  {
+    "facilNo": "CAP1987-000003",
+    "facilNm": "해수 인수관",
+    "startYmd": "20191217",
+    "endYmd": "20191220",
+    "dignGbn": "공동조사",
+    "no": "14"
+  },
+  {
+    "facilNo": "CAP1987-000003",
+    "facilNm": "해수 인수관",
+    "startYmd": "20191217",
+    "endYmd": "20191227",
+    "dignGbn": "육안조사",
+    "no": "15"
+  },
+  {
+    "facilNo": "CAP1987-000003",
+    "facilNm": "해수 인수관",
+    "startYmd": "20201207",
+    "endYmd": "20201209",
+    "dignGbn": "육안조사",
+    "no": "16"
+  },
+  {
+    "facilNo": "CAP1987-000003",
+    "facilNm": "해수 인수관",
+    "startYmd": "20211101",
+    "endYmd": "20211105",
+    "dignGbn": "육안조사",
+    "no": "17"
+  },
+  {
+    "facilNo": "CAP1987-000003",
+    "facilNm": "해수 인수관",
+    "startYmd": "20211101",
+    "endYmd": "20211105",
+    "dignGbn": "육안조사",
+    "no": "18"
+  },
+  {
+    "facilNo": "CAP1987-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20191001",
+    "endYmd": "20191011",
+    "dignGbn": "육안조사",
+    "no": "19"
+  },
+  {
+    "facilNo": "CAP1987-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201029",
+    "endYmd": "20201106",
+    "dignGbn": "육안조사",
+    "no": "20"
+  },
+  {
+    "facilNo": "CAP1987-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20210913",
+    "endYmd": "20210930",
+    "dignGbn": "육안조사",
+    "no": "21"
+  },
+  {
+    "facilNo": "CAP1989-000001",
+    "facilNm": "열수송관",
+    "startYmd": "20191028",
+    "endYmd": "20191107",
+    "dignGbn": "육안조사",
+    "no": "22"
+  },
+  {
+    "facilNo": "CAP1992-000001",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20180927",
+    "endYmd": "20181002",
+    "dignGbn": "육안조사",
+    "no": "23"
+  },
+  {
+    "facilNo": "CAP1992-000001",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20190927",
+    "endYmd": "20191002",
+    "dignGbn": "육안조사",
+    "no": "24"
+  },
+  {
+    "facilNo": "CAP1992-000001",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20200922",
+    "endYmd": "20200923",
+    "dignGbn": "육안조사",
+    "no": "25"
+  },
+  {
+    "facilNo": "CAP1992-000001",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20211019",
+    "endYmd": "20211101",
+    "dignGbn": "육안조사",
+    "no": "26"
+  },
+  {
+    "facilNo": "CAP1992-000002",
+    "facilNm": "열수송관(방화-01)",
+    "startYmd": "20191125",
+    "endYmd": "20191126",
+    "dignGbn": "육안조사",
+    "no": "27"
+  },
+  {
+    "facilNo": "CAP1993-000001",
+    "facilNm": "열수송관(이중보온관)",
+    "startYmd": "20201001",
+    "endYmd": "20201031",
+    "dignGbn": "육안조사",
+    "no": "28"
+  },
+  {
+    "facilNo": "CAP1993-000001",
+    "facilNm": "열수송관(이중보온관)",
+    "startYmd": "20201001",
+    "endYmd": "20201015",
+    "dignGbn": "육안조사",
+    "no": "29"
+  },
+  {
+    "facilNo": "CAP1993-000001",
+    "facilNm": "열수송관(이중보온관)",
+    "startYmd": "20200901",
+    "endYmd": "20200930",
+    "dignGbn": "육안조사",
+    "no": "30"
+  },
+  {
+    "facilNo": "CAP1993-000006",
+    "facilNm": "열수송관(가양-01)",
+    "startYmd": "20191125",
+    "endYmd": "20191126",
+    "dignGbn": "육안조사",
+    "no": "31"
+  },
+  {
+    "facilNo": "CAP1993-000007",
+    "facilNm": "열수송관(가양-02)",
+    "startYmd": "20191125",
+    "endYmd": "20191126",
+    "dignGbn": "육안조사",
+    "no": "32"
+  },
+  {
+    "facilNo": "CAP1993-000008",
+    "facilNm": "지역난방 공급용 열수송관",
+    "startYmd": "20210712",
+    "endYmd": "20210723",
+    "dignGbn": "육안조사",
+    "no": "33"
+  },
+  {
+    "facilNo": "CAP1993-000009",
+    "facilNm": "지역난방 공급용 열수송관",
+    "startYmd": "20210712",
+    "endYmd": "20210723",
+    "dignGbn": "육안조사",
+    "no": "34"
+  },
+  {
+    "facilNo": "CAP1993-000011",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20210901",
+    "endYmd": "20210930",
+    "dignGbn": "육안조사",
+    "no": "35"
+  },
+  {
+    "facilNo": "CAP1993-000013",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20210901",
+    "endYmd": "20210930",
+    "dignGbn": "육안조사",
+    "no": "36"
+  },
+  {
+    "facilNo": "CAP1994-000001",
+    "facilNm": "열수송관",
+    "startYmd": "20191216",
+    "endYmd": "20191216",
+    "dignGbn": "육안조사",
+    "no": "37"
+  },
+  {
+    "facilNo": "CAP1994-000001",
+    "facilNm": "열수송관",
+    "startYmd": "20201127",
+    "endYmd": "20201127",
+    "dignGbn": "육안조사",
+    "no": "38"
+  },
+  {
+    "facilNo": "CAP1994-000002",
+    "facilNm": "열수송관",
+    "startYmd": "20191216",
+    "endYmd": "20191216",
+    "dignGbn": "육안조사",
+    "no": "39"
+  },
+  {
+    "facilNo": "CAP1994-000002",
+    "facilNm": "열수송관",
+    "startYmd": "20201127",
+    "endYmd": "20201127",
+    "dignGbn": "육안조사",
+    "no": "40"
+  },
+  {
+    "facilNo": "CAP1994-000003",
+    "facilNm": "열수송관",
+    "startYmd": "20191216",
+    "endYmd": "20191216",
+    "dignGbn": "육안조사",
+    "no": "41"
+  },
+  {
+    "facilNo": "CAP1994-000003",
+    "facilNm": "열수송관",
+    "startYmd": "20201127",
+    "endYmd": "20201127",
+    "dignGbn": "육안조사",
+    "no": "42"
+  },
+  {
+    "facilNo": "CAP1994-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20191216",
+    "endYmd": "20191216",
+    "dignGbn": "육안조사",
+    "no": "43"
+  },
+  {
+    "facilNo": "CAP1994-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201127",
+    "endYmd": "20201127",
+    "dignGbn": "육안조사",
+    "no": "44"
+  },
+  {
+    "facilNo": "CAP1994-000006",
+    "facilNm": "열수송관",
+    "startYmd": "20191216",
+    "endYmd": "20191216",
+    "dignGbn": "육안조사",
+    "no": "45"
+  },
+  {
+    "facilNo": "CAP1994-000006",
+    "facilNm": "열수송관",
+    "startYmd": "20201127",
+    "endYmd": "20201127",
+    "dignGbn": "육안조사",
+    "no": "46"
+  },
+  {
+    "facilNo": "CAP1994-000007",
+    "facilNm": "열수송관(등촌-01)",
+    "startYmd": "20191125",
+    "endYmd": "20200226",
+    "dignGbn": "육안조사",
+    "no": "47"
+  },
+  {
+    "facilNo": "CAP1995-000007",
+    "facilNm": "(7) 31번 국도 19초소 배관 Culvert",
+    "startYmd": "20200117",
+    "endYmd": "20200120",
+    "dignGbn": "육안조사",
+    "no": "48"
+  },
+  {
+    "facilNo": "CAP1995-000018",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20180915",
+    "endYmd": "20181015",
+    "dignGbn": "육안조사",
+    "no": "49"
+  },
+  {
+    "facilNo": "CAP1995-000018",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20191119",
+    "endYmd": "20191126",
+    "dignGbn": "육안조사",
+    "no": "50"
+  },
+  {
+    "facilNo": "CAP1995-000026",
+    "facilNm": "이중보온관",
+    "startYmd": "20210501",
+    "endYmd": "20211130",
+    "dignGbn": "공동조사",
+    "no": "51"
+  },
+  {
+    "facilNo": "CAP1995-000034",
+    "facilNm": "열수송관(일산동구)",
+    "startYmd": "20210501",
+    "endYmd": "20211130",
+    "dignGbn": "공동조사",
+    "no": "52"
+  },
+  {
+    "facilNo": "CAP1995-000037",
+    "facilNm": "열수송관(일산서구)",
+    "startYmd": "20210501",
+    "endYmd": "20211130",
+    "dignGbn": "공동조사",
+    "no": "53"
+  },
+  {
+    "facilNo": "CAP1995-000038",
+    "facilNm": "이중보온관",
+    "startYmd": "20210501",
+    "endYmd": "20211130",
+    "dignGbn": "공동조사",
+    "no": "54"
+  },
+  {
+    "facilNo": "CAP1996-000001",
+    "facilNm": "열수송관(양천-02)",
+    "startYmd": "20191125",
+    "endYmd": "20191126",
+    "dignGbn": "육안조사",
+    "no": "55"
+  },
+  {
+    "facilNo": "CAP2000-000004",
+    "facilNm": "한국지역난방공사 김해사업소 열수송관",
+    "startYmd": "20191223",
+    "endYmd": "20191224",
+    "dignGbn": "육안조사",
+    "no": "56"
+  },
+  {
+    "facilNo": "CAP2000-000004",
+    "facilNm": "한국지역난방공사 김해사업소 열수송관",
+    "startYmd": "20201022",
+    "endYmd": "20201023",
+    "dignGbn": "육안조사",
+    "no": "57"
+  },
+  {
+    "facilNo": "CAP2000-000004",
+    "facilNm": "한국지역난방공사 김해사업소 열수송관",
+    "startYmd": "20211202",
+    "endYmd": "20211203",
+    "dignGbn": "육안조사",
+    "no": "58"
+  },
+  {
+    "facilNo": "CAP2000-000004",
+    "facilNm": "한국지역난방공사 김해사업소 열수송관",
+    "startYmd": "20220822",
+    "endYmd": "20221004",
+    "dignGbn": "공동조사",
+    "no": "59"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "60"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "61"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "62"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "63"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "64"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "65"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "66"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "67"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "68"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "69"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "70"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "71"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "72"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "73"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "74"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "75"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "76"
+  },
+  {
+    "facilNo": "CAP2000-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "77"
+  },
+  {
+    "facilNo": "CAP2001-000001",
+    "facilNm": "열수송관",
+    "startYmd": "20190923",
+    "endYmd": "20191008",
+    "dignGbn": "육안조사",
+    "no": "78"
+  },
+  {
+    "facilNo": "CAP2001-000001",
+    "facilNm": "열수송관",
+    "startYmd": "20211018",
+    "endYmd": "20211020",
+    "dignGbn": "육안조사",
+    "no": "79"
+  },
+  {
+    "facilNo": "CAP2001-000005",
+    "facilNm": "이중보온관",
+    "startYmd": "20210501",
+    "endYmd": "20211130",
+    "dignGbn": "공동조사",
+    "no": "80"
+  },
+  {
+    "facilNo": "CAP2002-000002",
+    "facilNm": "열수송관(양천-01)",
+    "startYmd": "20191125",
+    "endYmd": "20191126",
+    "dignGbn": "육안조사",
+    "no": "81"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "82"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "83"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "84"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "85"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "86"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "87"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "88"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "89"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "90"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "91"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "92"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "93"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "94"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "95"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "96"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "97"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "98"
+  },
+  {
+    "facilNo": "CAP2002-000004",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "99"
+  },
+  {
+    "facilNo": "CAP2004-000055",
+    "facilNm": "이중보온관",
+    "startYmd": "20210501",
+    "endYmd": "20211130",
+    "dignGbn": "공동조사",
+    "no": "100"
+  },
+  {
+    "facilNo": "CAP2004-000056",
+    "facilNm": "이중보온관",
+    "startYmd": "20210501",
+    "endYmd": "20211130",
+    "dignGbn": "공동조사",
+    "no": "101"
+  },
+  {
+    "facilNo": "CAP2004-000059",
+    "facilNm": "이중보온관",
+    "startYmd": "20210501",
+    "endYmd": "20211130",
+    "dignGbn": "공동조사",
+    "no": "102"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210402",
+    "endYmd": "20210402",
+    "dignGbn": "육안조사",
+    "no": "103"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210405",
+    "endYmd": "20210405",
+    "dignGbn": "육안조사",
+    "no": "104"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210405",
+    "endYmd": "20210405",
+    "dignGbn": "육안조사",
+    "no": "105"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210405",
+    "endYmd": "20210405",
+    "dignGbn": "육안조사",
+    "no": "106"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210405",
+    "endYmd": "20210405",
+    "dignGbn": "육안조사",
+    "no": "107"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210405",
+    "endYmd": "20210405",
+    "dignGbn": "육안조사",
+    "no": "108"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210405",
+    "endYmd": "20210405",
+    "dignGbn": "육안조사",
+    "no": "109"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210405",
+    "endYmd": "20210405",
+    "dignGbn": "육안조사",
+    "no": "110"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210405",
+    "endYmd": "20210405",
+    "dignGbn": "육안조사",
+    "no": "111"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210405",
+    "endYmd": "20210405",
+    "dignGbn": "육안조사",
+    "no": "112"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210405",
+    "endYmd": "20210405",
+    "dignGbn": "육안조사",
+    "no": "113"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210405",
+    "endYmd": "20210405",
+    "dignGbn": "육안조사",
+    "no": "114"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210405",
+    "endYmd": "20210405",
+    "dignGbn": "육안조사",
+    "no": "115"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210405",
+    "endYmd": "20210405",
+    "dignGbn": "육안조사",
+    "no": "116"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210405",
+    "endYmd": "20210405",
+    "dignGbn": "육안조사",
+    "no": "117"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210405",
+    "endYmd": "20210405",
+    "dignGbn": "육안조사",
+    "no": "118"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210408",
+    "endYmd": "20210408",
+    "dignGbn": "육안조사",
+    "no": "119"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210408",
+    "endYmd": "20210408",
+    "dignGbn": "육안조사",
+    "no": "120"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210408",
+    "endYmd": "20210408",
+    "dignGbn": "육안조사",
+    "no": "121"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210408",
+    "endYmd": "20210408",
+    "dignGbn": "육안조사",
+    "no": "122"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210408",
+    "endYmd": "20210408",
+    "dignGbn": "육안조사",
+    "no": "123"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210408",
+    "endYmd": "20210408",
+    "dignGbn": "육안조사",
+    "no": "124"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210408",
+    "endYmd": "20210408",
+    "dignGbn": "육안조사",
+    "no": "125"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210408",
+    "endYmd": "20210408",
+    "dignGbn": "육안조사",
+    "no": "126"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210408",
+    "endYmd": "20210408",
+    "dignGbn": "육안조사",
+    "no": "127"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210408",
+    "endYmd": "20210408",
+    "dignGbn": "육안조사",
+    "no": "128"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210408",
+    "endYmd": "20210408",
+    "dignGbn": "육안조사",
+    "no": "129"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210408",
+    "endYmd": "20210408",
+    "dignGbn": "육안조사",
+    "no": "130"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "131"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "132"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "133"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "134"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "135"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "136"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "137"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "138"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "139"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "140"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "141"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "142"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "143"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "144"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "145"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "146"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "147"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "148"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "149"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "150"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "151"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "152"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "153"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "154"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "155"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "156"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "157"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "158"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "159"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "160"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "161"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "162"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "163"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "164"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "165"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "166"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "167"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "168"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "169"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "170"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "171"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "172"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "173"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "174"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "175"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "176"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "177"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "178"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "179"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "180"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "181"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "182"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "183"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "184"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210410",
+    "endYmd": "20210410",
+    "dignGbn": "육안조사",
+    "no": "185"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "186"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "187"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "188"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "189"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "190"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "191"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "192"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "193"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "194"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "195"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "196"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "197"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "198"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "199"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "200"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "201"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "202"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "203"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "204"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "205"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "206"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "207"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "208"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "209"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "210"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "211"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "212"
+  },
+  {
+    "facilNo": "CAP2005-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210409",
+    "endYmd": "20210409",
+    "dignGbn": "육안조사",
+    "no": "213"
+  },
+  {
+    "facilNo": "CAP2005-000006",
+    "facilNm": "지역난방 공급용 열수송관",
+    "startYmd": "20210712",
+    "endYmd": "20210723",
+    "dignGbn": "육안조사",
+    "no": "214"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210412",
+    "endYmd": "20210412",
+    "dignGbn": "육안조사",
+    "no": "215"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210412",
+    "endYmd": "20210412",
+    "dignGbn": "육안조사",
+    "no": "216"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210412",
+    "endYmd": "20210412",
+    "dignGbn": "육안조사",
+    "no": "217"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210412",
+    "endYmd": "20210412",
+    "dignGbn": "육안조사",
+    "no": "218"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210412",
+    "endYmd": "20210412",
+    "dignGbn": "육안조사",
+    "no": "219"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210412",
+    "endYmd": "20210412",
+    "dignGbn": "육안조사",
+    "no": "220"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210412",
+    "endYmd": "20210412",
+    "dignGbn": "육안조사",
+    "no": "221"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210412",
+    "endYmd": "20210412",
+    "dignGbn": "육안조사",
+    "no": "222"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210412",
+    "endYmd": "20210412",
+    "dignGbn": "육안조사",
+    "no": "223"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210412",
+    "endYmd": "20210412",
+    "dignGbn": "육안조사",
+    "no": "224"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210412",
+    "endYmd": "20210412",
+    "dignGbn": "육안조사",
+    "no": "225"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210412",
+    "endYmd": "20210412",
+    "dignGbn": "육안조사",
+    "no": "226"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "227"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "228"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "229"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "230"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "231"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "232"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "233"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "234"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "235"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "236"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "237"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "238"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "239"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "240"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "241"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "242"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "243"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "244"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "245"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "246"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "247"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "248"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "249"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "250"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "251"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "252"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "253"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "254"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "255"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "256"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "257"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "258"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "259"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "260"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "261"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "262"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "263"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "264"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "265"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "266"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "267"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "268"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "269"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "270"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "271"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "272"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "273"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "274"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "275"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "276"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "277"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "278"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "279"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "280"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "281"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "282"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "283"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "284"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "285"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "286"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "287"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "288"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "289"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "290"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "291"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "292"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "293"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "294"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "295"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "296"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "297"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "298"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "299"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "300"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "301"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "302"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "303"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "304"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "305"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "306"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "307"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "308"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "309"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "310"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "311"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "312"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210420",
+    "endYmd": "20210420",
+    "dignGbn": "육안조사",
+    "no": "313"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210424",
+    "endYmd": "20210424",
+    "dignGbn": "육안조사",
+    "no": "314"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210424",
+    "endYmd": "20210424",
+    "dignGbn": "육안조사",
+    "no": "315"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210424",
+    "endYmd": "20210424",
+    "dignGbn": "육안조사",
+    "no": "316"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210424",
+    "endYmd": "20210424",
+    "dignGbn": "육안조사",
+    "no": "317"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "318"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "319"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "320"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "321"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "322"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "323"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "324"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "325"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "326"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "327"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "328"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "329"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "330"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "331"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "332"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "333"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "334"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "335"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "336"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "337"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "338"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "339"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "340"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "341"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "342"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "343"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "344"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "345"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "346"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "347"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "348"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210421",
+    "endYmd": "20210421",
+    "dignGbn": "육안조사",
+    "no": "349"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "350"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "351"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "352"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "353"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "354"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "355"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "356"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "357"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "358"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "359"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "360"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "361"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "362"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "363"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "364"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "365"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "366"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "367"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210423",
+    "endYmd": "20210423",
+    "dignGbn": "육안조사",
+    "no": "368"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210415",
+    "endYmd": "20210415",
+    "dignGbn": "육안조사",
+    "no": "369"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210415",
+    "endYmd": "20210415",
+    "dignGbn": "육안조사",
+    "no": "370"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210415",
+    "endYmd": "20210415",
+    "dignGbn": "육안조사",
+    "no": "371"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210415",
+    "endYmd": "20210415",
+    "dignGbn": "육안조사",
+    "no": "372"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210416",
+    "endYmd": "20210416",
+    "dignGbn": "육안조사",
+    "no": "373"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210416",
+    "endYmd": "20210416",
+    "dignGbn": "육안조사",
+    "no": "374"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210416",
+    "endYmd": "20210416",
+    "dignGbn": "육안조사",
+    "no": "375"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210416",
+    "endYmd": "20210416",
+    "dignGbn": "육안조사",
+    "no": "376"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210416",
+    "endYmd": "20210416",
+    "dignGbn": "육안조사",
+    "no": "377"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "378"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "379"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "380"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "381"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "382"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "383"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "384"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "385"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "386"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "387"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "388"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "389"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "390"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "391"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "392"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "393"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "394"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210419",
+    "endYmd": "20210419",
+    "dignGbn": "육안조사",
+    "no": "395"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210414",
+    "endYmd": "20210414",
+    "dignGbn": "육안조사",
+    "no": "396"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210414",
+    "endYmd": "20210414",
+    "dignGbn": "육안조사",
+    "no": "397"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210414",
+    "endYmd": "20210414",
+    "dignGbn": "육안조사",
+    "no": "398"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210414",
+    "endYmd": "20210414",
+    "dignGbn": "육안조사",
+    "no": "399"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210414",
+    "endYmd": "20210414",
+    "dignGbn": "육안조사",
+    "no": "400"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210414",
+    "endYmd": "20210414",
+    "dignGbn": "육안조사",
+    "no": "401"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210422",
+    "endYmd": "20210422",
+    "dignGbn": "육안조사",
+    "no": "402"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210422",
+    "endYmd": "20210422",
+    "dignGbn": "육안조사",
+    "no": "403"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210422",
+    "endYmd": "20210422",
+    "dignGbn": "육안조사",
+    "no": "404"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210422",
+    "endYmd": "20210422",
+    "dignGbn": "육안조사",
+    "no": "405"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210422",
+    "endYmd": "20210422",
+    "dignGbn": "육안조사",
+    "no": "406"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210422",
+    "endYmd": "20210422",
+    "dignGbn": "육안조사",
+    "no": "407"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210422",
+    "endYmd": "20210422",
+    "dignGbn": "육안조사",
+    "no": "408"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210422",
+    "endYmd": "20210422",
+    "dignGbn": "육안조사",
+    "no": "409"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210422",
+    "endYmd": "20210422",
+    "dignGbn": "육안조사",
+    "no": "410"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210422",
+    "endYmd": "20210422",
+    "dignGbn": "육안조사",
+    "no": "411"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210426",
+    "endYmd": "20210426",
+    "dignGbn": "육안조사",
+    "no": "412"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210426",
+    "endYmd": "20210426",
+    "dignGbn": "육안조사",
+    "no": "413"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210426",
+    "endYmd": "20210426",
+    "dignGbn": "육안조사",
+    "no": "414"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210426",
+    "endYmd": "20210426",
+    "dignGbn": "육안조사",
+    "no": "415"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210426",
+    "endYmd": "20210426",
+    "dignGbn": "육안조사",
+    "no": "416"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210426",
+    "endYmd": "20210426",
+    "dignGbn": "육안조사",
+    "no": "417"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210426",
+    "endYmd": "20210426",
+    "dignGbn": "육안조사",
+    "no": "418"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210426",
+    "endYmd": "20210426",
+    "dignGbn": "육안조사",
+    "no": "419"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210426",
+    "endYmd": "20210426",
+    "dignGbn": "육안조사",
+    "no": "420"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "421"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "422"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "423"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "424"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "425"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "426"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "427"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "428"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "429"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "430"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "431"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210427",
+    "endYmd": "20210427",
+    "dignGbn": "육안조사",
+    "no": "432"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210427",
+    "endYmd": "20210427",
+    "dignGbn": "육안조사",
+    "no": "433"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210427",
+    "endYmd": "20210427",
+    "dignGbn": "육안조사",
+    "no": "434"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210427",
+    "endYmd": "20210427",
+    "dignGbn": "육안조사",
+    "no": "435"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210427",
+    "endYmd": "20210427",
+    "dignGbn": "육안조사",
+    "no": "436"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210427",
+    "endYmd": "20210427",
+    "dignGbn": "육안조사",
+    "no": "437"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210427",
+    "endYmd": "20210427",
+    "dignGbn": "육안조사",
+    "no": "438"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210427",
+    "endYmd": "20210427",
+    "dignGbn": "육안조사",
+    "no": "439"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210427",
+    "endYmd": "20210427",
+    "dignGbn": "육안조사",
+    "no": "440"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210427",
+    "endYmd": "20210427",
+    "dignGbn": "육안조사",
+    "no": "441"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210427",
+    "endYmd": "20210427",
+    "dignGbn": "육안조사",
+    "no": "442"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210427",
+    "endYmd": "20210427",
+    "dignGbn": "육안조사",
+    "no": "443"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210427",
+    "endYmd": "20210427",
+    "dignGbn": "육안조사",
+    "no": "444"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210428",
+    "endYmd": "20210428",
+    "dignGbn": "육안조사",
+    "no": "445"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210428",
+    "endYmd": "20210428",
+    "dignGbn": "육안조사",
+    "no": "446"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210428",
+    "endYmd": "20210428",
+    "dignGbn": "육안조사",
+    "no": "447"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210428",
+    "endYmd": "20210428",
+    "dignGbn": "육안조사",
+    "no": "448"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210428",
+    "endYmd": "20210428",
+    "dignGbn": "육안조사",
+    "no": "449"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210428",
+    "endYmd": "20210428",
+    "dignGbn": "육안조사",
+    "no": "450"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210428",
+    "endYmd": "20210428",
+    "dignGbn": "육안조사",
+    "no": "451"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210428",
+    "endYmd": "20210428",
+    "dignGbn": "육안조사",
+    "no": "452"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210428",
+    "endYmd": "20210428",
+    "dignGbn": "육안조사",
+    "no": "453"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210428",
+    "endYmd": "20210428",
+    "dignGbn": "육안조사",
+    "no": "454"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210428",
+    "endYmd": "20210428",
+    "dignGbn": "육안조사",
+    "no": "455"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210428",
+    "endYmd": "20210428",
+    "dignGbn": "육안조사",
+    "no": "456"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210428",
+    "endYmd": "20210428",
+    "dignGbn": "육안조사",
+    "no": "457"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "458"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "459"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210430",
+    "endYmd": "20210430",
+    "dignGbn": "육안조사",
+    "no": "460"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210430",
+    "endYmd": "20210430",
+    "dignGbn": "육안조사",
+    "no": "461"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210430",
+    "endYmd": "20210430",
+    "dignGbn": "육안조사",
+    "no": "462"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210430",
+    "endYmd": "20210430",
+    "dignGbn": "육안조사",
+    "no": "463"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210511",
+    "endYmd": "20210511",
+    "dignGbn": "육안조사",
+    "no": "464"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210511",
+    "endYmd": "20210511",
+    "dignGbn": "육안조사",
+    "no": "465"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210511",
+    "endYmd": "20210511",
+    "dignGbn": "육안조사",
+    "no": "466"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210511",
+    "endYmd": "20210511",
+    "dignGbn": "육안조사",
+    "no": "467"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210426",
+    "endYmd": "20210426",
+    "dignGbn": "육안조사",
+    "no": "468"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210426",
+    "endYmd": "20210426",
+    "dignGbn": "육안조사",
+    "no": "469"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210514",
+    "endYmd": "20210514",
+    "dignGbn": "육안조사",
+    "no": "470"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210514",
+    "endYmd": "20210514",
+    "dignGbn": "육안조사",
+    "no": "471"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210514",
+    "endYmd": "20210514",
+    "dignGbn": "육안조사",
+    "no": "472"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210514",
+    "endYmd": "20210514",
+    "dignGbn": "육안조사",
+    "no": "473"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210501",
+    "endYmd": "20210501",
+    "dignGbn": "육안조사",
+    "no": "474"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210501",
+    "endYmd": "20210501",
+    "dignGbn": "육안조사",
+    "no": "475"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "476"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "477"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "478"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "479"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "480"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "481"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210503",
+    "endYmd": "20210503",
+    "dignGbn": "육안조사",
+    "no": "482"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210517",
+    "endYmd": "20210517",
+    "dignGbn": "육안조사",
+    "no": "483"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210517",
+    "endYmd": "20210517",
+    "dignGbn": "육안조사",
+    "no": "484"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210517",
+    "endYmd": "20210517",
+    "dignGbn": "육안조사",
+    "no": "485"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210517",
+    "endYmd": "20210517",
+    "dignGbn": "육안조사",
+    "no": "486"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210517",
+    "endYmd": "20210517",
+    "dignGbn": "육안조사",
+    "no": "487"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210520",
+    "endYmd": "20210520",
+    "dignGbn": "육안조사",
+    "no": "488"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210520",
+    "endYmd": "20210520",
+    "dignGbn": "육안조사",
+    "no": "489"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210520",
+    "endYmd": "20210520",
+    "dignGbn": "육안조사",
+    "no": "490"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210520",
+    "endYmd": "20210520",
+    "dignGbn": "육안조사",
+    "no": "491"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210520",
+    "endYmd": "20210520",
+    "dignGbn": "육안조사",
+    "no": "492"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210520",
+    "endYmd": "20210520",
+    "dignGbn": "육안조사",
+    "no": "493"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210520",
+    "endYmd": "20210520",
+    "dignGbn": "육안조사",
+    "no": "494"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210520",
+    "endYmd": "20210520",
+    "dignGbn": "육안조사",
+    "no": "495"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210520",
+    "endYmd": "20210520",
+    "dignGbn": "육안조사",
+    "no": "496"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210520",
+    "endYmd": "20210520",
+    "dignGbn": "육안조사",
+    "no": "497"
+  },
+  {
+    "facilNo": "CAP2006-000031",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210520",
+    "endYmd": "20210520",
+    "dignGbn": "육안조사",
+    "no": "498"
+  },
+  {
+    "facilNo": "CAP2006-000033",
+    "facilNm": "열수송관01",
+    "startYmd": "20191007",
+    "endYmd": "20191007",
+    "dignGbn": "육안조사",
+    "no": "499"
+  },
+  {
+    "facilNo": "CAP2006-000034",
+    "facilNm": "열수송관02",
+    "startYmd": "20191007",
+    "endYmd": "20191007",
+    "dignGbn": "육안조사",
+    "no": "500"
+  },
+  {
+    "facilNo": "CAP2006-000035",
+    "facilNm": "열수송관03",
+    "startYmd": "20191008",
+    "endYmd": "20191008",
+    "dignGbn": "육안조사",
+    "no": "501"
+  },
+  {
+    "facilNo": "CAP2006-000036",
+    "facilNm": "열수송관05",
+    "startYmd": "20191011",
+    "endYmd": "20191011",
+    "dignGbn": "육안조사",
+    "no": "502"
+  },
+  {
+    "facilNo": "CAP2006-000037",
+    "facilNm": "열수송관06",
+    "startYmd": "20191014",
+    "endYmd": "20191014",
+    "dignGbn": "육안조사",
+    "no": "503"
+  },
+  {
+    "facilNo": "CAP2006-000038",
+    "facilNm": "열수송관07",
+    "startYmd": "20191014",
+    "endYmd": "20191014",
+    "dignGbn": "육안조사",
+    "no": "504"
+  },
+  {
+    "facilNo": "CAP2006-000039",
+    "facilNm": "열수송관08",
+    "startYmd": "20191018",
+    "endYmd": "20191018",
+    "dignGbn": "육안조사",
+    "no": "505"
+  },
+  {
+    "facilNo": "CAP2006-000040",
+    "facilNm": "열수송관09",
+    "startYmd": "20191021",
+    "endYmd": "20191021",
+    "dignGbn": "육안조사",
+    "no": "506"
+  },
+  {
+    "facilNo": "CAP2006-000041",
+    "facilNm": "열수송관10",
+    "startYmd": "20191021",
+    "endYmd": "20191021",
+    "dignGbn": "육안조사",
+    "no": "507"
+  },
+  {
+    "facilNo": "CAP2006-000042",
+    "facilNm": "열수송관11",
+    "startYmd": "20191022",
+    "endYmd": "20191022",
+    "dignGbn": "육안조사",
+    "no": "508"
+  },
+  {
+    "facilNo": "CAP2006-000043",
+    "facilNm": "열수송관12",
+    "startYmd": "20191024",
+    "endYmd": "20191024",
+    "dignGbn": "육안조사",
+    "no": "509"
+  },
+  {
+    "facilNo": "CAP2006-000044",
+    "facilNm": "열수송관13",
+    "startYmd": "20191024",
+    "endYmd": "20191024",
+    "dignGbn": "육안조사",
+    "no": "510"
+  },
+  {
+    "facilNo": "CAP2006-000045",
+    "facilNm": "열수송관14",
+    "startYmd": "20191024",
+    "endYmd": "20191024",
+    "dignGbn": "육안조사",
+    "no": "511"
+  },
+  {
+    "facilNo": "CAP2006-000054",
+    "facilNm": "열수송관",
+    "startYmd": "20211117",
+    "endYmd": "20211119",
+    "dignGbn": "육안조사",
+    "no": "512"
+  },
+  {
+    "facilNo": "CAP2006-000055",
+    "facilNm": "열수송관",
+    "startYmd": "20211122",
+    "endYmd": "20211122",
+    "dignGbn": "육안조사",
+    "no": "513"
+  },
+  {
+    "facilNo": "CAP2006-000056",
+    "facilNm": "열수송관",
+    "startYmd": "20211117",
+    "endYmd": "20211119",
+    "dignGbn": "육안조사",
+    "no": "514"
+  },
+  {
+    "facilNo": "CAP2006-000060",
+    "facilNm": "열수송관",
+    "startYmd": "20211117",
+    "endYmd": "20211119",
+    "dignGbn": "육안조사",
+    "no": "515"
+  },
+  {
+    "facilNo": "CAP2007-000001",
+    "facilNm": "열수송관",
+    "startYmd": "20191111",
+    "endYmd": "20191125",
+    "dignGbn": "육안조사",
+    "no": "516"
+  },
+  {
+    "facilNo": "CAP2008-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20191010",
+    "endYmd": "20191120",
+    "dignGbn": "육안조사",
+    "no": "517"
+  },
+  {
+    "facilNo": "CAP2008-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20181128",
+    "endYmd": "20181128",
+    "dignGbn": "육안조사",
+    "no": "518"
+  },
+  {
+    "facilNo": "CAP2008-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20201015",
+    "endYmd": "20201215",
+    "dignGbn": "육안조사",
+    "no": "519"
+  },
+  {
+    "facilNo": "CAP2008-000002",
+    "facilNm": "코리아PTG(주) STEAM 운송배관",
+    "startYmd": "20191227",
+    "endYmd": "20191227",
+    "dignGbn": "육안조사",
+    "no": "520"
+  },
+  {
+    "facilNo": "CAP2008-000002",
+    "facilNm": "코리아PTG(주) STEAM 운송배관",
+    "startYmd": "20201207",
+    "endYmd": "20201207",
+    "dignGbn": "육안조사",
+    "no": "521"
+  },
+  {
+    "facilNo": "CAP2008-000002",
+    "facilNm": "코리아PTG(주) STEAM 운송배관",
+    "startYmd": "20211118",
+    "endYmd": "20211118",
+    "dignGbn": "육안조사",
+    "no": "522"
+  },
+  {
+    "facilNo": "CAP2008-000008",
+    "facilNm": "화성시 열수송관(매송고색로)",
+    "startYmd": "20191004",
+    "endYmd": "20191024",
+    "dignGbn": "육안조사",
+    "no": "523"
+  },
+  {
+    "facilNo": "CAP2008-000009",
+    "facilNm": "화성시 열수송관(화성로)",
+    "startYmd": "20191004",
+    "endYmd": "20191024",
+    "dignGbn": "육안조사",
+    "no": "524"
+  },
+  {
+    "facilNo": "CAP2008-000010",
+    "facilNm": "화성시 열수송관(푸른들판로)",
+    "startYmd": "20191004",
+    "endYmd": "20191024",
+    "dignGbn": "육안조사",
+    "no": "525"
+  },
+  {
+    "facilNo": "CAP2008-000011",
+    "facilNm": "화성시 열수송관(행정동로)",
+    "startYmd": "20191004",
+    "endYmd": "20191024",
+    "dignGbn": "육안조사",
+    "no": "526"
+  },
+  {
+    "facilNo": "CAP2008-000012",
+    "facilNm": "화성시 열수송관(향남로)",
+    "startYmd": "20191004",
+    "endYmd": "20191024",
+    "dignGbn": "육안조사",
+    "no": "527"
+  },
+  {
+    "facilNo": "CAP2008-000013",
+    "facilNm": "화성시 열수송관(발안로)",
+    "startYmd": "20191004",
+    "endYmd": "20191024",
+    "dignGbn": "육안조사",
+    "no": "528"
+  },
+  {
+    "facilNo": "CAP2008-000014",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20191215",
+    "endYmd": "20200115",
+    "dignGbn": "육안조사",
+    "no": "529"
+  },
+  {
+    "facilNo": "CAP2008-000021",
+    "facilNm": "이중보온관",
+    "startYmd": "20210501",
+    "endYmd": "20211130",
+    "dignGbn": "공동조사",
+    "no": "530"
+  },
+  {
+    "facilNo": "CAP2009-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20181128",
+    "endYmd": "20181128",
+    "dignGbn": "육안조사",
+    "no": "531"
+  },
+  {
+    "facilNo": "CAP2009-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20191010",
+    "endYmd": "20191130",
+    "dignGbn": "육안조사",
+    "no": "532"
+  },
+  {
+    "facilNo": "CAP2009-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20201015",
+    "endYmd": "20201217",
+    "dignGbn": "육안조사",
+    "no": "533"
+  },
+  {
+    "facilNo": "CAP2009-000067",
+    "facilNm": "열수송관",
+    "startYmd": "20181001",
+    "endYmd": "20181005",
+    "dignGbn": "육안조사",
+    "no": "534"
+  },
+  {
+    "facilNo": "CAP2009-000067",
+    "facilNm": "열수송관",
+    "startYmd": "20191001",
+    "endYmd": "20191004",
+    "dignGbn": "육안조사",
+    "no": "535"
+  },
+  {
+    "facilNo": "CAP2009-000067",
+    "facilNm": "열수송관",
+    "startYmd": "20201005",
+    "endYmd": "20201009",
+    "dignGbn": "육안조사",
+    "no": "536"
+  },
+  {
+    "facilNo": "CAP2009-000067",
+    "facilNm": "열수송관",
+    "startYmd": "20211004",
+    "endYmd": "20211008",
+    "dignGbn": "육안조사",
+    "no": "537"
+  },
+  {
+    "facilNo": "CAP2009-000078",
+    "facilNm": "이중보온관",
+    "startYmd": "20210501",
+    "endYmd": "20211130",
+    "dignGbn": "공동조사",
+    "no": "538"
+  },
+  {
+    "facilNo": "CAP2010-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20191025",
+    "endYmd": "20191120",
+    "dignGbn": "육안조사",
+    "no": "539"
+  },
+  {
+    "facilNo": "CAP2010-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20201019",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "540"
+  },
+  {
+    "facilNo": "CAP2010-000049",
+    "facilNm": "열수송관04",
+    "startYmd": "20191008",
+    "endYmd": "20191008",
+    "dignGbn": "육안조사",
+    "no": "541"
+  },
+  {
+    "facilNo": "CAP2010-000052",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "542"
+  },
+  {
+    "facilNo": "CAP2010-000056",
+    "facilNm": "열수송관",
+    "startYmd": "20211117",
+    "endYmd": "20211119",
+    "dignGbn": "육안조사",
+    "no": "543"
+  },
+  {
+    "facilNo": "CAP2010-000057",
+    "facilNm": "열수송관",
+    "startYmd": "20211117",
+    "endYmd": "20211119",
+    "dignGbn": "육안조사",
+    "no": "544"
+  },
+  {
+    "facilNo": "CAP2010-000058",
+    "facilNm": "열수송관",
+    "startYmd": "20211117",
+    "endYmd": "20211119",
+    "dignGbn": "육안조사",
+    "no": "545"
+  },
+  {
+    "facilNo": "CAP2011-000087",
+    "facilNm": "화성시 열수송관(반월들길)",
+    "startYmd": "20191004",
+    "endYmd": "20191024",
+    "dignGbn": "육안조사",
+    "no": "546"
+  },
+  {
+    "facilNo": "CAP2011-000088",
+    "facilNm": "안산시 열수송관 (해안로)",
+    "startYmd": "20191209",
+    "endYmd": "20191213",
+    "dignGbn": "육안조사",
+    "no": "547"
+  },
+  {
+    "facilNo": "CAP2011-000089",
+    "facilNm": "안산시 열수송관 (반월들길)",
+    "startYmd": "20191209",
+    "endYmd": "20191213",
+    "dignGbn": "육안조사",
+    "no": "548"
+  },
+  {
+    "facilNo": "CAP2012-000036",
+    "facilNm": "(주)한주 증기공급배관망",
+    "startYmd": "20191212",
+    "endYmd": "20191218",
+    "dignGbn": "육안조사",
+    "no": "549"
+  },
+  {
+    "facilNo": "CAP2012-000036",
+    "facilNm": "(주)한주 증기공급배관망",
+    "startYmd": "20201118",
+    "endYmd": "20201201",
+    "dignGbn": "육안조사",
+    "no": "550"
+  },
+  {
+    "facilNo": "CAP2012-000036",
+    "facilNm": "(주)한주 증기공급배관망",
+    "startYmd": "20211103",
+    "endYmd": "20211106",
+    "dignGbn": "육안조사",
+    "no": "551"
+  },
+  {
+    "facilNo": "CAP2012-000037",
+    "facilNm": "열수송시설(800)",
+    "startYmd": "20191113",
+    "endYmd": "20191212",
+    "dignGbn": "육안조사",
+    "no": "552"
+  },
+  {
+    "facilNo": "CAP2012-000037",
+    "facilNm": "열수송시설(800)",
+    "startYmd": "20200427",
+    "endYmd": "20200522",
+    "dignGbn": "육안조사",
+    "no": "553"
+  },
+  {
+    "facilNo": "CAP2012-000037",
+    "facilNm": "열수송시설(800)",
+    "startYmd": "20201109",
+    "endYmd": "20201127",
+    "dignGbn": "육안조사",
+    "no": "554"
+  },
+  {
+    "facilNo": "CAP2012-000037",
+    "facilNm": "열수송시설(800)",
+    "startYmd": "20210309",
+    "endYmd": "20210406",
+    "dignGbn": "육안조사",
+    "no": "555"
+  },
+  {
+    "facilNo": "CAP2012-000042",
+    "facilNm": "용연3공장→KPTG行 스팀배관",
+    "startYmd": "20191023",
+    "endYmd": "20191023",
+    "dignGbn": "육안조사",
+    "no": "556"
+  },
+  {
+    "facilNo": "CAP2012-000042",
+    "facilNm": "용연3공장→KPTG行 스팀배관",
+    "startYmd": "20201211",
+    "endYmd": "20201211",
+    "dignGbn": "육안조사",
+    "no": "557"
+  },
+  {
+    "facilNo": "CAP2012-000042",
+    "facilNm": "용연3공장→KPTG行 스팀배관",
+    "startYmd": "20211025",
+    "endYmd": "20211025",
+    "dignGbn": "육안조사",
+    "no": "558"
+  },
+  {
+    "facilNo": "CAP2012-000042",
+    "facilNm": "용연3공장→KPTG行 스팀배관",
+    "startYmd": "20211025",
+    "endYmd": "20211025",
+    "dignGbn": "육안조사",
+    "no": "559"
+  },
+  {
+    "facilNo": "CAP2012-000045",
+    "facilNm": "열수송시설(700)",
+    "startYmd": "20191113",
+    "endYmd": "20191212",
+    "dignGbn": "육안조사",
+    "no": "560"
+  },
+  {
+    "facilNo": "CAP2012-000045",
+    "facilNm": "열수송시설(700)",
+    "startYmd": "20200427",
+    "endYmd": "20200522",
+    "dignGbn": "육안조사",
+    "no": "561"
+  },
+  {
+    "facilNo": "CAP2012-000045",
+    "facilNm": "열수송시설(700)",
+    "startYmd": "20201109",
+    "endYmd": "20201127",
+    "dignGbn": "육안조사",
+    "no": "562"
+  },
+  {
+    "facilNo": "CAP2012-000045",
+    "facilNm": "열수송시설(700)",
+    "startYmd": "20210309",
+    "endYmd": "20210406",
+    "dignGbn": "육안조사",
+    "no": "563"
+  },
+  {
+    "facilNo": "CAP2012-000046",
+    "facilNm": "열수송시설(600)",
+    "startYmd": "20191113",
+    "endYmd": "20191212",
+    "dignGbn": "육안조사",
+    "no": "564"
+  },
+  {
+    "facilNo": "CAP2012-000046",
+    "facilNm": "열수송시설(600)",
+    "startYmd": "20200427",
+    "endYmd": "20200522",
+    "dignGbn": "육안조사",
+    "no": "565"
+  },
+  {
+    "facilNo": "CAP2012-000046",
+    "facilNm": "열수송시설(600)",
+    "startYmd": "20201109",
+    "endYmd": "20201127",
+    "dignGbn": "육안조사",
+    "no": "566"
+  },
+  {
+    "facilNo": "CAP2012-000046",
+    "facilNm": "열수송시설(600)",
+    "startYmd": "20210309",
+    "endYmd": "20210406",
+    "dignGbn": "육안조사",
+    "no": "567"
+  },
+  {
+    "facilNo": "CAP2012-000047",
+    "facilNm": "열수송시설(500)",
+    "startYmd": "20191113",
+    "endYmd": "20191212",
+    "dignGbn": "육안조사",
+    "no": "568"
+  },
+  {
+    "facilNo": "CAP2012-000047",
+    "facilNm": "열수송시설(500)",
+    "startYmd": "20200427",
+    "endYmd": "20200522",
+    "dignGbn": "육안조사",
+    "no": "569"
+  },
+  {
+    "facilNo": "CAP2012-000047",
+    "facilNm": "열수송시설(500)",
+    "startYmd": "20201109",
+    "endYmd": "20201127",
+    "dignGbn": "육안조사",
+    "no": "570"
+  },
+  {
+    "facilNo": "CAP2012-000047",
+    "facilNm": "열수송시설(500)",
+    "startYmd": "20210309",
+    "endYmd": "20210406",
+    "dignGbn": "육안조사",
+    "no": "571"
+  },
+  {
+    "facilNo": "CAP2012-000048",
+    "facilNm": "열수송시설(500)",
+    "startYmd": "20191113",
+    "endYmd": "20191212",
+    "dignGbn": "육안조사",
+    "no": "572"
+  },
+  {
+    "facilNo": "CAP2012-000048",
+    "facilNm": "열수송시설(500)",
+    "startYmd": "20200427",
+    "endYmd": "20200522",
+    "dignGbn": "육안조사",
+    "no": "573"
+  },
+  {
+    "facilNo": "CAP2012-000048",
+    "facilNm": "열수송시설(500)",
+    "startYmd": "20201109",
+    "endYmd": "20201127",
+    "dignGbn": "육안조사",
+    "no": "574"
+  },
+  {
+    "facilNo": "CAP2012-000048",
+    "facilNm": "열수송시설(500)",
+    "startYmd": "20210309",
+    "endYmd": "20210406",
+    "dignGbn": "육안조사",
+    "no": "575"
+  },
+  {
+    "facilNo": "CAP2012-000054",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20181022",
+    "endYmd": "20181025",
+    "dignGbn": "육안조사",
+    "no": "576"
+  },
+  {
+    "facilNo": "CAP2012-000054",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20191203",
+    "endYmd": "20191203",
+    "dignGbn": "육안조사",
+    "no": "577"
+  },
+  {
+    "facilNo": "CAP2012-000054",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20200921",
+    "endYmd": "20200921",
+    "dignGbn": "육안조사",
+    "no": "578"
+  },
+  {
+    "facilNo": "CAP2012-000054",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20211019",
+    "endYmd": "20211020",
+    "dignGbn": "육안조사",
+    "no": "579"
+  },
+  {
+    "facilNo": "CAP2013-000005",
+    "facilNm": "지하매설물",
+    "startYmd": "20191230",
+    "endYmd": "20191230",
+    "dignGbn": "육안조사",
+    "no": "580"
+  },
+  {
+    "facilNo": "CAP2013-000006",
+    "facilNm": "열수송관(04)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "581"
+  },
+  {
+    "facilNo": "CAP2013-000006",
+    "facilNm": "열수송관(04)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "582"
+  },
+  {
+    "facilNo": "CAP2013-000007",
+    "facilNm": "열수송관(07)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "583"
+  },
+  {
+    "facilNo": "CAP2013-000007",
+    "facilNm": "열수송관(07)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "584"
+  },
+  {
+    "facilNo": "CAP2013-000008",
+    "facilNm": "열수송관(08)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "585"
+  },
+  {
+    "facilNo": "CAP2013-000008",
+    "facilNm": "열수송관(08)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "586"
+  },
+  {
+    "facilNo": "CAP2013-000014",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "587"
+  },
+  {
+    "facilNo": "CAP2013-000014",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "588"
+  },
+  {
+    "facilNo": "CAP2013-000014",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "589"
+  },
+  {
+    "facilNo": "CAP2013-000014",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "590"
+  },
+  {
+    "facilNo": "CAP2013-000014",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "591"
+  },
+  {
+    "facilNo": "CAP2013-000014",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "592"
+  },
+  {
+    "facilNo": "CAP2013-000015",
+    "facilNm": "지하 Steam 배관",
+    "startYmd": "20201126",
+    "endYmd": "20201126",
+    "dignGbn": "육안조사",
+    "no": "593"
+  },
+  {
+    "facilNo": "CAP2013-000015",
+    "facilNm": "지하 Steam 배관",
+    "startYmd": "20210927",
+    "endYmd": "20210927",
+    "dignGbn": "육안조사",
+    "no": "594"
+  },
+  {
+    "facilNo": "CAP2013-000016",
+    "facilNm": "열수송관",
+    "startYmd": "20211108",
+    "endYmd": "20211119",
+    "dignGbn": "육안조사",
+    "no": "595"
+  },
+  {
+    "facilNo": "CAP2013-000016",
+    "facilNm": "열수송관",
+    "startYmd": "20220411",
+    "endYmd": "20220516",
+    "dignGbn": "공동조사",
+    "no": "596"
+  },
+  {
+    "facilNo": "CAP2014-000003",
+    "facilNm": "열수송관15",
+    "startYmd": "20191029",
+    "endYmd": "20191029",
+    "dignGbn": "육안조사",
+    "no": "597"
+  },
+  {
+    "facilNo": "CAP2014-000004",
+    "facilNm": "열수송관16",
+    "startYmd": "20191030",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "598"
+  },
+  {
+    "facilNo": "CAP2014-000005",
+    "facilNm": "열수송관17",
+    "startYmd": "20191030",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "599"
+  },
+  {
+    "facilNo": "CAP2014-000006",
+    "facilNm": "열수송관(03)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "600"
+  },
+  {
+    "facilNo": "CAP2014-000006",
+    "facilNm": "열수송관(03)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "601"
+  },
+  {
+    "facilNo": "CAP2014-000007",
+    "facilNm": "열수송관(05)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "602"
+  },
+  {
+    "facilNo": "CAP2014-000007",
+    "facilNm": "열수송관(05)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "603"
+  },
+  {
+    "facilNo": "CAP2014-000008",
+    "facilNm": "열수송관(06)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "604"
+  },
+  {
+    "facilNo": "CAP2014-000008",
+    "facilNm": "열수송관(06)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "605"
+  },
+  {
+    "facilNo": "CAP2014-000009",
+    "facilNm": "열수송관(09)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "606"
+  },
+  {
+    "facilNo": "CAP2014-000009",
+    "facilNm": "열수송관(09)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "607"
+  },
+  {
+    "facilNo": "CAP2014-000010",
+    "facilNm": "열수송관(10)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "608"
+  },
+  {
+    "facilNo": "CAP2014-000010",
+    "facilNm": "열수송관(10)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "609"
+  },
+  {
+    "facilNo": "CAP2014-000011",
+    "facilNm": "열수송관(11)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "610"
+  },
+  {
+    "facilNo": "CAP2014-000011",
+    "facilNm": "열수송관(11)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "611"
+  },
+  {
+    "facilNo": "CAP2014-000012",
+    "facilNm": "열수송관(12)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "612"
+  },
+  {
+    "facilNo": "CAP2014-000012",
+    "facilNm": "열수송관(12)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "613"
+  },
+  {
+    "facilNo": "CAP2014-000018",
+    "facilNm": "국인산업 스팀배관",
+    "startYmd": "20191213",
+    "endYmd": "20191220",
+    "dignGbn": "육안조사",
+    "no": "614"
+  },
+  {
+    "facilNo": "CAP2014-000018",
+    "facilNm": "국인산업 스팀배관",
+    "startYmd": "20201203",
+    "endYmd": "20201207",
+    "dignGbn": "육안조사",
+    "no": "615"
+  },
+  {
+    "facilNo": "CAP2015-000002",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210401",
+    "endYmd": "20210401",
+    "dignGbn": "육안조사",
+    "no": "616"
+  },
+  {
+    "facilNo": "CAP2015-000002",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210401",
+    "endYmd": "20210401",
+    "dignGbn": "육안조사",
+    "no": "617"
+  },
+  {
+    "facilNo": "CAP2015-000002",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210401",
+    "endYmd": "20210401",
+    "dignGbn": "육안조사",
+    "no": "618"
+  },
+  {
+    "facilNo": "CAP2015-000002",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20210401",
+    "endYmd": "20210401",
+    "dignGbn": "육안조사",
+    "no": "619"
+  },
+  {
+    "facilNo": "CAP2015-000004",
+    "facilNm": "수송관",
+    "startYmd": "20191217",
+    "endYmd": "20191217",
+    "dignGbn": "육안조사",
+    "no": "620"
+  },
+  {
+    "facilNo": "CAP2015-000004",
+    "facilNm": "수송관",
+    "startYmd": "20201228",
+    "endYmd": "20201228",
+    "dignGbn": "육안조사",
+    "no": "621"
+  },
+  {
+    "facilNo": "CAP2015-000005",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20180927",
+    "endYmd": "20181002",
+    "dignGbn": "육안조사",
+    "no": "622"
+  },
+  {
+    "facilNo": "CAP2015-000005",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20191119",
+    "endYmd": "20191126",
+    "dignGbn": "육안조사",
+    "no": "623"
+  },
+  {
+    "facilNo": "CAP2015-000005",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20200917",
+    "endYmd": "20200917",
+    "dignGbn": "육안조사",
+    "no": "624"
+  },
+  {
+    "facilNo": "CAP2015-000005",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20210916",
+    "endYmd": "20210917",
+    "dignGbn": "육안조사",
+    "no": "625"
+  },
+  {
+    "facilNo": "CAP2015-000006",
+    "facilNm": "열수송관(01)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "626"
+  },
+  {
+    "facilNo": "CAP2015-000006",
+    "facilNm": "열수송관(01)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "627"
+  },
+  {
+    "facilNo": "CAP2015-000007",
+    "facilNm": "열수송관(02)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "628"
+  },
+  {
+    "facilNo": "CAP2015-000007",
+    "facilNm": "열수송관(02)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "629"
+  },
+  {
+    "facilNo": "CAP2015-000018",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20180915",
+    "endYmd": "20181015",
+    "dignGbn": "육안조사",
+    "no": "630"
+  },
+  {
+    "facilNo": "CAP2015-000018",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20191119",
+    "endYmd": "20191126",
+    "dignGbn": "육안조사",
+    "no": "631"
+  },
+  {
+    "facilNo": "CAP2015-000018",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20200917",
+    "endYmd": "20200917",
+    "dignGbn": "육안조사",
+    "no": "632"
+  },
+  {
+    "facilNo": "CAP2015-000018",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20210916",
+    "endYmd": "20210917",
+    "dignGbn": "육안조사",
+    "no": "633"
+  },
+  {
+    "facilNo": "CAP2015-000019",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20180915",
+    "endYmd": "20181015",
+    "dignGbn": "육안조사",
+    "no": "634"
+  },
+  {
+    "facilNo": "CAP2015-000019",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20191119",
+    "endYmd": "20191126",
+    "dignGbn": "육안조사",
+    "no": "635"
+  },
+  {
+    "facilNo": "CAP2015-000020",
+    "facilNm": "화성시 열수송관(방죽로)",
+    "startYmd": "20191004",
+    "endYmd": "20191024",
+    "dignGbn": "육안조사",
+    "no": "636"
+  },
+  {
+    "facilNo": "CAP2015-000021",
+    "facilNm": "화성시 열수송관(향봉로)",
+    "startYmd": "20191004",
+    "endYmd": "20191024",
+    "dignGbn": "육안조사",
+    "no": "637"
+  },
+  {
+    "facilNo": "CAP2015-000022",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20181017",
+    "endYmd": "20181118",
+    "dignGbn": "육안조사",
+    "no": "638"
+  },
+  {
+    "facilNo": "CAP2015-000022",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20191118",
+    "endYmd": "20191119",
+    "dignGbn": "육안조사",
+    "no": "639"
+  },
+  {
+    "facilNo": "CAP2015-000022",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20200918",
+    "endYmd": "20200921",
+    "dignGbn": "육안조사",
+    "no": "640"
+  },
+  {
+    "facilNo": "CAP2015-000022",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20211006",
+    "endYmd": "20211015",
+    "dignGbn": "육안조사",
+    "no": "641"
+  },
+  {
+    "facilNo": "CAP2015-000023",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20180927",
+    "endYmd": "20181002",
+    "dignGbn": "육안조사",
+    "no": "642"
+  },
+  {
+    "facilNo": "CAP2015-000023",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20190927",
+    "endYmd": "20191002",
+    "dignGbn": "육안조사",
+    "no": "643"
+  },
+  {
+    "facilNo": "CAP2015-000023",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20200927",
+    "endYmd": "20201002",
+    "dignGbn": "육안조사",
+    "no": "644"
+  },
+  {
+    "facilNo": "CAP2015-000023",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20211021",
+    "endYmd": "20211203",
+    "dignGbn": "육안조사",
+    "no": "645"
+  },
+  {
+    "facilNo": "CAP2015-000024",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20180927",
+    "endYmd": "20181002",
+    "dignGbn": "육안조사",
+    "no": "646"
+  },
+  {
+    "facilNo": "CAP2015-000024",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20190927",
+    "endYmd": "20191002",
+    "dignGbn": "육안조사",
+    "no": "647"
+  },
+  {
+    "facilNo": "CAP2015-000024",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20200901",
+    "endYmd": "20200918",
+    "dignGbn": "육안조사",
+    "no": "648"
+  },
+  {
+    "facilNo": "CAP2015-000024",
+    "facilNm": "열수송관(난방)",
+    "startYmd": "20210927",
+    "endYmd": "20211005",
+    "dignGbn": "육안조사",
+    "no": "649"
+  },
+  {
+    "facilNo": "CAP2015-000028",
+    "facilNm": "열수송관(덕양구)",
+    "startYmd": "20210501",
+    "endYmd": "20211130",
+    "dignGbn": "공동조사",
+    "no": "650"
+  },
+  {
+    "facilNo": "CAP2016-000038",
+    "facilNm": "열수송관",
+    "startYmd": "20201007",
+    "endYmd": "20201013",
+    "dignGbn": "육안조사",
+    "no": "651"
+  },
+  {
+    "facilNo": "CAP2016-000038",
+    "facilNm": "열수송관",
+    "startYmd": "20211012",
+    "endYmd": "20211014",
+    "dignGbn": "육안조사",
+    "no": "652"
+  },
+  {
+    "facilNo": "CAP2016-000039",
+    "facilNm": "열수송관(22)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "653"
+  },
+  {
+    "facilNo": "CAP2016-000039",
+    "facilNm": "열수송관(22)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "654"
+  },
+  {
+    "facilNo": "CAP2016-000040",
+    "facilNm": "열수송관(14)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "655"
+  },
+  {
+    "facilNo": "CAP2016-000040",
+    "facilNm": "열수송관(14)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "656"
+  },
+  {
+    "facilNo": "CAP2016-000041",
+    "facilNm": "열수송관(13)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "657"
+  },
+  {
+    "facilNo": "CAP2016-000041",
+    "facilNm": "열수송관(13)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "658"
+  },
+  {
+    "facilNo": "CAP2016-000047",
+    "facilNm": "열수송관(마곡-01)",
+    "startYmd": "20191125",
+    "endYmd": "20191126",
+    "dignGbn": "육안조사",
+    "no": "659"
+  },
+  {
+    "facilNo": "CAP2016-000048",
+    "facilNm": "열수송관(마곡-02)",
+    "startYmd": "20191125",
+    "endYmd": "20191126",
+    "dignGbn": "육안조사",
+    "no": "660"
+  },
+  {
+    "facilNo": "CAP2016-000049",
+    "facilNm": "열수송관(마곡-03)",
+    "startYmd": "20191125",
+    "endYmd": "20191126",
+    "dignGbn": "육안조사",
+    "no": "661"
+  },
+  {
+    "facilNo": "CAP2016-000068",
+    "facilNm": "열수송관 (도레이)",
+    "startYmd": "20200521",
+    "endYmd": "20200522",
+    "dignGbn": "육안조사",
+    "no": "662"
+  },
+  {
+    "facilNo": "CAP2016-000068",
+    "facilNm": "열수송관 (도레이)",
+    "startYmd": "20210527",
+    "endYmd": "20210528",
+    "dignGbn": "육안조사",
+    "no": "663"
+  },
+  {
+    "facilNo": "CAP2016-000069",
+    "facilNm": "열수송관 (솔베이)",
+    "startYmd": "20200521",
+    "endYmd": "20200522",
+    "dignGbn": "육안조사",
+    "no": "664"
+  },
+  {
+    "facilNo": "CAP2016-000069",
+    "facilNm": "열수송관 (솔베이)",
+    "startYmd": "20210527",
+    "endYmd": "20210528",
+    "dignGbn": "육안조사",
+    "no": "665"
+  },
+  {
+    "facilNo": "CAP2016-000070",
+    "facilNm": "지역난방 공급용 열수송관",
+    "startYmd": "20210712",
+    "endYmd": "20210723",
+    "dignGbn": "육안조사",
+    "no": "666"
+  },
+  {
+    "facilNo": "CAP2017-000048",
+    "facilNm": "열수송관(21)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "667"
+  },
+  {
+    "facilNo": "CAP2017-000048",
+    "facilNm": "열수송관(21)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "668"
+  },
+  {
+    "facilNo": "CAP2017-000049",
+    "facilNm": "열수송관(18)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "669"
+  },
+  {
+    "facilNo": "CAP2017-000049",
+    "facilNm": "열수송관(18)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "670"
+  },
+  {
+    "facilNo": "CAP2017-000050",
+    "facilNm": "열수송관(17)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "671"
+  },
+  {
+    "facilNo": "CAP2017-000050",
+    "facilNm": "열수송관(17)",
+    "startYmd": "20191025",
+    "endYmd": "20200206",
+    "dignGbn": "육안조사",
+    "no": "672"
+  },
+  {
+    "facilNo": "CAP2017-000051",
+    "facilNm": "열수송관(16)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "673"
+  },
+  {
+    "facilNo": "CAP2017-000051",
+    "facilNm": "열수송관(16)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "674"
+  },
+  {
+    "facilNo": "CAP2017-000052",
+    "facilNm": "열수송관(15)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "675"
+  },
+  {
+    "facilNo": "CAP2017-000052",
+    "facilNm": "열수송관(15)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "676"
+  },
+  {
+    "facilNo": "CAP2017-000065",
+    "facilNm": "옥산산업단지 內 스팀배관",
+    "startYmd": "20211213",
+    "endYmd": "20211213",
+    "dignGbn": "육안조사",
+    "no": "677"
+  },
+  {
+    "facilNo": "CAP2018-000002",
+    "facilNm": "송유관",
+    "startYmd": "20191223",
+    "endYmd": "20191223",
+    "dignGbn": "육안조사",
+    "no": "678"
+  },
+  {
+    "facilNo": "CAP2018-000003",
+    "facilNm": "열수송관(20)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "679"
+  },
+  {
+    "facilNo": "CAP2018-000003",
+    "facilNm": "열수송관(20)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "680"
+  },
+  {
+    "facilNo": "CAP2018-000004",
+    "facilNm": "열수송관(19)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "681"
+  },
+  {
+    "facilNo": "CAP2018-000004",
+    "facilNm": "열수송관(19)",
+    "startYmd": "20191025",
+    "endYmd": "20191030",
+    "dignGbn": "육안조사",
+    "no": "682"
+  },
+  {
+    "facilNo": "CAP2018-000016",
+    "facilNm": "화성시 열수송관(남양로)",
+    "startYmd": "20191004",
+    "endYmd": "20191024",
+    "dignGbn": "육안조사",
+    "no": "683"
+  },
+  {
+    "facilNo": "CAP2018-000017",
+    "facilNm": "화성시 열수송관(미륵골로)",
+    "startYmd": "20191004",
+    "endYmd": "20191024",
+    "dignGbn": "육안조사",
+    "no": "684"
+  },
+  {
+    "facilNo": "CAP2018-000018",
+    "facilNm": "지역난방배관",
+    "startYmd": "20190101",
+    "endYmd": "20190919",
+    "dignGbn": "육안조사",
+    "no": "685"
+  },
+  {
+    "facilNo": "CAP2018-000018",
+    "facilNm": "지역난방배관",
+    "startYmd": "20190101",
+    "endYmd": "20201025",
+    "dignGbn": "육안조사",
+    "no": "686"
+  },
+  {
+    "facilNo": "CAP2019-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20190101",
+    "endYmd": "20191227",
+    "dignGbn": "육안조사",
+    "no": "687"
+  },
+  {
+    "facilNo": "CAP2019-000001",
+    "facilNm": "지역난방 열수송관",
+    "startYmd": "20200101",
+    "endYmd": "20201228",
+    "dignGbn": "육안조사",
+    "no": "688"
+  },
+  {
+    "facilNo": "CAP2019-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20191010",
+    "endYmd": "20191010",
+    "dignGbn": "육안조사",
+    "no": "689"
+  },
+  {
+    "facilNo": "CAP2019-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20211015",
+    "endYmd": "20211015",
+    "dignGbn": "육안조사",
+    "no": "690"
+  },
+  {
+    "facilNo": "CAP2019-000005",
+    "facilNm": "열수송관",
+    "startYmd": "20220818",
+    "endYmd": "20220930",
+    "dignGbn": "공동조사",
+    "no": "691"
+  },
+  {
+    "facilNo": "CAP2019-000010",
+    "facilNm": "서울시 은평구 열수송관",
+    "startYmd": "20201101",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "692"
+  },
+  {
+    "facilNo": "CAP2019-000013",
+    "facilNm": "열수송시설",
+    "startYmd": "20200116",
+    "endYmd": "20200117",
+    "dignGbn": "육안조사",
+    "no": "693"
+  },
+  {
+    "facilNo": "CAP2019-000014",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "694"
+  },
+  {
+    "facilNo": "CAP2019-000014",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "695"
+  },
+  {
+    "facilNo": "CAP2019-000014",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "696"
+  },
+  {
+    "facilNo": "CAP2019-000014",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "697"
+  },
+  {
+    "facilNo": "CAP2019-000014",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "698"
+  },
+  {
+    "facilNo": "CAP2019-000014",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "699"
+  },
+  {
+    "facilNo": "CAP2019-000014",
+    "facilNm": "열수송관",
+    "startYmd": "20201116",
+    "endYmd": "20201120",
+    "dignGbn": "육안조사",
+    "no": "700"
+  }
+]

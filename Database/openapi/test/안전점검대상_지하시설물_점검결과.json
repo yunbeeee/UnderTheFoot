@@ -1,0 +1,33 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "0",
+      "resultMsg": "NORMAL_CODE"
+    },
+    "numOfRows": "1000",
+    "pageNo": "1",
+    "totalCount": "1",
+    "body": {
+      "items": [
+        {
+          "facilNo": "ELE2015-000008",
+          "facilNm": "154kV",
+          "startYmd": "20201020",
+          "endYmd": "20201022",
+          "dignGbn": "육안조사",
+          "dignCost": "0.00",
+          "extLthRoad": "0.000",
+          "extLthSide": "0.000",
+          "dignSummary": "* 직경 500밀리미터 이상의 전기설비\r\n - 육안점검 실시\r\n - 맨홀 양수 작업 실시\r\n - 접지저항 이상 없음\r\n - 누설전류 이상 없음\r\n",
+          "etcComment": "",
+          "evalGrade": "양호",
+          "factNeedYn": "",
+          "evalNeedYn": "N",
+          "signStatus": "작성중",
+          "signDate": "",
+          "no": "1"
+        }
+      ]
+    }
+  }
+}

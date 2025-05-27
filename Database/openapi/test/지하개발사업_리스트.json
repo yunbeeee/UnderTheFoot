@@ -1,0 +1,715 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "0",
+      "resultMsg": "NORMAL_CODE"
+    },
+    "numOfRows": "1000",
+    "pageNo": "1",
+    "totalCount": "1179",
+    "body": {
+      "items": [
+        {
+          "saupNo": "20180158",
+          "saupNm": "안양냉천 주거환경개선사업",
+          "proStage": "협의요청",
+          "maxDigDepth": "14.50",
+          "no": "1"
+        },
+        {
+          "saupNo": "20190135",
+          "saupNm": "예산 몽곡리 폐기물최종처분시설 조성사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "48.00",
+          "no": "2"
+        },
+        {
+          "saupNo": "20190172",
+          "saupNm": "사직1-6지구 주택재건축정비사업에 따른 지하안전영향평가 용역",
+          "proStage": "협의요청",
+          "maxDigDepth": "29.00",
+          "no": "3"
+        },
+        {
+          "saupNo": "20190182",
+          "saupNm": "대현2동강변 주택재건축정비사업 소규모지하안전영향평가",
+          "proStage": "협의요청",
+          "maxDigDepth": "15.85",
+          "no": "4"
+        },
+        {
+          "saupNo": "20190205",
+          "saupNm": "팔달동 주택재건축 정비사업 신축에 따른 소규모지하안전영향평가",
+          "proStage": "협의요청",
+          "maxDigDepth": "19.00",
+          "no": "5"
+        },
+        {
+          "saupNo": "20192099",
+          "saupNm": "광주광역시 동구 지산동 지역주택조합 아파트 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "31.17",
+          "no": "6"
+        },
+        {
+          "saupNo": "20192131",
+          "saupNm": "과천주공4단지 주택재건축정비사업조합",
+          "proStage": "제출완료",
+          "maxDigDepth": "15.45",
+          "no": "7"
+        },
+        {
+          "saupNo": "20200037",
+          "saupNm": "반여4구역 주택재건축 정비사업",
+          "proStage": "승인요청",
+          "maxDigDepth": "14.00",
+          "no": "8"
+        },
+        {
+          "saupNo": "20200068",
+          "saupNm": "문화동 8구역 주택재개발 정비사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "18.10",
+          "no": "9"
+        },
+        {
+          "saupNo": "20200143",
+          "saupNm": "서대문경찰서 청사 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "18.74",
+          "no": "10"
+        },
+        {
+          "saupNo": "20200169",
+          "saupNm": "범어우방1차아파트 재건축 정비사업 소규모지하안전영향평가",
+          "proStage": "승인요청",
+          "maxDigDepth": "16.00",
+          "no": "11"
+        },
+        {
+          "saupNo": "20200174",
+          "saupNm": "평택그린비전센터 SRF발전사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "17.80",
+          "no": "12"
+        },
+        {
+          "saupNo": "20200177",
+          "saupNm": "향림아파트지구주택재건축정비사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "13.25",
+          "no": "13"
+        },
+        {
+          "saupNo": "20200233",
+          "saupNm": "원주시 원동 274-40번지 일원 다박골 주택재개발 정비사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "26.70",
+          "no": "14"
+        },
+        {
+          "saupNo": "20200246",
+          "saupNm": "수도권(4단계) 관로 복선화사업 지하안전영향평가 용역",
+          "proStage": "제출완료",
+          "maxDigDepth": "12.07",
+          "no": "15"
+        },
+        {
+          "saupNo": "20200265",
+          "saupNm": "사천예수화전지구 공공지원민간임대주택 공급촉진지구 조성사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "40.01",
+          "no": "16"
+        },
+        {
+          "saupNo": "20200271",
+          "saupNm": "상봉역 역세권 청년주택 신축공사",
+          "proStage": "정보수정중",
+          "maxDigDepth": "26.36",
+          "no": "17"
+        },
+        {
+          "saupNo": "20200277",
+          "saupNm": "인천여상주변구역 도시환경 정비사업 소규모 지하안전영향평가",
+          "proStage": "제출완료",
+          "maxDigDepth": "12.85",
+          "no": "18"
+        },
+        {
+          "saupNo": "20200286",
+          "saupNm": "주공5단지2구역주택재건축정비사업조합",
+          "proStage": "제출완료",
+          "maxDigDepth": "10.60",
+          "no": "19"
+        },
+        {
+          "saupNo": "20200289",
+          "saupNm": "덕산~화명 비상연계 노후관 개량공사",
+          "proStage": "정보수정중",
+          "maxDigDepth": "10.50",
+          "no": "20"
+        },
+        {
+          "saupNo": "20200294",
+          "saupNm": "음성 성본산업단지 폐기물최종처리시설 조성사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "38.48",
+          "no": "21"
+        },
+        {
+          "saupNo": "20200298",
+          "saupNm": "울산공업용수도 노후관 개량사업(3차)",
+          "proStage": "제출완료",
+          "maxDigDepth": "7.00",
+          "no": "22"
+        },
+        {
+          "saupNo": "20200317",
+          "saupNm": "대흥2구역 주택재개발 정비사업 소규모 지하안전영향평가",
+          "proStage": "정보수정중",
+          "maxDigDepth": "11.76",
+          "no": "23"
+        },
+        {
+          "saupNo": "20200319",
+          "saupNm": "이천시 안흥동 주상복합 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "30.40",
+          "no": "24"
+        },
+        {
+          "saupNo": "20200322",
+          "saupNm": "성동구 용답동 229-1 주상복합 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "17.55",
+          "no": "25"
+        },
+        {
+          "saupNo": "20200341",
+          "saupNm": "동탄~인덕원 복선전철 제1공구 및 월곶~판교 복선전철 제8공구 건설공사 지하안전영향평가 용역",
+          "proStage": "사업 등록 완료",
+          "maxDigDepth": "43.20",
+          "no": "26"
+        },
+        {
+          "saupNo": "20200373",
+          "saupNm": "대구 달성공원역 주상복합 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "22.10",
+          "no": "27"
+        },
+        {
+          "saupNo": "20200379",
+          "saupNm": "대전광역시 중구 대흥동 456번지 근린생활시설 및 도시형생활주택 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "19.50",
+          "no": "28"
+        },
+        {
+          "saupNo": "20200382",
+          "saupNm": "인천지역 전기공급시설 전력구공사(동송도S/S~서송도S/S)",
+          "proStage": "제출완료",
+          "maxDigDepth": "75.00",
+          "no": "29"
+        },
+        {
+          "saupNo": "20200386",
+          "saupNm": "청주시 서원구 남이면 물류센터 1B-1BL 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "30.31",
+          "no": "30"
+        },
+        {
+          "saupNo": "20200387",
+          "saupNm": "동탄~인덕원 복선전철 제9공구 건설공사 ",
+          "proStage": "제출완료",
+          "maxDigDepth": "46.00",
+          "no": "31"
+        },
+        {
+          "saupNo": "20200389",
+          "saupNm": "수원 덕산병원 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "23.51",
+          "no": "32"
+        },
+        {
+          "saupNo": "20200398",
+          "saupNm": "한전 KDN 서울지역본부 사옥신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "22.70",
+          "no": "33"
+        },
+        {
+          "saupNo": "20200400",
+          "saupNm": "태평아파트 재건축 정비사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "13.65",
+          "no": "34"
+        },
+        {
+          "saupNo": "20200404",
+          "saupNm": "태평종합사회복지관 건립공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "18.06",
+          "no": "35"
+        },
+        {
+          "saupNo": "20200427",
+          "saupNm": "대구 삼덕동 주상복합 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "26.65",
+          "no": "36"
+        },
+        {
+          "saupNo": "20200430",
+          "saupNm": "시흥은계지구 상업2-1 근린생활시설 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "16.03",
+          "no": "37"
+        },
+        {
+          "saupNo": "20200439",
+          "saupNm": "서울특별시 영등포구 당산동6가 복합시설 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "16.93",
+          "no": "38"
+        },
+        {
+          "saupNo": "20200442",
+          "saupNm": "오포 공공하수처리시설 증설사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "13.83",
+          "no": "39"
+        },
+        {
+          "saupNo": "20200443",
+          "saupNm": "새연산아파트 소규모재건축정비사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "16.55",
+          "no": "40"
+        },
+        {
+          "saupNo": "20200455",
+          "saupNm": "검단신도시 오수중계펌프장 및 관로 공사",
+          "proStage": "정보수정중",
+          "maxDigDepth": "13.05",
+          "no": "41"
+        },
+        {
+          "saupNo": "20200456",
+          "saupNm": "서울 어울림 체육센터 건립",
+          "proStage": "사업 등록 완료",
+          "maxDigDepth": "18.15",
+          "no": "42"
+        },
+        {
+          "saupNo": "20200458",
+          "saupNm": "고양시 지축공공주택지구 C1-2-1 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "15.49",
+          "no": "43"
+        },
+        {
+          "saupNo": "20200460",
+          "saupNm": "야음제1지구 가로주택정비사업 신축공사",
+          "proStage": "정보수정중",
+          "maxDigDepth": "18.10",
+          "no": "44"
+        },
+        {
+          "saupNo": "20200471",
+          "saupNm": "강남구 역삼동 근린생활시설 및 공동주택 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "19.78",
+          "no": "45"
+        },
+        {
+          "saupNo": "20200473",
+          "saupNm": "운남동 영종하늘도시 00오피스텔 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "25.03",
+          "no": "46"
+        },
+        {
+          "saupNo": "20200476",
+          "saupNm": "진동물재생센터 증설사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "15.05",
+          "no": "47"
+        },
+        {
+          "saupNo": "20200483",
+          "saupNm": "효목동 00아파트 신축에 따른 소규모지하안전영향평가 용역",
+          "proStage": "제출완료",
+          "maxDigDepth": "18.81",
+          "no": "48"
+        },
+        {
+          "saupNo": "20200488",
+          "saupNm": "수원발KTX직결사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "21.79",
+          "no": "49"
+        },
+        {
+          "saupNo": "20200496",
+          "saupNm": "홍성군 홍북읍 신경리907 근린생활시설 및 오피스텔 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "17.82",
+          "no": "50"
+        },
+        {
+          "saupNo": "20200497",
+          "saupNm": "대전광역시 서구 용문동 589-14번지외 2필지 주상복합 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "19.42",
+          "no": "51"
+        },
+        {
+          "saupNo": "20200498",
+          "saupNm": "금사도시재생어울림센터",
+          "proStage": "제출완료",
+          "maxDigDepth": "12.00",
+          "no": "52"
+        },
+        {
+          "saupNo": "20200500",
+          "saupNm": "판교 제2테크노밸리 행복주택 및 기업성장센터 건설사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "40.96",
+          "no": "53"
+        },
+        {
+          "saupNo": "20200504",
+          "saupNm": "화성시 병점복합타운 상업13-2,3,4블록 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "23.46",
+          "no": "54"
+        },
+        {
+          "saupNo": "20200511",
+          "saupNm": "남구 대명동(157-3) 주상복합 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "18.61",
+          "no": "55"
+        },
+        {
+          "saupNo": "20200513",
+          "saupNm": "광교 C6블럭 주상복합 개발계획",
+          "proStage": "제출완료",
+          "maxDigDepth": "37.44",
+          "no": "56"
+        },
+        {
+          "saupNo": "20200516",
+          "saupNm": "피앤피시큐어 마곡사옥 신축공사 소규모지하안전영향평가",
+          "proStage": "제출완료",
+          "maxDigDepth": "16.98",
+          "no": "57"
+        },
+        {
+          "saupNo": "20200524",
+          "saupNm": "SW드림타운 건립공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "29.40",
+          "no": "58"
+        },
+        {
+          "saupNo": "20200538",
+          "saupNm": "위례지구내 주차장 13호 지하주차장 건축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "13.44",
+          "no": "59"
+        },
+        {
+          "saupNo": "20200540",
+          "saupNm": "익산시 마동 공동주택 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "13.56",
+          "no": "60"
+        },
+        {
+          "saupNo": "20200549",
+          "saupNm": "판교 제2테크노밸리 행복주택 및 기업성장센터 건설사업",
+          "proStage": "사업 등록 완료",
+          "maxDigDepth": "40.96",
+          "no": "61"
+        },
+        {
+          "saupNo": "20200550",
+          "saupNm": "판교 제2테크노밸리 행복주택 및 기업성장센터 건설사업(성남시청)",
+          "proStage": "제출완료",
+          "maxDigDepth": "40.96",
+          "no": "62"
+        },
+        {
+          "saupNo": "20200554",
+          "saupNm": "고창읍 읍내리 654-3외 3필지 주상복합 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "16.35",
+          "no": "63"
+        },
+        {
+          "saupNo": "20200556",
+          "saupNm": "상계6구역 재정비촉진지구 체육관시설 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "18.12",
+          "no": "64"
+        },
+        {
+          "saupNo": "20200557",
+          "saupNm": "대구엠비씨부지주상복합신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "23.00",
+          "no": "65"
+        },
+        {
+          "saupNo": "20200559",
+          "saupNm": "안양물류센터 재건축 사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "19.67",
+          "no": "66"
+        },
+        {
+          "saupNo": "20200561",
+          "saupNm": "동두천시 생연동 주상복합 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "19.80",
+          "no": "67"
+        },
+        {
+          "saupNo": "20200563",
+          "saupNm": "서교동 460-25번지 관광호텔 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "17.62",
+          "no": "68"
+        },
+        {
+          "saupNo": "20200564",
+          "saupNm": "송파방이 일자리연계형 창업지원주택 복합개발사업",
+          "proStage": "정보수정중",
+          "maxDigDepth": "15.76",
+          "no": "69"
+        },
+        {
+          "saupNo": "20200568",
+          "saupNm": "심곡본동 로얄아파트 가로주택정비사업 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "21.60",
+          "no": "70"
+        },
+        {
+          "saupNo": "20200571",
+          "saupNm": "하왕십리동 역세권 2030 청년주택 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "26.90",
+          "no": "71"
+        },
+        {
+          "saupNo": "20200575",
+          "saupNm": "검단신도시 상업용지(C11-4-1)복합시설 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "18.68",
+          "no": "72"
+        },
+        {
+          "saupNo": "20200577",
+          "saupNm": "인천 부평구 부평동 531-3외 6필지 오피스텔 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "12.00",
+          "no": "73"
+        },
+        {
+          "saupNo": "20200579",
+          "saupNm": "파주-운정3지구 F3-1-9L 신축공사 소규모지하안전영향평가",
+          "proStage": "제출완료",
+          "maxDigDepth": "18.90",
+          "no": "74"
+        },
+        {
+          "saupNo": "20200580",
+          "saupNm": "오시리아 관광단지 메디타운 개발사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "15.21",
+          "no": "75"
+        },
+        {
+          "saupNo": "20200581",
+          "saupNm": "경산시 중방동 임대주택 신축공사",
+          "proStage": "사업 등록 완료",
+          "maxDigDepth": "15.55",
+          "no": "76"
+        },
+        {
+          "saupNo": "20200582",
+          "saupNm": "아산공공하수처리시설 증설(3단계)사업 ",
+          "proStage": "제출완료",
+          "maxDigDepth": "13.85",
+          "no": "77"
+        },
+        {
+          "saupNo": "20200583",
+          "saupNm": "시흥시 대야동 650-2번지(시흥은계 상업2-3) 오피스텔",
+          "proStage": "제출완료",
+          "maxDigDepth": "38.73",
+          "no": "78"
+        },
+        {
+          "saupNo": "20200584",
+          "saupNm": "대구 칠성동2가 주거복합 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "19.86",
+          "no": "79"
+        },
+        {
+          "saupNo": "20200589",
+          "saupNm": "2020 승강편의시설 설치 지하안전영향평가 대행용역 (신림역 #5 E/S 설치공사)",
+          "proStage": "제출완료",
+          "maxDigDepth": "8.94",
+          "no": "80"
+        },
+        {
+          "saupNo": "20200590",
+          "saupNm": "판교 제2테크노밸리 PSK CAMPUS 조성사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "30.86",
+          "no": "81"
+        },
+        {
+          "saupNo": "20200593",
+          "saupNm": "홍성 Solis IDC 충남페타센터 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "19.90",
+          "no": "82"
+        },
+        {
+          "saupNo": "20200595",
+          "saupNm": "경기도 남양주시 다산지금지구 업무1BL 복합시설 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "14.31",
+          "no": "83"
+        },
+        {
+          "saupNo": "20200600",
+          "saupNm": "구월지구 우수저류시설 설치사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "18.05",
+          "no": "84"
+        },
+        {
+          "saupNo": "20200603",
+          "saupNm": "과천지식정보타운 3-3BL 오피스텔 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "34.61",
+          "no": "85"
+        },
+        {
+          "saupNo": "20200612",
+          "saupNm": "여의도동 오피스텔 개발사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "27.06",
+          "no": "86"
+        },
+        {
+          "saupNo": "20200613",
+          "saupNm": "용산구 서빙고동 4-3,6,15,20,77,142 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "22.21",
+          "no": "87"
+        },
+        {
+          "saupNo": "20200614",
+          "saupNm": "홍제동 근린생활시설 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "14.09",
+          "no": "88"
+        },
+        {
+          "saupNo": "20200619",
+          "saupNm": "창원시 성산구 상남동 74-3,4번지 생활숙박시설 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "25.14",
+          "no": "89"
+        },
+        {
+          "saupNo": "20200623",
+          "saupNm": "고양지축 공공주택지구 업무B1-1-1,2 근린생활시설 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "15.52",
+          "no": "90"
+        },
+        {
+          "saupNo": "20200625",
+          "saupNm": "가천대 길병원 편의시설 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "30.10",
+          "no": "91"
+        },
+        {
+          "saupNo": "20200628",
+          "saupNm": "평택~부여~익산(서부내륙)고속도로 예산군 통과구간 변경설계",
+          "proStage": "제출완료",
+          "maxDigDepth": "202.00",
+          "no": "92"
+        },
+        {
+          "saupNo": "20200630",
+          "saupNm": "광교 13-4-2,3BL 지식산업센터 개발사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "27.58",
+          "no": "93"
+        },
+        {
+          "saupNo": "20200631",
+          "saupNm": "2020 승강편의시설 설치 지하안전영향평가 대행용역 (낙성대역 #3 E/S 설치공사)",
+          "proStage": "제출완료",
+          "maxDigDepth": "11.06",
+          "no": "94"
+        },
+        {
+          "saupNo": "20200637",
+          "saupNm": "대구광역시 달서구 본리동 주상복합 신축사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "29.22",
+          "no": "95"
+        },
+        {
+          "saupNo": "20200640",
+          "saupNm": "대구 중구 남산동 주상복합시설 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "25.73",
+          "no": "96"
+        },
+        {
+          "saupNo": "20200641",
+          "saupNm": "수원시 금곡동 1108-2,3번지 오피스텔 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "19.90",
+          "no": "97"
+        },
+        {
+          "saupNo": "20200642",
+          "saupNm": "서울시 용산구 한남동 76-6 오피스텔 개발사업",
+          "proStage": "제출완료",
+          "maxDigDepth": "30.53",
+          "no": "98"
+        },
+        {
+          "saupNo": "20200643",
+          "saupNm": "청라동 152-22 근생 및 오피스텔 신축공사",
+          "proStage": "정보수정중",
+          "maxDigDepth": "17.70",
+          "no": "99"
+        },
+        {
+          "saupNo": "20200646",
+          "saupNm": "서귀포시 서호동 지식산업센터 신축공사",
+          "proStage": "제출완료",
+          "maxDigDepth": "19.91",
+          "no": "100"
+        }
+      ]
+    }
+  }
+}

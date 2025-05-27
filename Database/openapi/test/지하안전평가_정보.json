@@ -1,0 +1,28 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "0",
+      "resultMsg": "NORMAL_CODE"
+    },
+    "numOfRows": "1000",
+    "pageNo": "1",
+    "totalCount": "1",
+    "body": {
+      "items": [
+        {
+          "evalNo": "E10091000030",
+          "evalNm": "왕길사거리 지하차도 설치공사 구간 내 간섭 열수송관 이설공사 지하안전평가",
+          "constCost": "11000.00",
+          "maxDigDepth": "10.08",
+          "digCapacity": "112.76",
+          "startYmd": "20220831",
+          "endYmd": "20230207",
+          "evalCost": "90860.00",
+          "proStage": "진행중",
+          "digArea": "0",
+          "no": "1"
+        }
+      ]
+    }
+  }
+}
