@@ -4,45 +4,80 @@
       "resultCode": "0",
       "resultMsg": "NORMAL_CODE"
     },
-    "numOfRows": "5",
+    "numOfRows": "10",
     "pageNo": "1",
-    "totalCount": "3655",
+    "totalCount": "881",
     "body": {
       "items": [
         {
-          "evalNo": "E00126000025",
-          "evalNm": "유성웰니스재활전문병원 신축공사 소규모 지하안전영향평가",
-          "maxDigDepth": "19.91",
+          "evalNo": "E00226000014",
+          "evalNm": "구수산공원 화성파크드림 공동주택 신축공사",
+          "maxDigDepth": "12.65",
           "proStage": "진행중",
           "no": "1"
         },
         {
-          "evalNo": "E00150000003",
-          "evalNm": "연산5구역 재개발정비사업조합 소규모 지하안전영향평가 용역",
-          "maxDigDepth": "13.82",
+          "evalNo": "E00116000020",
+          "evalNm": "안양 호계동 데이터센터 신축공사",
+          "maxDigDepth": "17.22",
           "proStage": "진행중",
           "no": "2"
         },
         {
-          "evalNo": "E00150000004",
-          "evalNm": "부산 초량오피스텔 개발사업 소규모지하안전영향평가",
-          "maxDigDepth": "19.00",
+          "evalNo": "E00243000033",
+          "evalNm": "성남고등지구 상업지역 2-2, 3 오피스텔 신축공사 소규모지하안전영향평가 용역",
+          "maxDigDepth": "19.09",
           "proStage": "진행중",
           "no": "3"
         },
         {
-          "evalNo": "E10009000001",
-          "evalNm": "금화호텔 신축공사",
-          "maxDigDepth": "18.00",
+          "evalNo": "E00203000046",
+          "evalNm": "안산시 단원구 선부동 1071번지 근린생활시설 신축공사",
+          "maxDigDepth": "15.89",
           "proStage": "진행중",
           "no": "4"
         },
         {
-          "evalNo": "E00129000004",
-          "evalNm": "대구광역시 중구 대신동 주상복합 신축공사",
-          "maxDigDepth": "19.20",
+          "evalNo": "E00024000008",
+          "evalNm": "풍원화학(주) 마곡연구소 신축공사 소규모 지하안전영향평가(재협의)",
+          "maxDigDepth": "18.59",
           "proStage": "진행중",
           "no": "5"
+        },
+        {
+          "evalNo": "E00113000007",
+          "evalNm": "인천 부평구 삼산동 325-370외 부평정수장 도수관로 정비공사",
+          "maxDigDepth": "12.00",
+          "proStage": "진행중",
+          "no": "6"
+        },
+        {
+          "evalNo": "E00243000034",
+          "evalNm": "마곡일반산업단지 D32-8 연구시설 신축공사 중 소규모지하안전영향평가 용역",
+          "maxDigDepth": "13.82",
+          "proStage": "진행중",
+          "no": "7"
+        },
+        {
+          "evalNo": "E00137000009",
+          "evalNm": "양동 지역주택조합아파트 신축공사",
+          "maxDigDepth": "14.49",
+          "proStage": "진행중",
+          "no": "8"
+        },
+        {
+          "evalNo": "E00137000010",
+          "evalNm": "남구 월산동 36-8번지 일원 주상복합 신축공사 소규모 지하안전영향평가",
+          "maxDigDepth": "12.80",
+          "proStage": "진행중",
+          "no": "9"
+        },
+        {
+          "evalNo": "E00149000038",
+          "evalNm": "천안시 서북구 불당동 1486번지 업무시설 신축공사",
+          "maxDigDepth": "19.57",
+          "proStage": "진행중",
+          "no": "10"
         }
       ]
     }

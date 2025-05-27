@@ -1,8 +1,39 @@
 {
   "response": {
     "header": {
-      "resultCode": "3",
-      "resultMsg": "NODATA_ERROR"
+      "resultCode": "0",
+      "resultMsg": "NORMAL_CODE"
+    },
+    "numOfRows": "10",
+    "pageNo": "1",
+    "totalCount": "1",
+    "body": {
+      "items": [
+        {
+          "sagoNo": "20220138",
+          "sido": "서울특별시",
+          "sigungu": "구로구",
+          "dong": "천왕동",
+          "addr": "오리로 1149",
+          "sagoLat": "",
+          "sagoLon": "",
+          "sagoDate": "20221208",
+          "sinkWidth": "0.20",
+          "sinkExtend": "0.80",
+          "sinkDepth": "0.50",
+          "grdKind": "기타",
+          "sagoDetail": "？ 장       소 : 구로구 오리로 1149 (천왕역 2번출구 인근) \n？ 사고원인 : 다짐불량으로 추정\n？ 피해상황 : 부상자 1명 발생(유지선(여,50세)/오른쪽발목통증/부천성모병원 응급실 치료후 자가 퇴원)\n？ 발생규모 : 0.2m×0.8m×0.5m(가로×세로×깊이)",
+          "deathCnt": "0",
+          "injuryCnt": "1",
+          "vehicleCnt": "0",
+          "trStatus": "복구완료",
+          "trMethod": "구로구 도로과 지반침하부분 보도 복구 완료",
+          "trAmt": "4000000",
+          "trFnDate": "20221210",
+          "daStDate": "00010101",
+          "no": "1"
+        }
+      ]
     }
   }
 }

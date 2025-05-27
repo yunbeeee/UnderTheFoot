@@ -4,45 +4,80 @@
       "resultCode": "0",
       "resultMsg": "NORMAL_CODE"
     },
-    "numOfRows": "5",
+    "numOfRows": "10",
     "pageNo": "1",
-    "totalCount": "812",
+    "totalCount": "182",
     "body": {
       "items": [
         {
-          "evalNo": "E10000000003",
-          "evalNm": "북오송 S/S 배전인출 전력구공사 사후 지하안전영향조사 ",
-          "maxDigDepth": "21.75",
+          "evalNo": "E10044000013",
+          "evalNm": "안산시 성포동 593-4,5번지 사랑의 병원 증축공사",
+          "maxDigDepth": "23.36",
           "proStage": "진행중",
           "no": "1"
         },
         {
-          "evalNo": "E00084000003",
-          "evalNm": "청주지역 전기공급시설 관로공사(1-1차, 목련로구간)",
-          "maxDigDepth": "22.00",
-          "proStage": "작성중",
+          "evalNo": "E00030000013",
+          "evalNm": "수원시 서둔동 자동차매매장 신축공사",
+          "maxDigDepth": "23.66",
+          "proStage": "진행중",
           "no": "2"
         },
         {
-          "evalNo": "E00226000010",
-          "evalNm": "동구 신천동 327-3,4 근린생활시설 및 오피스텔 신축공사",
-          "maxDigDepth": "28.35",
+          "evalNo": "E00102000085",
+          "evalNm": "용인 현성 더테라스 신축공사 사후지하안전영향조사",
+          "maxDigDepth": "27.46",
           "proStage": "진행중",
           "no": "3"
         },
         {
-          "evalNo": "E00038000079",
-          "evalNm": "평택 고덕지구 11-1-1BL 복합시설 신축공사 사후지하안전영향조사",
-          "maxDigDepth": "25.90",
+          "evalNo": "E10068000002",
+          "evalNm": "양산~사송연계 2단계 및 사송지구 내 열수송관공사 사후지하안전영향조사",
+          "maxDigDepth": "7.60",
           "proStage": "진행중",
           "no": "4"
         },
         {
-          "evalNo": "E00038000080",
-          "evalNm": "광진구 화양동 111-85번지 일원 오피스텔 신축공사 사후지하안전영향조사",
-          "maxDigDepth": "27.40",
-          "proStage": "작성중",
+          "evalNo": "E00017000038",
+          "evalNm": "당진대덕수청지구 상업시설 신축공사",
+          "maxDigDepth": "24.33",
+          "proStage": "진행중",
           "no": "5"
+        },
+        {
+          "evalNo": "E00203000047",
+          "evalNm": "고덕 국제화계획지구 업무시설용지 12-2-1BL 판매시설 및 근린생활시설 신축공사",
+          "maxDigDepth": "22.28",
+          "proStage": "진행중",
+          "no": "6"
+        },
+        {
+          "evalNo": "E00102000090",
+          "evalNm": "동국제약 청담동 사옥 신축공사",
+          "maxDigDepth": "21.09",
+          "proStage": "진행중",
+          "no": "7"
+        },
+        {
+          "evalNo": "E00130000009",
+          "evalNm": "도봉산~옥정 광역철도 건설공사 사후지하안전영향조사",
+          "maxDigDepth": "52.02",
+          "proStage": "진행중",
+          "no": "8"
+        },
+        {
+          "evalNo": "E00226000015",
+          "evalNm": "뉴 센트럴 두산 위브 더제니스 아파트",
+          "maxDigDepth": "20.70",
+          "proStage": "진행중",
+          "no": "9"
+        },
+        {
+          "evalNo": "E00004000014",
+          "evalNm": "전주에코시티1,2블럭 주상복합 신축공사 사후지하안전영향조사 용역",
+          "maxDigDepth": "26.06",
+          "proStage": "진행중",
+          "no": "10"
         }
       ]
     }

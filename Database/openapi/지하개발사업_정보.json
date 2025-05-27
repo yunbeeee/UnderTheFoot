@@ -1,8 +1,33 @@
 {
   "response": {
     "header": {
-      "resultCode": "3",
-      "resultMsg": "NODATA_ERROR"
+      "resultCode": "0",
+      "resultMsg": "NORMAL_CODE"
+    },
+    "numOfRows": "10",
+    "pageNo": "1",
+    "totalCount": "1",
+    "body": {
+      "items": [
+        {
+          "saupNo": "20190072",
+          "saupNm": "춘천시 근화1지역주택조합 신축공사",
+          "saupClass": "특정지역 개발",
+          "groupCd": "F00283",
+          "groupNm": "길철수",
+          "zipNo": "24246",
+          "addr": "강원도 춘천시 중앙로194번길 6, 외1필지 근화동 751-5번지 (근화동)",
+          "staPlanYmd": "20190501",
+          "endPlanYmd": "20220430",
+          "constCost": "80000.00",
+          "maxDigDepth": "13.83",
+          "digCapacity": "0.00",
+          "digArea": "0.00",
+          "devCorpNm": "",
+          "proStage": "제출완료",
+          "no": "1"
+        }
+      ]
     }
   }
 }
