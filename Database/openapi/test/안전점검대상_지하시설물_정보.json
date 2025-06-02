@@ -6,16 +6,352 @@
     },
     "numOfRows": "1000",
     "pageNo": "1",
-    "totalCount": "1",
+    "totalCount": "43",
     "body": {
       "items": [
         {
-          "facilNo": "ELE2015-000008",
-          "facilNm": "154kV",
-          "mngMain": "(주)지에스포천그린에너지",
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
           "facilClass": "기타",
-          "facilKind": "전기시설",
+          "facilKind": "수송관",
           "no": "1"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "2"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "3"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "4"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "5"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "6"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "7"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "8"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "9"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "10"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "11"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "12"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "13"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "14"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "15"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "16"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "17"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "18"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "19"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "20"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "21"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "22"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "23"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "24"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "25"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "26"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "27"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "28"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "29"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "30"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "31"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "32"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "33"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "34"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "35"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "36"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "37"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "38"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "39"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "40"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "41"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "42"
+        },
+        {
+          "facilNo": "CAP2019-000014",
+          "facilNm": "열수송관",
+          "mngMain": "한국지역난방공사 청주지사",
+          "facilClass": "기타",
+          "facilKind": "수송관",
+          "no": "43"
         }
       ]
     }

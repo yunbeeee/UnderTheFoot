@@ -6,30 +6,19 @@
     },
     "numOfRows": "1000",
     "pageNo": "1",
-    "totalCount": "2",
+    "totalCount": "1",
     "body": {
       "items": [
         {
-          "evalNo": "E00017000038",
-          "evalNm": "당진대덕수청지구 상업시설 신축공사",
-          "evalYy": "2021",
-          "yearChasu": "2",
-          "startYmd": "20190930",
-          "endYmd": "20200430",
-          "progRate": "100.00",
+          "evalNo": "E00130000046",
+          "evalNm": "평택~오송 2복선화 건설공사 착공후지하안전조사용역(5공구)",
+          "evalYy": "",
+          "yearChasu": "",
+          "startYmd": "",
+          "endYmd": "",
+          "progRate": "",
           "proStage": "진행중",
           "no": "1"
-        },
-        {
-          "evalNo": "E00017000038",
-          "evalNm": "당진대덕수청지구 상업시설 신축공사",
-          "evalYy": "2024",
-          "yearChasu": "1",
-          "startYmd": "20190801",
-          "endYmd": "20200430",
-          "progRate": "100.00",
-          "proStage": "진행중",
-          "no": "2"
         }
       ]
     }

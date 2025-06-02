@@ -1,0 +1,28 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "0",
+      "resultMsg": "NORMAL_CODE"
+    },
+    "numOfRows": "1000",
+    "pageNo": "1",
+    "totalCount": "1",
+    "body": {
+      "items": [
+        {
+          "evalNo": "E00014000001",
+          "evalNm": "제주시 연동 274-13번지 일원 주상복합시설 지하안전영향평가",
+          "constCost": "15000.00",
+          "maxDigDepth": "21.72",
+          "digCapacity": "0.00",
+          "startYmd": "20180319",
+          "endYmd": "20180510",
+          "evalCost": "41000.00",
+          "proStage": "진행중",
+          "digArea": "34823",
+          "no": "1"
+        }
+      ]
+    }
+  }
+}

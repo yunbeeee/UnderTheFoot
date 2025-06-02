@@ -10,16 +10,16 @@
     "body": {
       "items": [
         {
-          "evalNo": "E10091000030",
-          "evalNm": "왕길사거리 지하차도 설치공사 구간 내 간섭 열수송관 이설공사 지하안전평가",
-          "constCost": "11000.00",
-          "maxDigDepth": "10.08",
-          "digCapacity": "112.76",
-          "startYmd": "20220831",
-          "endYmd": "20230207",
-          "evalCost": "90860.00",
-          "proStage": "진행중",
-          "digArea": "0",
+          "evalNo": "E00066000237",
+          "evalNm": "서린구역 3,4,5지구 도시환경정비사업",
+          "constCost": "163000.00",
+          "maxDigDepth": "38.11",
+          "digCapacity": "0.00",
+          "startYmd": "20250423",
+          "endYmd": "20250529",
+          "evalCost": "80000.00",
+          "proStage": "작성중",
+          "digArea": "2494",
           "no": "1"
         }
       ]
