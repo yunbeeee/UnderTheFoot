@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './KakaoMap.css';
 
 const REST_API_KEY = process.env.REACT_APP_KAKAO_REST_API_KEY; // Kakao REST API Key
 
@@ -144,16 +145,21 @@ const KakaoMap = () => {
     <div>
       <h2>🚗 출발지/도착지 경로 검색</h2>
 
-      <div style={{ marginBottom: '1rem' }}>
+      <div id="map" style={{ height: '560px', marginTop: '1rem', marginBottom: '1rem' }} />
+
+      <div className="flex items-center">
+        <label className="w-20 font-medium text-gray-700 pb-[11px]">출발지:</label>
         <input
           type="text"
           placeholder="출발지를 입력하세요"
+          className="input-box"
           value={startQuery}
           onChange={(e) => {
             setStartQuery(e.target.value);
             searchKeyword(e.target.value, setStartResults);
           }}
         />
+      </div> 
         {startResults.length > 0 && (
           <div style={{
             maxHeight: '200px',
@@ -178,18 +184,21 @@ const KakaoMap = () => {
             ))}
           </div>
         )}
-      </div>
+     
 
-      <div style={{ marginBottom: '1rem' }}>
+      <div className="flex items-center">
+        <label className="w-20 font-medium text-gray-700 pb-[11px]">도착지:</label>
         <input
           type="text"
           placeholder="도착지를 입력하세요"
+          className="input-box"
           value={endQuery}
           onChange={(e) => {
             setEndQuery(e.target.value);
             searchKeyword(e.target.value, setEndResults);
           }}
         />
+      </div>
         {endResults.length > 0 && (
           <div style={{
             maxHeight: '200px',
@@ -214,14 +223,14 @@ const KakaoMap = () => {
             ))}
           </div>
         )}
-      </div>
+      
 
-      <button onClick={getCarDirection} disabled={!startCoord || !endCoord}>
+      <button onClick={getCarDirection} disabled={!startCoord || !endCoord} className="search-button"> 
         최적 경로 보기
       </button>
 
-      <div id="map" style={{ width: '30%', height: '500px', marginTop: '1rem' }} />
-      {/* <div id="map" className="w-full h-[300px] mt-4" /> */}
+      
+
       
     </div>
   );

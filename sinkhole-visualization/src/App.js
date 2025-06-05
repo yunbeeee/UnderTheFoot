@@ -13,27 +13,29 @@ function App() {
       </h1>
 
       {/* 3단 고정 레이아웃 */}
-      <div className="flex gap-4 mx-auto max-w-[1400px]">
+      <div className="flex gap-4 mx-auto max-w-[2000px]">
         {/* 왼쪽 (검색 + 카카오맵) */}
-        <div className="w-96 h-[596px] bg-white p-4 rounded shadow overflow-auto">
+        <div className="w-96 h-[806px] bg-white p-4 rounded shadow overflow-auto">
           <KakaoMap />
         </div>
 
         {/* 가운데 (서울 지도) */}
-        <div className="w-[701px] h-[596px] bg-white p-4 rounded shadow">
+        {/* <div className="w-[701px] h-[596px] bg-white p-4 rounded shadow">
           <SeoulMap />
+          <InfoBox />
+        </div> */}
+        <div className="flex flex-col w-[701px] bg-white p-4 rounded shadow">
+          <div className="h-[596px]">
+            <SeoulMap />
+          </div>
+            <InfoBox />
         </div>
-
         {/* 오른쪽 (차트) */}
         <div className="w-60 h-[806px] bg-white p-4 rounded shadow overflow-auto">
           <ChartPanel />
         </div>
       </div>
 
-      {/* 하단 정보창 */}
-      <div className="mt-6 max-w-[1400px] mx-auto">
-        <InfoBox />
-      </div>
     </div>
   );
 }

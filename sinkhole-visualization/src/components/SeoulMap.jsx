@@ -42,13 +42,15 @@ const SeoulMap = () => {
   };
 
   return (
-    <MapContainer center={[37.5665, 126.9780]} zoom={11} style={{ height: "600px", width: "100%" }}>
-      <TileLayer
-        attribution='&copy; OpenStreetMap contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <GeoJSON data={seoulGeoJson} style={styleFeature} />
-      {sinkholes.map((item, idx) => (
+    <div>
+      <h1>🕳️ 싱크홀 발생 현황</h1>
+      <MapContainer center={[37.5665, 126.9780]} zoom={11} style={{ height: "560px", marginTop: '1rem' }} >
+        <TileLayer
+          attribution='&copy; OpenStreetMap contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <GeoJSON data={seoulGeoJson} style={styleFeature} />
+        {sinkholes.map((item, idx) => (
         <Marker
           key={idx}
           position={[item.sagoLat, item.sagoLon]}
@@ -63,7 +65,8 @@ const SeoulMap = () => {
           </Popup>
         </Marker>
       ))}
-    </MapContainer>
+      </MapContainer>
+    </div>
   );
 };
 
