@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, GeoJSON, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import seoulGeoJson from '../data/seoul_municipalities_geo_simple.json';
 import sinkholes from '../sinkholes.json';
-import redPinImg from 'C:/Users/USER/Desktop/Lookatme/sinkhole-visualization/src/asset/redpin.png'; // 이미지 경로에 맞게 import
+import redPinImg from '../asset/redpin.png'; // 이미지 경로에 맞게 import
 import * as d3 from 'd3';
 
 // 커스텀 빨간 핀 아이콘 정의
