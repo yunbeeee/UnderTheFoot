@@ -41,9 +41,29 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       {/* 타이틀 */}
-      <h1 className="text-3xl font-bold mb-6">
-        Under the foot: <span className="text-black">당신의 발 밑은 안전한가요?</span>
-      </h1>
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="text-3xl font-bold">
+          Under the foot: <span className="text-black">당신의 발 밑은 안전한가요?</span>
+        </h1>
+        <div className="flex space-x-4 text-sm">
+          <a
+            href="https://www.safekorea.go.kr/idsiSFK/neo/main/main.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            📩 신고하기
+          </a>
+          <a
+            href="https://www.safekorea.go.kr/idsiSFK/neo/bbs/docs/view.do?bbs_cd=1005&seq=14127"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            📘 대처법 보기
+          </a>
+        </div>
+      </div>
 
       {/* 3단 고정 레이아웃 */}
       <div className="flex gap-4 mx-auto max-w-[2000px]">

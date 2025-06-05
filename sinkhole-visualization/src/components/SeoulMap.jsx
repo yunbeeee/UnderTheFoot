@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { MapContainer, TileLayer, GeoJSON, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
-import seoulGeoJson from '../data/seoul_municipalities_geo_simple.json';
+import seoulGeoJson from '../data/seoul_gu_boundary.json'
 import sinkholes from '../sinkholes.json';
 import redPinImg from '../asset/redpin.png'; // 이미지 경로에 맞게 import
 import * as d3 from 'd3';
+// import centroid from '@turf/centroid';
 
 // 커스텀 빨간 핀 아이콘 정의
 const redIcon = new L.Icon({
@@ -18,17 +19,37 @@ const redIcon = new L.Icon({
   className: ''
 });
 
-// 위험도 예시값
-const riskScores = {
-  종로구: 0.12, 중구: 0.45, 용산구: 0.81, 성동구: 0.34, 광진구: 0.58,
-  동대문구: 0.67, 중랑구: 0.23, 성북구: 0.75, 강북구: 0.19, 도봉구: 0.11,
-  노원구: 0.29, 은평구: 0.63, 서대문구: 0.72, 마포구: 0.38, 양천구: 0.26,
-  강서구: 0.44, 구로구: 0.53, 금천구: 0.36, 영등포구: 0.69, 동작구: 0.77,
-  관악구: 0.55, 서초구: 0.49, 강남구: 0.95, 송파구: 0.41, 강동구: 0.33
-};
+function calculateRiskScores(data) {
+  const countByDistrict = {};
+
+  // 1. 각 자치구별로 발생 건수 세기
+  data.forEach((entry) => {
+    const district = entry.sigungu;
+    if (!district) return; // null 값 제외
+    countByDistrict[district] = (countByDistrict[district] || 0) + 1;
+  });
+
+  // 2. 건수 기준으로 정규화 (0 ~ 1)
+  const values = Object.values(countByDistrict);
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+
+  const normalizedScores = {};
+  Object.entries(countByDistrict).forEach(([district, count]) => {
+    // min == max인 경우 모두 1로 처리 (예외 방지)
+    const score = (max === min) ? 1 : (count - min) / (max - min);
+    normalizedScores[district] = parseFloat(score.toFixed(2));
+  });
+
+  return normalizedScores;
+}
+
+// 사용 예시
+const riskScores = calculateRiskScores(sinkholes);
 
 const colorScale = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, 1]);
-
+const [selectedGu, setSelectedGu] = useState(null);
+const mapRef = useRef(); // leaflet Map 인스턴스 접근용
 const SeoulMap = ({ 
   setSelectedSinkhole, selectedCauses, selectedMonths,
   depthRange, areaRange 
@@ -103,37 +124,99 @@ const SeoulMap = ({
   });
 
   const styleFeature = (feature) => {
-    const guName = feature.properties.name;
-    const risk = riskScores[guName] ?? 0;
+    const fullName = feature.properties.SGG_NM;
+    const guName = fullName.replace('서울특별시 ', '').trim();
+    const risk = riskScores[guName];
+    console.log('guName:', guName, 'risk:', riskScores[guName]);
     return {
-      fillColor: colorScale(risk),
+      fillColor: risk !== undefined ? colorScale(risk) : '#ccc',
       weight: 1,
       color: 'white',
       fillOpacity: 0.7,
     };
   };
 
+  const handleFeatureClick = (feature, layer) => {
+    layer.on({
+      click: () => {
+        const bounds = layer.getBounds();
+        // const center = bounds.getCenter();
+        setSelectedGu(feature.properties.SGG_NM.replace('서울특별시 ', '').trim());
+       
+        console.log('mapRef:', mapRef.current);  // 클릭 이벤트 안에서
+
+        mapRef.current?.fitBounds(bounds, { padding: [20, 20] });
+
+      }
+    });
+  };
+
+
   return (
     <div>
       <h1>🕳️ 싱크홀 발생 현황</h1>
-      <MapContainer center={[37.5665, 126.9780]} zoom={11} style={{ height: "560px", marginTop: '1rem' }} >
+      <MapContainer
+        center={[37.5665, 126.9780]}
+        zoom={11}
+        style={{ height: "560px", marginTop: '1rem' }}
+        whenCreated={(mapInstance) => { mapRef.current = mapInstance; }}
+      >
         <TileLayer
           attribution='&copy; OpenStreetMap contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <GeoJSON data={seoulGeoJson} style={styleFeature} />
-        
-        {filteredSinkholes.map((item, idx) => (
-        <Marker
-          key={idx}
-          position={[item.sagoLat, item.sagoLon]}
-          icon={redIcon}
-          eventHandlers={{
-            click: () => setSelectedSinkhole(item)
-          }}
-        >
-        </Marker>
-      ))}
+
+          <GeoJSON
+          data={seoulGeoJson}
+          style={styleFeature}
+          onEachFeature={handleFeatureClick}
+          />
+          {/* 자치구 이름 텍스트 표시 */}
+          {seoulGeoJson.features.map((feature, idx) => {
+            const bounds = L.geoJSON(feature).getBounds();
+            const center = bounds.getCenter();      
+            // const center = centroid(feature).geometry.coordinates;
+            const guName = feature.properties.SGG_NM.replace('서울특별시 ', '');
+
+            return (
+              <Marker
+                key={`label-${idx}`}
+                position={center}
+                icon={L.divIcon({
+                  className: 'gu-label',
+                  html: `<div>${guName}</div>`,
+                  iconSize: [80, 20],
+                  iconAnchor: [40, 10],
+                })}
+                interactive={false}
+                eventHandlers={{
+                  click: () => setSelectedSinkhole(item)
+                }}
+              />
+            );
+          })}
+
+        {sinkholes
+          .filter(item => {
+            if (!selectedGu) return false;
+            const guName = item.sigungu?.replace('서울특별시 ', '');
+            return !selectedGu || guName === selectedGu;
+          })
+          .map((item, idx) => (
+            <Marker
+              key={idx}
+              position={[item.sagoLat, item.sagoLon]}
+              icon={redIcon}
+            >
+              <Popup>
+                <div>
+                  <b>{item.addr}</b><br />
+                  날짜: {item.sagoDate}<br />
+                  규모: {item.sinkWidth} x {item.sinkExtend} x {item.sinkDepth} m
+                </div>
+              </Popup>
+            </Marker>
+        ))}
       </MapContainer>
     </div>
   );

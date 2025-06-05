@@ -139,6 +139,12 @@ const KakaoMap = () => {
 
     newPolyline.setMap(map);
     setPolyline(newPolyline);
+
+    const bounds = new window.kakao.maps.LatLngBounds();
+    bounds.extend(new window.kakao.maps.LatLng(startCoord.lat, startCoord.lng));
+    bounds.extend(new window.kakao.maps.LatLng(endCoord.lat, endCoord.lng));
+    linePath.forEach((latlng) => bounds.extend(latlng));
+    map.setBounds(bounds);
   };
 
   return (
