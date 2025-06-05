@@ -7,6 +7,7 @@ import InfoBox from './components/InfoBox';
 function App() {
   const [selectedSinkhole, setSelectedSinkhole] = useState(null);
   const [selectedCauses, setSelectedCauses] = useState([]); // 중복 선택 허용 -> 배열로 관리
+  const [selectedMonths, setSelectedMonths] = useState([]);
   const [depthRange, setDepthRange] = useState([0, 20])
   const [areaRange, setAreaRange] = useState([0, 300])
 
@@ -27,7 +28,14 @@ function App() {
     // 항상 배열 형태로 trim 적용 후 저장 <- 단일 원인에도 적용하기 위함
     const causes = parsed.map(d => d.trim()).filter(Boolean);
     setSelectedCauses(causes);
+
+    // 발생 월 처리
+    const dateStr = sinkhole.sagoDate?.toString();
+    const month = dateStr && dateStr.length >= 6 ? dateStr.substring(4, 6) : null;
+    setSelectedMonths([month]);
   };
+
+
   
 
   return (
@@ -54,6 +62,7 @@ function App() {
             <SeoulMap 
             setSelectedSinkhole={handleSinkholeSelect} 
             selectedCauses={selectedCauses} 
+            selectedMonths={selectedMonths}
             depthRange={depthRange}
             areaRange={areaRange}
             />
@@ -65,6 +74,8 @@ function App() {
           <ChartPanel 
           selectedCauses={selectedCauses} 
           setSelectedCauses={setSelectedCauses}
+          selectedMonths={selectedMonths}
+          setSelectedMonths={setSelectedMonths}
           depthRange={depthRange} 
           setDepthRange={setDepthRange}
           areaRange={areaRange}

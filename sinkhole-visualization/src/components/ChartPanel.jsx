@@ -5,7 +5,11 @@ import sinkholes from '../sinkholes.json';
 import * as d3 from 'd3';
 import { parse } from 'json5';
 
-const ChartPanel = ({ selectedCauses, setSelectedCauses, depthRange, setDepthRange, areaRange, setAreaRange }) => {
+const ChartPanel = ({ 
+  selectedCauses, setSelectedCauses, 
+  selectedMonths, setSelectedMonths,
+  depthRange, setDepthRange, 
+  areaRange, setAreaRange }) => {
 
   // 원인 카테고리별 카운트
   const causeCounts = {};
@@ -31,6 +35,7 @@ const ChartPanel = ({ selectedCauses, setSelectedCauses, depthRange, setDepthRan
     });
   });
 
+
   const chartData = Object.entries(causeCounts).map(([name, count]) => ({
     name,
     count,
@@ -43,6 +48,36 @@ const ChartPanel = ({ selectedCauses, setSelectedCauses, depthRange, setDepthRan
       setSelectedCauses([...selectedCauses, name]);
     }
   };
+
+  // 월별 사고 건수 카운트
+  const monthCounts = new Array(12).fill(0); // 0~11: 1월~12월
+  sinkholes.forEach(item => {
+    const dateStr = String(item.sagoDate);
+    if (dateStr.length >= 6) {
+      const month = parseInt(dateStr.slice(4, 6), 10); // "YYYYMMDD" → MM
+      if (month >= 1 && month <= 12) {
+        monthCounts[month - 1]++;
+      }
+    }
+  });
+
+  // 차트용 데이터로 변환
+  const monthChartData = monthCounts.map((count, index) => {
+    const paddedMonth = (index + 1).toString().padStart(2, '0'); // '01' ~ '12'
+    return {
+      month: paddedMonth,
+      count,
+    };
+  });
+  
+  const handleMonthClick = (month) => {
+    if (selectedMonths.includes(month)) {
+      setSelectedMonths(selectedMonths.filter(m => m !== month));
+    } else {
+      setSelectedMonths([...selectedMonths, month]);
+    }
+  };
+  
 
   return (
     <div className="w-full p-4 bg-white rounded shadow overflow-y-auto max-h-[800px]">
@@ -97,6 +132,39 @@ const ChartPanel = ({ selectedCauses, setSelectedCauses, depthRange, setDepthRan
                 }
                 onClick={() => handleClick(entry.name)}
               />            
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
+
+      <h3 className="mt-8 text-base font-semibold">📅 월별 사고 건수</h3>
+      <ResponsiveContainer width="100%" height={200}>
+        <BarChart 
+          data={monthChartData} 
+          margin={{ top: 10, right: 20, left: 0, bottom: 30 }}
+        >
+          <XAxis 
+            dataKey="month" 
+            tickFormatter={m => `${parseInt(m, 10)}월`}
+            tick={{ fontSize: 6 }}
+            interval={0} 
+            angle={-30}
+            textAnchor="end"
+          />
+          <Tooltip />
+          <Bar dataKey="count">
+            {monthChartData.map((entry, index) => (
+              <Cell
+                key={`month-cell-${index}`}
+                cursor="pointer"
+                fill="#60a5fa"
+                fillOpacity={
+                  selectedMonths.length === 0 || selectedMonths.includes(entry.month)
+                    ? 1
+                    : 0.4
+                }
+                onClick={() => handleMonthClick(entry.month)}
+              />
             ))}
           </Bar>
         </BarChart>

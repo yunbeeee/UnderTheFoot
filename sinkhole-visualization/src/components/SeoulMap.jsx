@@ -29,7 +29,10 @@ const riskScores = {
 
 const colorScale = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, 1]);
 
-const SeoulMap = ({ setSelectedSinkhole, selectedCauses, depthRange, areaRange }) => {
+const SeoulMap = ({ 
+  setSelectedSinkhole, selectedCauses, selectedMonths,
+  depthRange, areaRange 
+}) => {
   // 해당 원인을 포함하는 싱크홀만 필터링
   const filteredSinkholes = sinkholes.filter(item => {
 
@@ -87,7 +90,16 @@ const SeoulMap = ({ setSelectedSinkhole, selectedCauses, depthRange, areaRange }
       );
     }
 
-    return withinArea && withinDepth && matchCause; // 모두 만족해야 마커 표시
+    // 월 조건
+    let matchMonth = true;
+    if (selectedMonths && selectedMonths.length > 0) {
+      const dateStr = item.sagoDate?.toString();
+      const month = dateStr && dateStr.length >= 6 ? dateStr.substring(4, 6) : null;
+      matchMonth = month && selectedMonths.includes(month);
+    }
+
+
+    return withinArea && withinDepth && matchCause && matchMonth; // 모두 만족해야 마커 표시
   });
 
   const styleFeature = (feature) => {
