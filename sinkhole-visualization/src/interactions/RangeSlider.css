@@ -1,0 +1,21 @@
+.custom-slider {
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  .custom-thumb {
+    height: 16px;
+    width: 16px;
+    background-color: #2563eb;
+    border-radius: 50%;
+    cursor: grab;
+    top: -4px;
+  }
+  
+  .custom-track {
+    background: #93c5fd;
+    height: 8px;
+  }
+  
