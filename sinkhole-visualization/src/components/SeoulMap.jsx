@@ -29,7 +29,67 @@ const riskScores = {
 
 const colorScale = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, 1]);
 
-const SeoulMap = () => {
+const SeoulMap = ({ setSelectedSinkhole, selectedCauses, depthRange, areaRange }) => {
+  // 해당 원인을 포함하는 싱크홀만 필터링
+  const filteredSinkholes = sinkholes.filter(item => {
+
+    // 깊이 조건
+    let depth = item.sinkDepth;
+
+    // 공백 또는 비정상적 값 처리
+    if (typeof depth === 'string') {
+      depth = depth.trim();
+    }
+    if (depth === '' || depth === null || depth === undefined) {
+      return false;
+    }
+
+    const parsedDepth = parseFloat(depth);
+    const withinDepth = !isNaN(parsedDepth) &&
+      parsedDepth >= depthRange[0] &&
+      parsedDepth <= depthRange[1];
+
+    // 면적 조건
+    let area = item.sinkArea;
+
+    // 공백 또는 비정상적 값 처리
+    if (typeof area === 'string') {
+      area = area.trim();
+    }
+    if (area === '' || area === null || area === undefined) {
+      return false;
+    }
+
+    const parsedArea = parseFloat(area);
+    const withinArea = !isNaN(parsedArea) &&
+      parsedArea >= areaRange[0] &&
+      parsedArea <= areaRange[1];
+
+
+
+    // 원인 조건
+    let matchCause = true;
+    if (selectedCauses && selectedCauses.length > 0) {
+      let details = item.sagoDetailProcessed;
+      try {
+        if (typeof details === 'string') {
+          details = JSON.parse(details.replace(/'/g, '"'));
+        }
+      } catch {
+        details = [details];
+      }
+      if (!Array.isArray(details)) {
+        details = [details];
+      }
+
+      matchCause = selectedCauses.every(cause =>
+        details.map(d => d.trim()).includes(cause)
+      );
+    }
+
+    return withinArea && withinDepth && matchCause; // 모두 만족해야 마커 표시
+  });
+
   const styleFeature = (feature) => {
     const guName = feature.properties.name;
     const risk = riskScores[guName] ?? 0;
@@ -50,19 +110,16 @@ const SeoulMap = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <GeoJSON data={seoulGeoJson} style={styleFeature} />
-        {sinkholes.map((item, idx) => (
+        
+        {filteredSinkholes.map((item, idx) => (
         <Marker
           key={idx}
           position={[item.sagoLat, item.sagoLon]}
           icon={redIcon}
+          eventHandlers={{
+            click: () => setSelectedSinkhole(item)
+          }}
         >
-          <Popup>
-            <div>
-              <b>{item.addr}</b><br />
-              날짜: {item.sagoDate}<br />
-              규모: {item.sinkWidth} x {item.sinkExtend} x {item.sinkDepth} m
-            </div>
-          </Popup>
         </Marker>
       ))}
       </MapContainer>
