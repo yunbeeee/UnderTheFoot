@@ -1,11 +1,12 @@
-import React, { useState, useRef } from 'react';
-import { MapContainer, TileLayer, GeoJSON, Marker, Popup } from 'react-leaflet';
+import React, { useState, useRef, useEffect } from 'react';
+import { MapContainer, TileLayer, GeoJSON, Marker, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import seoulGeoJson from '../data/seoul_gu_boundary.json'
 import sinkholes from '../sinkholes.json';
 import redPinImg from '../asset/redpin.png'; // 이미지 경로에 맞게 import
 import * as d3 from 'd3';
-// import centroid from '@turf/centroid';
+import centroid from '@turf/centroid';
+// import { point } from '@turf/helpers';
 
 // 커스텀 빨간 핀 아이콘 정의
 const redIcon = new L.Icon({
@@ -18,6 +19,40 @@ const redIcon = new L.Icon({
   shadowAnchor: null,
   className: ''
 });
+
+const MapControlButtons = ({ onReset, onShowAll }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    const control = L.control({ position: 'topright' });
+
+    control.onAdd = () => {
+      const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+      container.style.display = 'flex';
+      container.style.flexDirection = 'row';
+      container.style.gap = '4px';
+
+      const resetBtn = L.DomUtil.create('button', '', container);
+      resetBtn.innerHTML = '🧭 초기화';
+      resetBtn.style.padding = '6px';
+      resetBtn.style.background = 'white';
+      resetBtn.onclick = () => onReset();
+
+      const allBtn = L.DomUtil.create('button', '', container);
+      allBtn.innerHTML = '🔍 전체 핀';
+      allBtn.style.padding = '6px';
+      allBtn.style.background = 'white';
+      allBtn.onclick = () => onShowAll();
+
+      return container;
+    };
+
+    control.addTo(map);
+    return () => control.remove();
+  }, [map, onReset, onShowAll]);
+
+  return null;
+};
 
 function calculateRiskScores(data) {
   const countByDistrict = {};
@@ -123,19 +158,26 @@ const SeoulMap = ({
     return withinArea && withinDepth && matchCause && matchMonth; // 모두 만족해야 마커 표시
   });
 
+  const [selectedGu, setSelectedGu] = useState(null);
+  const mapRef = useRef(); // leaflet Map 인스턴스 접근용
   const styleFeature = (feature) => {
     const fullName = feature.properties.SGG_NM;
     const guName = fullName.replace('서울특별시 ', '').trim();
     const risk = riskScores[guName];
-    console.log('guName:', guName, 'risk:', riskScores[guName]);
+    const isSelected = selectedGu === guName;
+
+     // 현재 선택된 구인지 확인
+    // console.log('guName:', guName, 'risk:', riskScores[guName]);
     return {
       fillColor: risk !== undefined ? colorScale(risk) : '#ccc',
-      weight: 1,
-      color: 'white',
-      fillOpacity: 0.7,
+      weight: isSelected ? 4 : 2.0,
+      color: isSelected ? '#000' : '#888',
+      fillOpacity: selectedGu
+      ? isSelected ? 0.7 : 0.4 // ✅ 선택된 구만 강조
+      : 0.9
     };
   };
-
+  
   const handleFeatureClick = (feature, layer) => {
     layer.on({
       click: () => {
@@ -145,28 +187,29 @@ const SeoulMap = ({
        
         console.log('mapRef:', mapRef.current);  // 클릭 이벤트 안에서
 
-        mapRef.current?.fitBounds(bounds, { padding: [20, 20] });
+        mapRef.current?.fitBounds(bounds, { padding: [15, 15] });
 
       }
     });
   };
 
-
   return (
     <div>
       <h1>🕳️ 싱크홀 발생 현황</h1>
+
       <MapContainer
         center={[37.5665, 126.9780]}
         zoom={11}
         style={{ height: "560px", marginTop: '1rem' }}
-        whenCreated={(mapInstance) => { mapRef.current = mapInstance; }}
+        ref={mapRef} // MapContainer에 ref 추가
       >
         <TileLayer
           attribution='&copy; OpenStreetMap contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-          <GeoJSON
+        <GeoJSON
+          key={selectedGu || 'all'}
           data={seoulGeoJson}
           style={styleFeature}
           onEachFeature={handleFeatureClick}
@@ -174,19 +217,20 @@ const SeoulMap = ({
           {/* 자치구 이름 텍스트 표시 */}
           {seoulGeoJson.features.map((feature, idx) => {
             const bounds = L.geoJSON(feature).getBounds();
-            const center = bounds.getCenter();      
-            // const center = centroid(feature).geometry.coordinates;
+            // const center = bounds.getCenter();      
+            const center = centroid(feature).geometry.coordinates;
             const guName = feature.properties.SGG_NM.replace('서울특별시 ', '');
 
             return (
               <Marker
                 key={`label-${idx}`}
-                position={center}
+                // position={center}
+                position={[center[1], center[0]]}
                 icon={L.divIcon({
                   className: 'gu-label',
                   html: `<div>${guName}</div>`,
-                  iconSize: [80, 20],
-                  iconAnchor: [40, 10],
+                  iconSize: [80, 24],
+                  iconAnchor: [20, 5],
                 })}
                 interactive={false}
                 eventHandlers={{
@@ -198,25 +242,38 @@ const SeoulMap = ({
 
         {sinkholes
           .filter(item => {
-            if (!selectedGu) return false;
+            if (!selectedGu) return false; // 아무것도 선택 안한 상태
+            if (selectedGu === 'ALL') return true;
             const guName = item.sigungu?.replace('서울특별시 ', '');
-            return !selectedGu || guName === selectedGu;
+            return guName === selectedGu;
           })
-          .map((item, idx) => (
+          .map((item, idx) => {
+            const guName = item.sigungu?.replace('서울특별시 ', '');
+            const isSelected = selectedGu === 'ALL' || guName === selectedGu;
+
+          return (
             <Marker
               key={idx}
               position={[item.sagoLat, item.sagoLon]}
-              icon={redIcon}
-            >
-              <Popup>
-                <div>
-                  <b>{item.addr}</b><br />
-                  날짜: {item.sagoDate}<br />
-                  규모: {item.sinkWidth} x {item.sinkExtend} x {item.sinkDepth} m
-                </div>
-              </Popup>
-            </Marker>
-        ))}
+              icon={L.divIcon({
+                html: `<img src="${redPinImg}" style="width: 30px; opacity: ${isSelected ? 1 : 0.3}" />`,
+                className: '',
+                iconSize: [30, 42],
+                iconAnchor: [15, 42],
+              })}
+            ></Marker>
+          );
+        })}
+        <MapControlButtons
+          onReset={() => {
+            setSelectedGu(null);
+            mapRef.current?.setView([37.5665, 126.9780], 11);
+          }}
+          onShowAll={() => {
+            setSelectedGu('ALL');
+            mapRef.current?.setView([37.5665, 126.9780], 11);
+          }}
+        />
       </MapContainer>
     </div>
   );
