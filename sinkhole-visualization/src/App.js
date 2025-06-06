@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import KakaoMap from './components/KakaoMap';
 import SeoulMap from './components/SeoulMap';
 import ChartPanel from './components/ChartPanel';
@@ -10,7 +10,9 @@ function App() {
   const [selectedMonths, setSelectedMonths] = useState([]);
   const [depthRange, setDepthRange] = useState([0, 20])
   const [areaRange, setAreaRange] = useState([0, 300])
-
+  const [selectedGu, setSelectedGu] = useState(null);
+  const mapRef = useRef(); // leaflet Map 인스턴스 접근용
+ 
   const handleSinkholeSelect = (sinkhole) => {
     setSelectedSinkhole(sinkhole);
   
@@ -80,11 +82,14 @@ function App() {
         <div className="flex flex-col w-[701px] bg-white p-4 rounded shadow">
           <div className="h-[596px]">
             <SeoulMap 
-            setSelectedSinkhole={handleSinkholeSelect} 
-            selectedCauses={selectedCauses} 
-            selectedMonths={selectedMonths}
-            depthRange={depthRange}
-            areaRange={areaRange}
+              selectedGu={selectedGu}
+              setSelectedGu={setSelectedGu}
+              mapRef={mapRef}
+              setSelectedSinkhole={handleSinkholeSelect} 
+              selectedCauses={selectedCauses} 
+              selectedMonths={selectedMonths}
+              depthRange={depthRange}
+              areaRange={areaRange}
             />
           </div>
           <InfoBox sinkhole={selectedSinkhole} />

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import RangeSlider from '../interactions/RangeSlider';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import sinkholes from '../sinkholes.json';
-import * as d3 from 'd3';
-import { parse } from 'json5';
+// import * as d3 from 'd3';
+// import { parse } from 'json5';
 
 const ChartPanel = ({ 
   selectedCauses, setSelectedCauses, 

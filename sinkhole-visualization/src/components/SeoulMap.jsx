@@ -83,10 +83,12 @@ function calculateRiskScores(data) {
 const riskScores = calculateRiskScores(sinkholes);
 
 const colorScale = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, 1]);
-const [selectedGu, setSelectedGu] = useState(null);
-const mapRef = useRef(); // leaflet Map 인스턴스 접근용
+
 const SeoulMap = ({ 
-  setSelectedSinkhole, selectedCauses, selectedMonths,
+  selectedGu, setSelectedGu, mapRef,
+  setSelectedSinkhole,
+  setSelectedCauses, selectedCauses,
+  setSelectedMonths, selectedMonths,
   depthRange, areaRange 
 }) => {
   // 해당 원인을 포함하는 싱크홀만 필터링
@@ -158,9 +160,7 @@ const SeoulMap = ({
     return withinArea && withinDepth && matchCause && matchMonth; // 모두 만족해야 마커 표시
   });
 
-  const [selectedGu, setSelectedGu] = useState(null);
-  const mapRef = useRef(); // leaflet Map 인스턴스 접근용
-  const styleFeature = (feature) => {
+    const styleFeature = (feature) => {
     const fullName = feature.properties.SGG_NM;
     const guName = fullName.replace('서울특별시 ', '').trim();
     const risk = riskScores[guName];
@@ -233,47 +233,59 @@ const SeoulMap = ({
                   iconAnchor: [20, 5],
                 })}
                 interactive={false}
+
+              />
+            );
+          })}
+
+          {sinkholes.map((item, idx) => {
+            const guName = item.sigungu?.replace('서울특별시 ', '');
+            const isInSelectedGu = selectedGu && guName === selectedGu;
+            const isInFilteredList = filteredSinkholes.includes(item);
+            
+            const isChartPanelActive = selectedCauses.length > 0 || selectedMonths.length > 0;
+
+            const shouldShow =
+              // 1. ChartPanel에서 항목 선택됨 (selectedGu는 null이고, 필터링된 데이터만 보여줌)
+              (selectedGu === null && isInFilteredList && isChartPanelActive) ||
+
+              // 3. 자치구 클릭 시 (선택된 자치구의 핀과 나머지 자치구 핀 전부 보여주되, 강조는 구분)
+              isInSelectedGu;
+
+            const isHighlighted =
+              selectedGu === 'ALL' ||
+              (selectedGu === null && isInFilteredList) ||
+              isInSelectedGu;
+         
+            return (
+
+              <Marker
+                key={idx}
+                position={[item.sagoLat, item.sagoLon]}
+                icon={L.divIcon({
+                  html: `<img src="${redPinImg}" style="width: 30px; opacity: ${isHighlighted ? 1 : 0.3}" />`,
+                  className: '',
+                  iconSize: [30, 42],
+                  iconAnchor: [15, 42],
+                })}
                 eventHandlers={{
                   click: () => setSelectedSinkhole(item)
                 }}
               />
             );
           })}
-
-        {sinkholes
-          .filter(item => {
-            if (!selectedGu) return false; // 아무것도 선택 안한 상태
-            if (selectedGu === 'ALL') return true;
-            const guName = item.sigungu?.replace('서울특별시 ', '');
-            return guName === selectedGu;
-          })
-          .map((item, idx) => {
-            const guName = item.sigungu?.replace('서울특별시 ', '');
-            const isSelected = selectedGu === 'ALL' || guName === selectedGu;
-
-          return (
-            <Marker
-              key={idx}
-              position={[item.sagoLat, item.sagoLon]}
-              icon={L.divIcon({
-                html: `<img src="${redPinImg}" style="width: 30px; opacity: ${isSelected ? 1 : 0.3}" />`,
-                className: '',
-                iconSize: [30, 42],
-                iconAnchor: [15, 42],
-              })}
-            ></Marker>
-          );
-        })}
-        <MapControlButtons
-          onReset={() => {
-            setSelectedGu(null);
-            mapRef.current?.setView([37.5665, 126.9780], 11);
-          }}
-          onShowAll={() => {
-            setSelectedGu('ALL');
-            mapRef.current?.setView([37.5665, 126.9780], 11);
-          }}
-        />
+            <MapControlButtons
+              onReset={() => {
+                setSelectedGu(null);
+                setSelectedCauses([]);     // ← 추가
+                setSelectedMonths([]); 
+                mapRef.current?.setView([37.5665, 126.9780], 11);
+              }}
+              onShowAll={() => {
+                setSelectedGu('ALL');
+                mapRef.current?.setView([37.5665, 126.9780], 11);
+              }}
+            />   
       </MapContainer>
     </div>
   );
