@@ -9,7 +9,9 @@ const ChartPanel = ({
   selectedCauses, setSelectedCauses, 
   selectedMonths, setSelectedMonths,
   depthRange, setDepthRange, 
-  areaRange, setAreaRange }) => {
+  areaRange, setAreaRange,
+  setSelectedGu, setIsReset
+}) => {
 
   // 원인 카테고리별 카운트
   const causeCounts = {};
@@ -42,10 +44,12 @@ const ChartPanel = ({
   })).sort((a, b) => b.count - a.count);
 
   const handleClick = (name) => {
+    setIsReset(false);
     if (selectedCauses.includes(name)) {
       setSelectedCauses(selectedCauses.filter(cause => cause !== name));
     } else {
       setSelectedCauses([...selectedCauses, name]);
+      setSelectedGu(null); // 원인 선택 시 자치구 선택 초기화
     }
   };
 
@@ -71,10 +75,12 @@ const ChartPanel = ({
   });
   
   const handleMonthClick = (month) => {
+    setIsReset(false);
     if (selectedMonths.includes(month)) {
       setSelectedMonths(selectedMonths.filter(m => m !== month));
     } else {
       setSelectedMonths([...selectedMonths, month]);
+      setSelectedGu(null); // 월 고르면 자치구 선택 초기화
     }
   };
   

@@ -1,4 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
+import DatePicker from 'react-datepicker';
+import { format, setISODay } from 'date-fns';
+import 'react-datepicker/dist/react-datepicker.css';
 import { MapContainer, TileLayer, GeoJSON, Marker, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import seoulGeoJson from '../data/seoul_gu_boundary.json'
@@ -24,7 +27,7 @@ const MapControlButtons = ({ onReset, onShowAll }) => {
   const map = useMap();
 
   useEffect(() => {
-    const control = L.control({ position: 'topright' });
+    const control = L.control({ position: 'topleft' });
 
     control.onAdd = () => {
       const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
@@ -89,8 +92,20 @@ const SeoulMap = ({
   setSelectedSinkhole,
   setSelectedCauses, selectedCauses,
   setSelectedMonths, selectedMonths,
-  depthRange, areaRange 
+  depthRange, areaRange,
+  dateRange, setDateRange,
+  isReset, setIsReset
 }) => {
+  const [startDate, endDate] = dateRange;
+
+  useEffect(() => {
+    const isChartPanelActive = selectedCauses.length > 0 || selectedMonths.length > 0 || (startDate && endDate);
+    
+    if (selectedGu === null && isChartPanelActive) {
+      mapRef.current?.setView([37.5665, 126.9780], 11); // 서울 전체 보기
+    }
+  }, [selectedGu, selectedCauses, selectedMonths, startDate, endDate]);
+
   // 해당 원인을 포함하는 싱크홀만 필터링
   const filteredSinkholes = sinkholes.filter(item => {
 
@@ -155,11 +170,25 @@ const SeoulMap = ({
       const month = dateStr && dateStr.length >= 6 ? dateStr.substring(4, 6) : null;
       matchMonth = month && selectedMonths.includes(month);
     }
+    
+    // 날짜 picker
+    let matchDate = true;
+    if (startDate && endDate) {
+      const sagoStr = item.sagoDate?.toString();
+      const dateFormatted =
+        sagoStr && sagoStr.length === 8
+          ? new Date(`${sagoStr.slice(0, 4)}-${sagoStr.slice(4, 6)}-${sagoStr.slice(6, 8)}`)
+          : null;
 
+      matchDate = 
+        dateFormatted &&
+        dateFormatted >= startDate &&
+        dateFormatted <= endDate;
+    }
 
-    return withinArea && withinDepth && matchCause && matchMonth; // 모두 만족해야 마커 표시
+    return withinArea && withinDepth && matchCause && matchMonth && matchDate; // 모두 만족해야 마커 표시
   });
-
+ 
     const styleFeature = (feature) => {
     const fullName = feature.properties.SGG_NM;
     const guName = fullName.replace('서울특별시 ', '').trim();
@@ -181,6 +210,7 @@ const SeoulMap = ({
   const handleFeatureClick = (feature, layer) => {
     layer.on({
       click: () => {
+        setIsReset(false);
         const bounds = layer.getBounds();
         // const center = bounds.getCenter();
         setSelectedGu(feature.properties.SGG_NM.replace('서울특별시 ', '').trim());
@@ -192,10 +222,41 @@ const SeoulMap = ({
       }
     });
   };
-
+  const MIN_DATE = new Date('2018-01-01');
+  const MAX_DATE = new Date('2025-12-31');
   return (
     <div>
-      <h1>🕳️ 싱크홀 발생 현황</h1>
+      <div className="flex justify-between items-center mb-2">
+        <h1>🕳️ 싱크홀 발생 현황</h1>
+
+        {/* 날짜 선택 영역 – 지도 상단 흰 공간 */}
+        <div className="relative z-[1000] flex gap-2 items-center p-2 bg-white rounded shadow mb-2" style={{ width: 'fit-content' }}>
+          <label className="relative z-[10000]">시작일:</label>
+          <DatePicker
+            selected={startDate}
+            onChange={(date) => setDateRange([date, endDate])}
+            dateFormat="yyyy-MM-dd"
+            minDate={MIN_DATE} 
+            maxDate={MAX_DATE}
+            placeholderText="시작일 선택"
+            className="p-1 border rounded text-sm"
+            popperClassName="datepicker-popper"
+            popperPlacement="bottom-start" 
+          />
+          <label className="relative z-50">종료일:</label>
+          <DatePicker
+            selected={endDate}
+            onChange={(date) => setDateRange([startDate, date])}
+            dateFormat="yyyy-MM-dd"
+            minDate={startDate}
+            maxDate={MAX_DATE}
+            placeholderText="종료일 선택"
+            className="p-1 border rounded text-sm"
+            popperClassName="datepicker-popper"
+            popperPlacement="bottom-start" 
+          />
+        </div>  
+      </div>
 
       <MapContainer
         center={[37.5665, 126.9780]}
@@ -246,17 +307,19 @@ const SeoulMap = ({
             const isChartPanelActive = selectedCauses.length > 0 || selectedMonths.length > 0;
 
             const shouldShow =
-              // 1. ChartPanel에서 항목 선택됨 (selectedGu는 null이고, 필터링된 데이터만 보여줌)
-              (selectedGu === null && isInFilteredList && isChartPanelActive) ||
-
-              // 3. 자치구 클릭 시 (선택된 자치구의 핀과 나머지 자치구 핀 전부 보여주되, 강조는 구분)
-              isInSelectedGu;
+              !isReset && (
+                (selectedGu === null && isInFilteredList) ||
+                (selectedGu && isInSelectedGu) ||
+                selectedGu === 'ALL'
+              );    
 
             const isHighlighted =
               selectedGu === 'ALL' ||
               (selectedGu === null && isInFilteredList) ||
               isInSelectedGu;
-         
+            
+            if (!shouldShow) return null;
+            
             return (
 
               <Marker
@@ -276,13 +339,16 @@ const SeoulMap = ({
           })}
             <MapControlButtons
               onReset={() => {
-                setSelectedGu(null);
-                setSelectedCauses([]);     // ← 추가
-                setSelectedMonths([]); 
+                setSelectedGu(null); 
+                setSelectedCauses([]);
+                setSelectedMonths([]);
+                setDateRange([null, null]);
+                setIsReset(true);
                 mapRef.current?.setView([37.5665, 126.9780], 11);
               }}
               onShowAll={() => {
                 setSelectedGu('ALL');
+                setIsReset(false);
                 mapRef.current?.setView([37.5665, 126.9780], 11);
               }}
             />   

@@ -8,11 +8,14 @@ function App() {
   const [selectedSinkhole, setSelectedSinkhole] = useState(null);
   const [selectedCauses, setSelectedCauses] = useState([]); // 중복 선택 허용 -> 배열로 관리
   const [selectedMonths, setSelectedMonths] = useState([]);
-  const [depthRange, setDepthRange] = useState([0, 20])
-  const [areaRange, setAreaRange] = useState([0, 300])
+  const [depthRange, setDepthRange] = useState([0, 20]);
+  const [areaRange, setAreaRange] = useState([0, 300]);
+  const [dateRange, setDateRange] = useState([null, null]); // [startDate, endDate]
+  const [startDate, endDate] = dateRange;
   const [selectedGu, setSelectedGu] = useState(null);
   const mapRef = useRef(); // leaflet Map 인스턴스 접근용
- 
+  const [isReset, setIsReset] = useState(true); // 초기화 여부
+
   const handleSinkholeSelect = (sinkhole) => {
     setSelectedSinkhole(sinkhole);
   
@@ -87,9 +90,15 @@ function App() {
               mapRef={mapRef}
               setSelectedSinkhole={handleSinkholeSelect} 
               selectedCauses={selectedCauses} 
+              setSelectedCauses={setSelectedCauses}
               selectedMonths={selectedMonths}
+              setSelectedMonths={setSelectedMonths}
               depthRange={depthRange}
               areaRange={areaRange}
+              dateRange={dateRange}
+              setDateRange={setDateRange}
+              isReset={isReset}
+              setIsReset={setIsReset}
             />
           </div>
           <InfoBox sinkhole={selectedSinkhole} />
@@ -105,6 +114,8 @@ function App() {
           setDepthRange={setDepthRange}
           areaRange={areaRange}
           setAreaRange={setAreaRange}
+            setSelectedGu={setSelectedGu}
+            setIsReset={setIsReset}
           />
         </div>
       </div>
