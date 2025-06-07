@@ -10,9 +10,14 @@ function App() {
   const [selectedMonths, setSelectedMonths] = useState([]);
   const [depthRange, setDepthRange] = useState([0, 20]);
   const [areaRange, setAreaRange] = useState([0, 300]);
+
   const [dateRange, setDateRange] = useState([null, null]); // [startDate, endDate]
-  const [startDate, endDate] = dateRange;
+  
+  const [highlightedCauses, setHighlightedCauses] = useState([]); // 강조 표시된 원인
+  const [highlightedMonths, setHighlightedMonths] = useState([]); // 강조 표시된 월
+
   const [selectedGu, setSelectedGu] = useState(null);
+
   const mapRef = useRef(); // leaflet Map 인스턴스 접근용
   const [isReset, setIsReset] = useState(true); // 초기화 여부
 
@@ -99,6 +104,8 @@ function App() {
               setDateRange={setDateRange}
               isReset={isReset}
               setIsReset={setIsReset}
+              setHighlightedCauses={setHighlightedCauses}
+              setHighlightedMonths={setHighlightedMonths} 
             />
           </div>
           <InfoBox sinkhole={selectedSinkhole} />
@@ -106,16 +113,18 @@ function App() {
         {/* 오른쪽 (차트) */}
         <div className="w-60 h-[806px] bg-white p-4 rounded shadow overflow-auto">
           <ChartPanel 
-          selectedCauses={selectedCauses} 
-          setSelectedCauses={setSelectedCauses}
-          selectedMonths={selectedMonths}
-          setSelectedMonths={setSelectedMonths}
-          depthRange={depthRange} 
-          setDepthRange={setDepthRange}
-          areaRange={areaRange}
-          setAreaRange={setAreaRange}
+            selectedCauses={selectedCauses} 
+            setSelectedCauses={setSelectedCauses}
+            selectedMonths={selectedMonths}
+            setSelectedMonths={setSelectedMonths}
+            depthRange={depthRange} 
+            setDepthRange={setDepthRange}
+            areaRange={areaRange}
+            setAreaRange={setAreaRange}
             setSelectedGu={setSelectedGu}
             setIsReset={setIsReset}
+            highlightedCauses={highlightedCauses}
+            highlightedMonths={highlightedMonths}
           />
         </div>
       </div>

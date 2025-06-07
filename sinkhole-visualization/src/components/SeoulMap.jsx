@@ -93,7 +93,8 @@ const SeoulMap = ({
   setSelectedMonths, selectedMonths,
   depthRange, areaRange,
   dateRange, setDateRange,
-  isReset, setIsReset
+  isReset, setIsReset,
+  setHighlightedCauses, setHighlightedMonths
 }) => {
   const [startDate, endDate] = dateRange;
 
@@ -187,7 +188,35 @@ const SeoulMap = ({
 
     return withinArea && withinDepth && matchCause && matchMonth && matchDate; // 모두 만족해야 마커 표시
   });
- 
+  useEffect(() => {
+    const causesSet = new Set();
+    const monthsSet = new Set();
+
+    filteredSinkholes.forEach(item => {
+      const detailsRaw = item.sagoDetailProcessed;
+      let details = [];
+
+      try {
+        if (typeof detailsRaw === 'string') {
+          details = JSON.parse(detailsRaw.replace(/'/g, '"'));
+        }
+      } catch {
+        details = [detailsRaw];
+      }
+
+      details.forEach(d => causesSet.add(d.trim()));
+
+      const dateStr = item.sagoDate?.toString();
+      if (dateStr?.length === 8) {
+        const month = dateStr.slice(4, 6);
+        monthsSet.add(month);
+      }
+    });
+
+    setHighlightedCauses(Array.from(causesSet));
+    setHighlightedMonths(Array.from(monthsSet));
+  }, [filteredSinkholes]); 
+  console.log('filteredSinkholes:', filteredSinkholes);
     const styleFeature = (feature) => {
     const fullName = feature.properties.SGG_NM;
     const guName = fullName.replace('서울특별시 ', '').trim();

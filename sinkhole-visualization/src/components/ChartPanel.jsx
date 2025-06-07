@@ -10,7 +10,8 @@ const ChartPanel = ({
   selectedMonths, setSelectedMonths,
   depthRange, setDepthRange, 
   areaRange, setAreaRange,
-  setSelectedGu, setIsReset
+  setSelectedGu, setIsReset, 
+  highlightedCauses, highlightedMonths
 }) => {
 
   // 원인 카테고리별 카운트
@@ -131,10 +132,10 @@ const ChartPanel = ({
                 key={`cell-${index}`}
                 cursor="pointer"
                 fill="#ef4444"
-                fillOpacity={ 
-                  selectedCauses.length === 0 || selectedCauses.includes(entry.name)
-                    ? 1
-                    : 0.4
+                fillOpacity={
+                  selectedCauses.length > 0
+                    ? selectedCauses.includes(entry.name) ? 1 : 0.4
+                    : highlightedCauses.includes(entry.name) ? 1 : 0.4
                 }
                 onClick={() => handleClick(entry.name)}
               />            
@@ -165,9 +166,9 @@ const ChartPanel = ({
                 cursor="pointer"
                 fill="#60a5fa"
                 fillOpacity={
-                  selectedMonths.length === 0 || selectedMonths.includes(entry.month)
-                    ? 1
-                    : 0.4
+                  selectedMonths.length > 0
+                    ? selectedMonths.includes(entry.month) ? 1 : 0.4
+                    : highlightedMonths.includes(entry.month) ? 1 : 0.4
                 }
                 onClick={() => handleMonthClick(entry.month)}
               />
