@@ -1,38 +1,37 @@
 /* src/components/KakaoMap.css */
 
 .input-box {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-  
-  .input-box:focus {
-    outline: none;
-    border-color: #409eff;
-    box-shadow: 0 0 0 2px rgba(64, 158, 255, 0.2);
-  }
-  
-  .search-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #409eff;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .search-button:hover {
-    background-color: #2f90e0;
-  }
-  
-  .search-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-  
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.input-box:focus {
+  outline: none;
+  border-color: #409eff;
+  box-shadow: 0 0 0 2px rgba(64, 158, 255, 0.2);
+}
+
+.search-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #409eff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.search-button:hover {
+  background-color: #2f90e0;
+}
+
+.search-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

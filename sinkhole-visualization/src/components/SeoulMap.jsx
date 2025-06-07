@@ -192,6 +192,18 @@ const SeoulMap = ({
           filter: hue-rotate(180deg) saturate(50%) brightness(1.2) opacity(0.7);
         }
       `}</style>
+        {/* {filteredSinkholes.map((item, idx) => (
+        <Marker
+          key={idx}
+          position={[item.sagoLat, item.sagoLon]}
+          icon={redIcon}
+          eventHandlers={{
+            click: () => setSelectedSinkhole(item)
+          }}
+        >
+        </Marker>
+      ))}
+      </MapContainer> */}
     </div>
   );
 };

@@ -67,7 +67,6 @@ function App() {
     const dateStr = sinkhole.sagoDate?.toString();
     const month = dateStr && dateStr.length >= 6 ? dateStr.substring(4, 6) : null;
     setSelectedMonths([month]);
-
     setClickedFromMap(false);
   };
 
@@ -97,6 +96,7 @@ function App() {
           <div className="h-[596px]">
             <SeoulMap 
               setSelectedSinkhole={setSelectedSinkhole}
+              // setSelectedSinkhole={handleSinkholeSelect} 
               selectedCauses={selectedCauses}
               selectedMonths={selectedMonths}
               depthRange={depthRange}
