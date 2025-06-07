@@ -18,6 +18,15 @@ const redIcon = new L.Icon({
   className: ''
 });
 
+// 커스텀 페이드 블루 아이콘 정의 (faded-blue-marker 스타일 적용)
+const fadedBlueIcon = new L.Icon({
+  iconUrl: redPinImg,
+  iconSize: [30, 42],
+  iconAnchor: [15, 42],
+  popupAnchor: [0, -35],
+  className: 'faded-blue-marker'
+});
+
 // 위험도 예시값
 const riskScores = {
   종로구: 0.12, 중구: 0.45, 용산구: 0.81, 성동구: 0.34, 광진구: 0.58,
@@ -30,8 +39,9 @@ const riskScores = {
 const colorScale = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, 1]);
 
 const SeoulMap = ({ 
-  setSelectedSinkhole, selectedCauses, selectedMonths,
-  depthRange, areaRange 
+  setSelectedSinkhole, selectedSinkhole, selectedCauses, selectedMonths,
+  depthRange, areaRange, clickedFromMap, setClickedFromMap,
+  showRain, showRepaired, showDamaged
 }) => {
   // 해당 원인을 포함하는 싱크홀만 필터링
   const filteredSinkholes = sinkholes.filter(item => {
@@ -98,8 +108,33 @@ const SeoulMap = ({
       matchMonth = month && selectedMonths.includes(month);
     }
 
+    // 강수량 필터 (있음 only)
+    let matchRain = true;
+    if (showRain) {
+      const rainRaw = item.rainfall;
+      matchRain = !(rainRaw === '0.0' || rainRaw === 0 || rainRaw === 0.0 || rainRaw === undefined || rainRaw === null);
+      // console.log('[SeoulMap Filter] Local Rain value:', rainRaw, '=>', matchRain);
+    }
 
-    return withinArea && withinDepth && matchCause && matchMonth; // 모두 만족해야 마커 표시
+    // 복구 여부 필터 (복구 미완)
+    let matchRepaired = true;
+    if (showRepaired) {
+      const status = (item.trStatus || '').trim();
+      matchRepaired = !status.includes('복구완료');
+      // console.log('[SeoulMap Filter] Repaired:', status, '=>', matchRepaired);
+    }
+
+    // 피해 여부 필터 (피해 있음 only)
+    let matchDamaged = true;
+    if (showDamaged) {
+      const totalDamage = (parseInt(item.deathCnt) || 0) +
+                          (parseInt(item.injuryCnt) || 0) +
+                          (parseInt(item.vehicleCnt) || 0);
+      matchDamaged = totalDamage > 0;
+      // console.log('[SeoulMap Filter] Damage total:'ㄴ, totalDamage, '=>', matchDamaged);
+    }
+
+    return withinArea && withinDepth && matchCause && matchMonth && matchRain && matchRepaired && matchDamaged; // 모두 만족해야 마커 표시
   });
 
   const styleFeature = (feature) => {
@@ -123,18 +158,40 @@ const SeoulMap = ({
         />
         <GeoJSON data={seoulGeoJson} style={styleFeature} />
         
-        {filteredSinkholes.map((item, idx) => (
-        <Marker
-          key={idx}
-          position={[item.sagoLat, item.sagoLon]}
-          icon={redIcon}
-          eventHandlers={{
-            click: () => setSelectedSinkhole(item)
-          }}
-        >
-        </Marker>
-      ))}
+        {/* 클릭이 지도에서 발생한 경우 선택된 싱크홀만, 아니면 전체 필터된 싱크홀 표시 */}
+        {(clickedFromMap && selectedSinkhole
+          ? filteredSinkholes
+          : filteredSinkholes
+        ).map((item, idx) => (
+          <Marker
+            key={idx}
+            position={[item.sagoLat, item.sagoLon]}
+            icon={
+              clickedFromMap && selectedSinkhole && item.sagoNo !== selectedSinkhole.sagoNo
+                ? fadedBlueIcon
+                : redIcon
+            }
+            opacity={
+              clickedFromMap && selectedSinkhole
+                ? item.sagoNo === selectedSinkhole.sagoNo ? 1 : 0.4
+                : 1
+            }
+            eventHandlers={{
+              click: () => {
+                console.log('[SeoulMap] Marker clicked - clickedFromMap set to true');
+                setClickedFromMap(true);
+                setSelectedSinkhole(item);
+                console.log('[SeoulMap] selectedSinkhole set to:', item);
+              }
+            }}
+          />
+        ))}
       </MapContainer>
+      <style>{`
+        .leaflet-marker-icon.faded-blue-marker {
+          filter: hue-rotate(180deg) saturate(50%) brightness(1.2) opacity(0.7);
+        }
+      `}</style>
     </div>
   );
 };

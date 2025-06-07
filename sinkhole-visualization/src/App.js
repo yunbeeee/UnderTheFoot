@@ -1,17 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import KakaoMap from './components/KakaoMap';
 import SeoulMap from './components/SeoulMap';
 import ChartPanel from './components/ChartPanel';
 import InfoBox from './components/InfoBox';
+import weatherCsv from './data/weather_with_sigungu.csv';
+import * as d3 from 'd3';
 
 function App() {
   const [selectedSinkhole, setSelectedSinkhole] = useState(null);
+  useEffect(() => {
+    console.log("[App] selectedSinkhole 변경:", selectedSinkhole);
+  }, [selectedSinkhole]);
   const [selectedCauses, setSelectedCauses] = useState([]); // 중복 선택 허용 -> 배열로 관리
   const [selectedMonths, setSelectedMonths] = useState([]);
   const [depthRange, setDepthRange] = useState([0, 20])
   const [areaRange, setAreaRange] = useState([0, 300])
+  const [weatherMap, setWeatherMap] = useState({});
+  const [clickedFromMap, setClickedFromMap] = useState(false);
+  const [showRain, setShowRain] = useState(false);
+  const [showRepaired, setShowRepaired] = useState(false);
+  const [showDamaged, setShowDamaged] = useState(false);
+  useEffect(() => {
+    console.log("[App] clickedFromMap 상태 변경:", clickedFromMap);
+  }, [clickedFromMap]);
+
+  useEffect(() => {
+    d3.csv(weatherCsv).then(data => {
+      const map = {};
+      data.forEach(row => {
+        const key = `${row['일시_modified']}_${row.sigungu}`;
+        const temp = row['평균기온(°C)'];
+        const rain = row['일강수량(mm)'];
+        map[key] = { temp, rain };
+        console.log('[App DEBUG] Weather key created:', key, '→', map[key]);
+      });
+      console.log('[App DEBUG] Total weatherMap keys:', Object.keys(map).length);
+      setWeatherMap(map);
+    }).catch(err => {
+      console.error('[App ERROR] Failed to load weather CSV:', err);
+    });
+  }, []);
 
   const handleSinkholeSelect = (sinkhole) => {
+    if (clickedFromMap) {
+      setSelectedSinkhole(sinkhole);
+      return;
+    }
     setSelectedSinkhole(sinkhole);
   
     // 원인을 배열로 파싱
@@ -33,6 +67,8 @@ function App() {
     const dateStr = sinkhole.sagoDate?.toString();
     const month = dateStr && dateStr.length >= 6 ? dateStr.substring(4, 6) : null;
     setSelectedMonths([month]);
+
+    setClickedFromMap(false);
   };
 
 
@@ -60,14 +96,20 @@ function App() {
         <div className="flex flex-col w-[701px] bg-white p-4 rounded shadow">
           <div className="h-[596px]">
             <SeoulMap 
-            setSelectedSinkhole={handleSinkholeSelect} 
-            selectedCauses={selectedCauses} 
-            selectedMonths={selectedMonths}
-            depthRange={depthRange}
-            areaRange={areaRange}
+              setSelectedSinkhole={setSelectedSinkhole}
+              selectedCauses={selectedCauses}
+              selectedMonths={selectedMonths}
+              depthRange={depthRange}
+              areaRange={areaRange}
+              selectedSinkhole={selectedSinkhole}
+              clickedFromMap={clickedFromMap}
+              setClickedFromMap={setClickedFromMap}
+              showRain={showRain}
+              showRepaired={showRepaired}
+              showDamaged={showDamaged}
             />
           </div>
-          <InfoBox sinkhole={selectedSinkhole} />
+          <InfoBox sinkhole={selectedSinkhole} weatherMap={weatherMap} />
         </div>
         {/* 오른쪽 (차트) */}
         <div className="w-60 h-[806px] bg-white p-4 rounded shadow overflow-auto">
@@ -82,6 +124,15 @@ function App() {
             setAreaRange={setAreaRange}
             selectedSinkhole={selectedSinkhole}
             setSelectedSinkhole={setSelectedSinkhole}
+            clickedFromMap={clickedFromMap}
+            setClickedFromMap={setClickedFromMap}
+            showRain={showRain}
+            setShowRain={setShowRain}
+            showRepaired={showRepaired}
+            setShowRepaired={setShowRepaired}
+            showDamaged={showDamaged}
+            setShowDamaged={setShowDamaged}
+            weatherMap={weatherMap}
           />
         </div>
       </div>

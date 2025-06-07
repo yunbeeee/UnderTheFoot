@@ -1,4 +1,4 @@
-export default function InfoBox({ sinkhole }) {
+export default function InfoBox({ sinkhole, weatherMap }) {
   if (!sinkhole) {
     return null;
   }
@@ -15,15 +15,22 @@ export default function InfoBox({ sinkhole }) {
       : [];
   }
 
+  let weatherInfo = null;
+  if (sinkhole && weatherMap) {
+    const dateStr = sinkhole.sagoDate?.toString().slice(0, 8); // e.g., "20180101"
+    const region = sinkhole.sigungu;
+    const key = `${dateStr}_${region}`; // Match App.js convention
+    weatherInfo = weatherMap[key];
+    console.log("Weather key:", key, "Matched weather info:", weatherInfo);
+  }
+
   return (
     <div className="mt-4 p-4 bg-red-50 rounded shadow text-sm">
       <p><strong>주소:</strong> {sinkhole.addr}</p>
       <p><strong>시기:</strong> {sinkhole.sagoDate}</p>
-      <p><strong>날씨:</strong> 폭우</p>
-      <p><strong>발생 원인:</strong> {causes.join(', ')}</p>
-      <p><strong>면적:</strong> {sinkhole.sinkArea}</p>
-      <p><strong>깊이:</strong> {sinkhole.sinkDepth}</p>
-      
+      <p><strong>날씨:</strong> 평균기온 {weatherInfo?.temp ?? '-'}°C | 강수량 {weatherInfo?.rain ?? '-'}mm</p>
+      <p><strong>발생 원인:</strong> {causes.join(' | ')}</p>
+      <p><strong>규모:</strong> 너비 {sinkhole.sinkWidth ?? '-'}m × 길이 {sinkhole.sinkExtend ?? '-'}m × 깊이 {sinkhole.sinkDepth ?? '-'}m</p>
 
       <p><strong>피해정도:</strong> {
         [

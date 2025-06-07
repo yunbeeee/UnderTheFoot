@@ -23,7 +23,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['노후 지하시설물', '굴착 / 복구 불량']",
-    "sinkArea": 9.424777961
+    "sinkArea": 9.424777961,
+    "avgTemp": 0.6,
+    "rainfall": 1.0
   },
   {
     "sagoNo": 20180002,
@@ -49,7 +51,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 1.570796327
+    "sinkArea": 1.570796327,
+    "avgTemp": 10.2,
+    "rainfall": 12.0
   },
   {
     "sagoNo": 20180003,
@@ -75,7 +79,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['노후 지하시설물', '굴착 / 복구 불량']",
-    "sinkArea": 0.125663706
+    "sinkArea": 0.125663706,
+    "avgTemp": 6.2,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20180004,
@@ -101,7 +107,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['노후 지하시설물', '지반 약화']",
-    "sinkArea": 0.274889357
+    "sinkArea": 0.274889357,
+    "avgTemp": 13.3,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20180005,
@@ -127,7 +135,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '노후 지하시설물']",
-    "sinkArea": 19.63495408
+    "sinkArea": 19.63495408,
+    "avgTemp": 14.0,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20180006,
@@ -153,7 +163,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 0.070685835
+    "sinkArea": 0.070685835,
+    "avgTemp": 15.0,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20180007,
@@ -179,7 +191,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['노후 지하시설물', '지반 약화']",
-    "sinkArea": 0.376991118
+    "sinkArea": 0.376991118,
+    "avgTemp": 14.3,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20180008,
@@ -205,7 +219,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['노후 지하시설물', '지반 약화']",
-    "sinkArea": 0.392699082
+    "sinkArea": 0.392699082,
+    "avgTemp": 16.3,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20180009,
@@ -231,7 +247,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['설계 / 시공 오류', '지반 약화']",
-    "sinkArea": 0.196349541
+    "sinkArea": 0.196349541,
+    "avgTemp": 16.5,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20180010,
@@ -257,7 +275,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '굴착 / 복구 불량']",
-    "sinkArea": 0.031415927
+    "sinkArea": 0.031415927,
+    "avgTemp": 24.9,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20180011,
@@ -283,7 +303,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 0.942477796
+    "sinkArea": 0.942477796,
+    "avgTemp": 25.2,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20180012,
@@ -309,7 +331,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 19.63495408
+    "sinkArea": 19.63495408,
+    "avgTemp": 27.2,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20180013,
@@ -335,7 +359,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "굴착 / 복구 불량",
-    "sinkArea": 3.534291735
+    "sinkArea": 3.534291735,
+    "avgTemp": 31.5,
+    "rainfall": 1.0
   },
   {
     "sagoNo": 20180014,
@@ -361,7 +387,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.86393798
+    "sinkArea": 0.86393798,
+    "avgTemp": null,
+    "rainfall": null
   },
   {
     "sagoNo": 20180015,
@@ -387,7 +415,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 1.767145868
+    "sinkArea": 1.767145868,
+    "avgTemp": 23.9,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20180016,
@@ -413,7 +443,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 0.3848451
+    "sinkArea": 0.3848451,
+    "avgTemp": null,
+    "rainfall": null
   },
   {
     "sagoNo": 20180017,
@@ -439,7 +471,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '설계 / 시공 오류']",
-    "sinkArea": 3.534291735
+    "sinkArea": 3.534291735,
+    "avgTemp": -6.6,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20190001,
@@ -465,7 +499,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 1.130973355
+    "sinkArea": 1.130973355,
+    "avgTemp": 18.7,
+    "rainfall": 3.5
   },
   {
     "sagoNo": 20190193,
@@ -491,7 +527,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "기타 / 미상",
-    "sinkArea": 0.628318531
+    "sinkArea": 0.628318531,
+    "avgTemp": 25.2,
+    "rainfall": 82.0
   },
   {
     "sagoNo": 20190194,
@@ -517,7 +555,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 3.141592654
+    "sinkArea": 3.141592654,
+    "avgTemp": 25.5,
+    "rainfall": 33.0
   },
   {
     "sagoNo": 20190195,
@@ -543,7 +583,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['노후 지하시설물', '설계 / 시공 오류', '자연재해']",
-    "sinkArea": 12.56637061
+    "sinkArea": 12.56637061,
+    "avgTemp": 28.7,
+    "rainfall": 15.0
   },
   {
     "sagoNo": 20190196,
@@ -569,7 +611,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 1.178097245
+    "sinkArea": 1.178097245,
+    "avgTemp": 31.9,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20190197,
@@ -595,7 +639,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.188495559
+    "sinkArea": 0.188495559,
+    "avgTemp": 26.6,
+    "rainfall": 37.0
   },
   {
     "sagoNo": 20190198,
@@ -621,7 +667,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '자연재해', '지반 약화']",
-    "sinkArea": 19.63495408
+    "sinkArea": 19.63495408,
+    "avgTemp": 23.8,
+    "rainfall": 57.5
   },
   {
     "sagoNo": 20190199,
@@ -647,7 +695,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['설계 / 시공 오류', '지반 약화']",
-    "sinkArea": 1.130973355
+    "sinkArea": 1.130973355,
+    "avgTemp": 24.8,
+    "rainfall": 1.0
   },
   {
     "sagoNo": 20190200,
@@ -673,7 +723,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "기타 / 미상",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": null,
+    "rainfall": null
   },
   {
     "sagoNo": 20190201,
@@ -699,7 +751,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "굴착 / 복구 불량",
-    "sinkArea": 1.178097245
+    "sinkArea": 1.178097245,
+    "avgTemp": 25.0,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20190202,
@@ -725,7 +779,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 27.48893572
+    "sinkArea": 27.48893572,
+    "avgTemp": null,
+    "rainfall": null
   },
   {
     "sagoNo": 20190203,
@@ -751,7 +807,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['설계 / 시공 오류', '지반 약화']",
-    "sinkArea": 12.56637061
+    "sinkArea": 12.56637061,
+    "avgTemp": 1.8,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20190204,
@@ -777,7 +835,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['노후 지하시설물', '지반 약화', '기타 / 미상']",
-    "sinkArea": 2.945243113
+    "sinkArea": 2.945243113,
+    "avgTemp": 5.2,
+    "rainfall": 0.5
   },
   {
     "sagoNo": 20200073,
@@ -803,7 +863,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "지반 약화",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": 3.8,
+    "rainfall": 4.0
   },
   {
     "sagoNo": 20200074,
@@ -829,7 +891,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 1.570796327
+    "sinkArea": 1.570796327,
+    "avgTemp": 4.8,
+    "rainfall": 2.5
   },
   {
     "sagoNo": 20200075,
@@ -855,7 +919,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['노후 지하시설물', '설계 / 시공 오류']",
-    "sinkArea": 1.767145868
+    "sinkArea": 1.767145868,
+    "avgTemp": 3.7,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20200076,
@@ -881,7 +947,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['노후 지하시설물', '지반 약화']",
-    "sinkArea": 1.767145868
+    "sinkArea": 1.767145868,
+    "avgTemp": 4.7,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20200077,
@@ -907,7 +975,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '지반 약화']",
-    "sinkArea": 2.073451151
+    "sinkArea": 2.073451151,
+    "avgTemp": 16.9,
+    "rainfall": 9.5
   },
   {
     "sagoNo": 20200078,
@@ -933,7 +1003,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "굴착 / 복구 불량",
-    "sinkArea": 0.196349541
+    "sinkArea": 0.196349541,
+    "avgTemp": 17.2,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20200100,
@@ -959,7 +1031,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['설계 / 시공 오류', '지반 약화']",
-    "sinkArea": 2.945243113
+    "sinkArea": 2.945243113,
+    "avgTemp": 23.8,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20200102,
@@ -985,7 +1059,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '노후 지하시설물', '설계 / 시공 오류']",
-    "sinkArea": 15.70796327
+    "sinkArea": 15.70796327,
+    "avgTemp": 14.5,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20200205,
@@ -1011,7 +1087,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 1.767145868
+    "sinkArea": 1.767145868,
+    "avgTemp": 27.0,
+    "rainfall": 37.0
   },
   {
     "sagoNo": 20200206,
@@ -1037,7 +1115,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "지반 약화",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": 25.3,
+    "rainfall": 72.0
   },
   {
     "sagoNo": 20200210,
@@ -1063,7 +1143,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": 27.3,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20200211,
@@ -1089,7 +1171,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 7.853981634
+    "sinkArea": 7.853981634,
+    "avgTemp": 25.4,
+    "rainfall": 131.0
   },
   {
     "sagoNo": 20200214,
@@ -1115,7 +1199,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 1.767145868
+    "sinkArea": 1.767145868,
+    "avgTemp": 28.0,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20200304,
@@ -1141,7 +1227,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "기타 / 미상",
-    "sinkArea": 0.031415927
+    "sinkArea": 0.031415927,
+    "avgTemp": 27.6,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20200305,
@@ -1167,7 +1255,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 2.042035225
+    "sinkArea": 2.042035225,
+    "avgTemp": 22.9,
+    "rainfall": 2.0
   },
   {
     "sagoNo": 20210003,
@@ -1193,7 +1283,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": 11.6,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20210004,
@@ -1219,7 +1311,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.196349541
+    "sinkArea": 0.196349541,
+    "avgTemp": 15.6,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20210005,
@@ -1245,7 +1339,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['노후 지하시설물', '설계 / 시공 오류']",
-    "sinkArea": 4.123340358
+    "sinkArea": 4.123340358,
+    "avgTemp": 7.2,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20210006,
@@ -1271,7 +1367,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.3848451
+    "sinkArea": 0.3848451,
+    "avgTemp": 15.2,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20210010,
@@ -1297,7 +1395,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 1.178097245
+    "sinkArea": 1.178097245,
+    "avgTemp": 24.4,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20210052,
@@ -1323,7 +1423,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['설계 / 시공 오류', '기타 / 미상']",
-    "sinkArea": 0.007853982
+    "sinkArea": 0.007853982,
+    "avgTemp": 27.9,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20210055,
@@ -1349,7 +1451,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['자연재해', '설계 / 시공 오류', '지반 약화']",
-    "sinkArea": 0.518362788
+    "sinkArea": 0.518362788,
+    "avgTemp": 21.8,
+    "rainfall": 21.5
   },
   {
     "sagoNo": 20210059,
@@ -1375,7 +1479,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": 30.1,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20210067,
@@ -1401,7 +1507,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "지반 약화",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": 23.7,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20210081,
@@ -1427,7 +1535,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '지반 약화']",
-    "sinkArea": 1.272345025
+    "sinkArea": 1.272345025,
+    "avgTemp": 22.3,
+    "rainfall": 69.0
   },
   {
     "sagoNo": 20210122,
@@ -1453,7 +1563,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['설계 / 시공 오류', '공사 영향']",
-    "sinkArea": 3.141592654
+    "sinkArea": 3.141592654,
+    "avgTemp": 23.7,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20220005,
@@ -1479,7 +1591,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['노후 지하시설물', '공사 영향']",
-    "sinkArea": 4.90088454
+    "sinkArea": 4.90088454,
+    "avgTemp": -1.8,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20220008,
@@ -1505,7 +1619,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "공사 영향",
-    "sinkArea": 0.589048623
+    "sinkArea": 0.589048623,
+    "avgTemp": 1.2,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20220009,
@@ -1531,7 +1647,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 4.71238898
+    "sinkArea": 4.71238898,
+    "avgTemp": null,
+    "rainfall": null
   },
   {
     "sagoNo": 20220022,
@@ -1557,7 +1675,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '기타 / 미상']",
-    "sinkArea": 3.141592654
+    "sinkArea": 3.141592654,
+    "avgTemp": 24.2,
+    "rainfall": 98.0
   },
   {
     "sagoNo": 20220024,
@@ -1583,7 +1703,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 2.35619449
+    "sinkArea": 2.35619449,
+    "avgTemp": 23.6,
+    "rainfall": 105.5
   },
   {
     "sagoNo": 20220025,
@@ -1609,7 +1731,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "기타 / 미상",
-    "sinkArea": 1.130973355
+    "sinkArea": 1.130973355,
+    "avgTemp": 22.9,
+    "rainfall": 17.5
   },
   {
     "sagoNo": 20220026,
@@ -1635,7 +1759,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "지반 약화",
-    "sinkArea": 0.628318531
+    "sinkArea": 0.628318531,
+    "avgTemp": 24.1,
+    "rainfall": 53.5
   },
   {
     "sagoNo": 20220027,
@@ -1661,7 +1787,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['자연재해', '노후 지하시설물']",
-    "sinkArea": 6.283185307
+    "sinkArea": 6.283185307,
+    "avgTemp": 27.5,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20220028,
@@ -1687,7 +1815,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "기타 / 미상",
-    "sinkArea": 23.5619449
+    "sinkArea": 23.5619449,
+    "avgTemp": null,
+    "rainfall": null
   },
   {
     "sagoNo": 20220031,
@@ -1713,7 +1843,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.125663706
+    "sinkArea": 0.125663706,
+    "avgTemp": 30.3,
+    "rainfall": 17.0
   },
   {
     "sagoNo": 20220036,
@@ -1739,7 +1871,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 1.225221135
+    "sinkArea": 1.225221135,
+    "avgTemp": 29.4,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20220085,
@@ -1765,7 +1899,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "기타 / 미상",
-    "sinkArea": 2.945243113
+    "sinkArea": 2.945243113,
+    "avgTemp": 25.2,
+    "rainfall": 110.0
   },
   {
     "sagoNo": 20220087,
@@ -1791,7 +1927,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '굴착 / 복구 불량']",
-    "sinkArea": 7.068583471
+    "sinkArea": 7.068583471,
+    "avgTemp": null,
+    "rainfall": null
   },
   {
     "sagoNo": 20220088,
@@ -1817,7 +1955,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '자연재해']",
-    "sinkArea": 1.767145868
+    "sinkArea": 1.767145868,
+    "avgTemp": 25.4,
+    "rainfall": 113.5
   },
   {
     "sagoNo": 20220114,
@@ -1843,7 +1983,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.3848451
+    "sinkArea": 0.3848451,
+    "avgTemp": 23.2,
+    "rainfall": 3.5
   },
   {
     "sagoNo": 20220120,
@@ -1869,7 +2011,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['자연재해', '설계 / 시공 오류']",
-    "sinkArea": 18.84955592
+    "sinkArea": 18.84955592,
+    "avgTemp": 27.0,
+    "rainfall": 185.5
   },
   {
     "sagoNo": 20220131,
@@ -1895,7 +2039,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "지반 약화",
-    "sinkArea": 0.070685835
+    "sinkArea": 0.070685835,
+    "avgTemp": 21.5,
+    "rainfall": 65.0
   },
   {
     "sagoNo": 20220136,
@@ -1921,7 +2067,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 1.767145868
+    "sinkArea": 1.767145868,
+    "avgTemp": 12.3,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20220138,
@@ -1947,7 +2095,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "굴착 / 복구 불량",
-    "sinkArea": 0.125663706
+    "sinkArea": 0.125663706,
+    "avgTemp": 3.9,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20220139,
@@ -1973,7 +2123,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 0.125663706
+    "sinkArea": 0.125663706,
+    "avgTemp": -2.4,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20230003,
@@ -1999,7 +2151,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "공사 영향",
-    "sinkArea": 0.753982237
+    "sinkArea": 0.753982237,
+    "avgTemp": 7.1,
+    "rainfall": 36.5
   },
   {
     "sagoNo": 20230009,
@@ -2025,7 +2179,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 0.471238898
+    "sinkArea": 0.471238898,
+    "avgTemp": 3.9,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20230012,
@@ -2051,7 +2207,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": 11.8,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20230013,
@@ -2077,7 +2235,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 3.141592654
+    "sinkArea": 3.141592654,
+    "avgTemp": 15.0,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20230016,
@@ -2103,7 +2263,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "굴착 / 복구 불량",
-    "sinkArea": 3.141592654
+    "sinkArea": 3.141592654,
+    "avgTemp": 12.1,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20230022,
@@ -2129,7 +2291,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "굴착 / 복구 불량",
-    "sinkArea": 1.767145868
+    "sinkArea": 1.767145868,
+    "avgTemp": 7.9,
+    "rainfall": 3.0
   },
   {
     "sagoNo": 20230023,
@@ -2155,7 +2319,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '지반 약화']",
-    "sinkArea": 2.35619449
+    "sinkArea": 2.35619449,
+    "avgTemp": 11.4,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20230026,
@@ -2181,7 +2347,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '자연재해']",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": 13.1,
+    "rainfall": 43.5
   },
   {
     "sagoNo": 20230037,
@@ -2207,7 +2375,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '설계 / 시공 오류']",
-    "sinkArea": 1.570796327
+    "sinkArea": 1.570796327,
+    "avgTemp": 22.8,
+    "rainfall": 13.0
   },
   {
     "sagoNo": 20230041,
@@ -2233,7 +2403,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.102101761
+    "sinkArea": 0.102101761,
+    "avgTemp": 24.0,
+    "rainfall": 23.0
   },
   {
     "sagoNo": 20230064,
@@ -2259,7 +2431,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": 20.8,
+    "rainfall": 0.5
   },
   {
     "sagoNo": 20230069,
@@ -2285,7 +2459,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 1.696460033
+    "sinkArea": 1.696460033,
+    "avgTemp": 24.9,
+    "rainfall": 0.5
   },
   {
     "sagoNo": 20230102,
@@ -2311,7 +2487,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": 27.8,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20230111,
@@ -2337,7 +2515,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "지반 약화",
-    "sinkArea": 8.246680716
+    "sinkArea": 8.246680716,
+    "avgTemp": 27.8,
+    "rainfall": 3.0
   },
   {
     "sagoNo": 20230118,
@@ -2363,7 +2543,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['노후 지하시설물', '자연재해']",
-    "sinkArea": 2.35619449
+    "sinkArea": 2.35619449,
+    "avgTemp": null,
+    "rainfall": 0.5
   },
   {
     "sagoNo": 20230119,
@@ -2389,7 +2571,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": 24.5,
+    "rainfall": 18.0
   },
   {
     "sagoNo": 20230129,
@@ -2415,7 +2599,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 2.35619449
+    "sinkArea": 2.35619449,
+    "avgTemp": 25.9,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20230133,
@@ -2441,7 +2627,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "지반 약화",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": 26.5,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20230136,
@@ -2467,7 +2655,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.109955743
+    "sinkArea": 0.109955743,
+    "avgTemp": 18.5,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20230140,
@@ -2493,7 +2683,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.117809725
+    "sinkArea": 0.117809725,
+    "avgTemp": 17.6,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20230142,
@@ -2519,7 +2711,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "기타 / 미상",
-    "sinkArea": 0.196349541
+    "sinkArea": 0.196349541,
+    "avgTemp": 19.3,
+    "rainfall": 3.5
   },
   {
     "sagoNo": 20230147,
@@ -2545,7 +2739,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 1.099557429
+    "sinkArea": 1.099557429,
+    "avgTemp": 12.5,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20240001,
@@ -2571,7 +2767,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "굴착 / 복구 불량",
-    "sinkArea": 0.188495559
+    "sinkArea": 0.188495559,
+    "avgTemp": 1.5,
+    "rainfall": 0.5
   },
   {
     "sagoNo": 20240007,
@@ -2597,7 +2795,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 3.534291735
+    "sinkArea": 3.534291735,
+    "avgTemp": -1.8,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20240011,
@@ -2623,7 +2823,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '자연재해']",
-    "sinkArea": 0.188495559
+    "sinkArea": 0.188495559,
+    "avgTemp": 1.2,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20240018,
@@ -2649,7 +2851,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.188495559
+    "sinkArea": 0.188495559,
+    "avgTemp": 18.8,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20240030,
@@ -2675,7 +2879,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.196349541
+    "sinkArea": 0.196349541,
+    "avgTemp": 28.0,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20240052,
@@ -2701,7 +2907,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": 28.0,
+    "rainfall": 44.5
   },
   {
     "sagoNo": 20240065,
@@ -2727,7 +2935,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "자연재해",
-    "sinkArea": 7.853981634
+    "sinkArea": 7.853981634,
+    "avgTemp": 27.8,
+    "rainfall": null
   },
   {
     "sagoNo": 20240077,
@@ -2753,7 +2963,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "기타 / 미상",
-    "sinkArea": 18.84955592
+    "sinkArea": 18.84955592,
+    "avgTemp": 27.2,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20240078,
@@ -2779,7 +2991,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "지반 약화",
-    "sinkArea": 2.35619449
+    "sinkArea": 2.35619449,
+    "avgTemp": 28.7,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20240079,
@@ -2805,7 +3019,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "굴착 / 복구 불량",
-    "sinkArea": 1.767145868
+    "sinkArea": 1.767145868,
+    "avgTemp": 26.7,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20240081,
@@ -2831,7 +3047,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "지반 약화",
-    "sinkArea": 2.35619449
+    "sinkArea": 2.35619449,
+    "avgTemp": 28.1,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20240082,
@@ -2857,7 +3075,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.502654825
+    "sinkArea": 0.502654825,
+    "avgTemp": 26.8,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20240083,
@@ -2883,7 +3103,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "기타 / 미상",
-    "sinkArea": 3.769911184
+    "sinkArea": 3.769911184,
+    "avgTemp": 0.6,
+    "rainfall": 3.0
   },
   {
     "sagoNo": 20240085,
@@ -2909,7 +3131,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.011309734
+    "sinkArea": 0.011309734,
+    "avgTemp": null,
+    "rainfall": null
   },
   {
     "sagoNo": 20240088,
@@ -2935,7 +3159,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '지반 약화']",
-    "sinkArea": 4.005530633
+    "sinkArea": 4.005530633,
+    "avgTemp": 26.0,
+    "rainfall": 13.5
   },
   {
     "sagoNo": 20240107,
@@ -2961,7 +3187,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 1.130973355
+    "sinkArea": 1.130973355,
+    "avgTemp": 8.6,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20240108,
@@ -2987,7 +3215,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "굴착 / 복구 불량",
-    "sinkArea": 0.062831853
+    "sinkArea": 0.062831853,
+    "avgTemp": 14.1,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20250004,
@@ -3013,7 +3243,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "['공사 영향', '설계 / 시공 오류']",
-    "sinkArea": 0.942477796
+    "sinkArea": 0.942477796,
+    "avgTemp": -1.4,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20250010,
@@ -3039,7 +3271,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 0.549778714
+    "sinkArea": 0.549778714,
+    "avgTemp": 3.9,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20250012,
@@ -3065,7 +3299,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": -1.4,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20250014,
@@ -3091,7 +3327,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "기타 / 미상",
-    "sinkArea": 0.392699082
+    "sinkArea": 0.392699082,
+    "avgTemp": 3.1,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20250016,
@@ -3117,7 +3355,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "기타 / 미상",
-    "sinkArea": 282.7433388
+    "sinkArea": 282.7433388,
+    "avgTemp": 15.8,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20250018,
@@ -3143,7 +3383,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "기타 / 미상",
-    "sinkArea": 0.070685835
+    "sinkArea": 0.070685835,
+    "avgTemp": -1.0,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20250024,
@@ -3169,7 +3411,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "지반 약화",
-    "sinkArea": 1.570796327
+    "sinkArea": 1.570796327,
+    "avgTemp": 7.3,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20250033,
@@ -3195,7 +3439,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.058904862
+    "sinkArea": 0.058904862,
+    "avgTemp": 18.9,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20250039,
@@ -3221,7 +3467,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 1.178097245
+    "sinkArea": 1.178097245,
+    "avgTemp": 17.4,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20250042,
@@ -3247,7 +3495,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": 17.2,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20250043,
@@ -3273,7 +3523,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.049087385
+    "sinkArea": 0.049087385,
+    "avgTemp": null,
+    "rainfall": null
   },
   {
     "sagoNo": 20250045,
@@ -3299,7 +3551,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "지반 약화",
-    "sinkArea": 1.570796327
+    "sinkArea": 1.570796327,
+    "avgTemp": 16.4,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20250046,
@@ -3325,7 +3579,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "지반 약화",
-    "sinkArea": 0.196349541
+    "sinkArea": 0.196349541,
+    "avgTemp": 14.4,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20250049,
@@ -3351,7 +3607,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "굴착 / 복구 불량",
-    "sinkArea": 1.413716694
+    "sinkArea": 1.413716694,
+    "avgTemp": 17.0,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20250053,
@@ -3377,7 +3635,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "설계 / 시공 오류",
-    "sinkArea": 0.785398163
+    "sinkArea": 0.785398163,
+    "avgTemp": 19.4,
+    "rainfall": 42.5
   },
   {
     "sagoNo": 20250056,
@@ -3403,7 +3663,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "굴착 / 복구 불량",
-    "sinkArea": 31.41592654
+    "sinkArea": 31.41592654,
+    "avgTemp": 14.7,
+    "rainfall": 0.0
   },
   {
     "sagoNo": 20250057,
@@ -3429,7 +3691,9 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "굴착 / 복구 불량",
-    "sinkArea": 1.767145868
+    "sinkArea": 1.767145868,
+    "avgTemp": 18.6,
+    "rainfall": 1.0
   },
   {
     "sagoNo": 20250059,
@@ -3455,6 +3719,8 @@
     "daStDate": 10101,
     "no": 1,
     "sagoDetailProcessed": "노후 지하시설물",
-    "sinkArea": 0.502654825
+    "sinkArea": 0.502654825,
+    "avgTemp": null,
+    "rainfall": null
   }
 ]

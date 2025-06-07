@@ -12,6 +12,11 @@ const ChartPanel = ({
   depthRange, setDepthRange, 
   areaRange, setAreaRange,
   selectedSinkhole, setSelectedSinkhole,
+  clickedFromMap, setClickedFromMap, // fixed
+  showRain = false, setShowRain,
+  showRepaired = false, setShowRepaired,
+  showDamaged = false, setShowDamaged,
+  weatherMap,
 }) => {
 
   // 원인 카테고리별 카운트
@@ -45,6 +50,9 @@ const ChartPanel = ({
   })).sort((a, b) => b.count - a.count);
 
   const handleClick = (name) => {
+    setClickedFromMap(false);
+    setSelectedSinkhole(null);
+    console.log("[ChartPanel] Cause clicked, clickedFromMap set to false");
     if (selectedCauses.includes(name)) {
       setSelectedCauses(selectedCauses.filter(cause => cause !== name));
     } else {
@@ -74,19 +82,119 @@ const ChartPanel = ({
   });
   
   const handleMonthClick = (month) => {
+    setClickedFromMap(false);
+    setSelectedSinkhole(null);
+    console.log("[ChartPanel] Month clicked, clickedFromMap set to false");
     if (selectedMonths.includes(month)) {
       setSelectedMonths(selectedMonths.filter(m => m !== month));
     } else {
       setSelectedMonths([...selectedMonths, month]);
     }
   };
-  
 
+  // 산점도 데이터 필터링 및 선택 상태 설정
+  const filteredScatterData = sinkholes
+    .filter(hole => {
+      const area = Number(hole.sinkArea);
+      const depth = Number(hole.sinkDepth);
+
+      // 강수량 필터 (showRain이 true일 경우에만 적용)
+      let matchRain = true;
+      if (showRain) {
+        const dateStr = hole.sagoDate?.toString().slice(0, 8);
+        const region = hole.sigungu;
+        const key = `${dateStr}_${region}`;
+        const weather = weatherMap?.[key];
+        const rainValue = parseFloat(weather?.rain);
+        matchRain = !isNaN(rainValue) && rainValue > 0;
+        console.log('[ChartPanel Filter] Rain condition:', rainValue, '=>', matchRain);
+      }
+
+      // 복구 여부 필터
+      let matchRepaired = true;
+      if (showRepaired) {
+        const status = hole.trStatus;
+        matchRepaired = typeof status === 'string' && status.includes('복구완료');
+        // console.log('[ChartPanel Filter] Repaired condition:', status, '=>', matchRepaired);
+      }
+
+      // 피해 여부 필터
+      let matchDamaged = true;
+      if (showDamaged) {
+        const totalDamage = (parseInt(hole.deathCnt) || 0) + (parseInt(hole.injuryCnt) || 0) + (parseInt(hole.vehicleCnt) || 0);
+        matchDamaged = totalDamage > 0;
+        // console.log('[ChartPanel Filter] Damaged condition:', totalDamage, '=>', matchDamaged);
+      }
+
+      return (
+        !isNaN(area) &&
+        !isNaN(depth) &&
+        area >= areaRange[0] &&
+        area <= areaRange[1] &&
+        depth >= depthRange[0] &&
+        depth <= depthRange[1] &&
+        matchRain &&
+        matchRepaired &&
+        matchDamaged
+      );
+    })
+    .map(hole => {
+      const isSelected = selectedSinkhole && hole.sagoNo === selectedSinkhole.sagoNo;
+      return {
+        ...hole,
+        isSelected,
+        fill: selectedSinkhole
+          ? (isSelected ? "#10b981" : "#a3a3a3")
+          : "#10b981",
+        opacity: selectedSinkhole
+          ? (isSelected ? 1 : 0.4)
+          : 1,
+      };
+    })
+    .sort((a, b) => (a.isSelected ? 1 : 0) - (b.isSelected ? 1 : 0));
+  
   return (
     <div className="chart-panel-container" /* w-full p-4 bg-white rounded shadow overflow-y-auto max-h-[800px] */>
       <h2 className="chart-panel-title-main" /* text-lg font-semibold mb-4 */>📊 싱크홀 데이터 분석</h2>
       <div className="chart-header-note" /* text-sm text-gray-500 */>
         ※ 차트는 선택한 범위에 따라 동적으로 렌더링됩니다.
+      </div>
+      <div className="toggle-filters filter-toggle-group" /* moved to CSS */>
+        <label className="toggle-label">
+          <input
+            type="checkbox"
+            checked={showRain}
+            onChange={() => {
+              setShowRain(!showRain);
+              setClickedFromMap(false);
+            }}
+          />{' '}
+          강수 유무
+        </label>
+        <label className="toggle-label">
+          <input
+            type="checkbox"
+            checked={showRepaired}
+            onChange={() => {
+              const nextValue = !showRepaired;
+              setShowRepaired(nextValue);
+              setClickedFromMap(false);
+              console.log('[Toggle] showRepaired changed to:', nextValue);
+            }}
+          />{' '}
+          복구 미완료
+        </label>
+        <label className="toggle-label">
+          <input
+            type="checkbox"
+            checked={showDamaged}
+            onChange={() => {
+              setShowDamaged(!showDamaged);
+              setClickedFromMap(false);
+            }}
+          />{' '}
+          피해 유무
+        </label>
       </div>
       {/* 여기에 차트 넣기 */}
       <h3 className="chart-section-title" /* mt-8 text-base font-semibold */>🧭 발생 원인별 카운트</h3>
@@ -112,10 +220,14 @@ const ChartPanel = ({
                 key={`cell-${index}`}
                 cursor="pointer"
                 fill="#ef4444"
-                fillOpacity={ 
-                  selectedCauses.length === 0 || selectedCauses.includes(entry.name)
-                    ? 1
-                    : 0.4
+                fillOpacity={
+                  selectedSinkhole
+                    ? sinkholes.some(s => s.sagoDetailProcessed?.includes(entry.name) && s.sagoNo === selectedSinkhole.sagoNo)
+                      ? 1
+                      : 0.3
+                    : (selectedCauses.length === 0 || selectedCauses.includes(entry.name))
+                      ? 1
+                      : 0.4
                 }
                 onClick={() => handleClick(entry.name)}
               />            
@@ -149,9 +261,13 @@ const ChartPanel = ({
                 cursor="pointer"
                 fill="#60a5fa"
                 fillOpacity={
-                  selectedMonths.length === 0 || selectedMonths.includes(entry.month)
-                    ? 1
-                    : 0.4
+                  selectedSinkhole
+                    ? sinkholes.some(s => String(s.sagoDate)?.slice(4, 6) === entry.month && s.sagoNo === selectedSinkhole.sagoNo)
+                      ? 1
+                      : 0.3
+                    : (clickedFromMap || selectedMonths.length === 0 || selectedMonths.includes(entry.month))
+                      ? 1
+                      : 0.4
                 }
                 onClick={() => handleMonthClick(entry.month)}
               />
@@ -197,67 +313,33 @@ const ChartPanel = ({
           <Tooltip cursor={{ strokeDasharray: '3 3' }} />
           <Scatter
             name="싱크홀"
-            data={sinkholes
-              .filter(hole => {
-                const area = Number(hole.sinkArea);
-                const depth = Number(hole.sinkDepth);
-                return (
-                  !isNaN(area) &&
-                  !isNaN(depth) &&
-                  area >= areaRange[0] &&
-                  area <= areaRange[1] &&
-                  depth >= depthRange[0] &&
-                  depth <= depthRange[1]
-                );
-              })
-              .map(hole => ({
-                ...hole,
-                opacity:
-                  selectedSinkhole && selectedSinkhole.sinkNo !== hole.sinkNo
-                    ? 0.3
-                    : 1,
-              }))}
+            data={filteredScatterData}
             fill="#10b981"
             onClick={(e) => {
               if (e && e.payload) {
                 setSelectedSinkhole(e.payload);
+                setClickedFromMap(true); // set to true so map reflects the clicked point 이름이 거시기 한데 scatter에서 클릭했을 때만 true로 설정
               }
             }}
           >
-            {sinkholes
-              .filter(hole => {
-                const area = Number(hole.sinkArea);
-                const depth = Number(hole.sinkDepth);
-                return (
-                  !isNaN(area) &&
-                  !isNaN(depth) &&
-                  area >= areaRange[0] &&
-                  area <= areaRange[1] &&
-                  depth >= depthRange[0] &&
-                  depth <= depthRange[1]
-                );
-              })
-              .map((entry, index) => {
-                const isSelected =
-                  !selectedSinkhole || selectedSinkhole.sinkNo === entry.sinkNo;
-                return (
-                  <Cell
-                    key={`scatter-point-${index}`}
-                    fillOpacity={isSelected ? 1 : 0.3}
-                  />
-                );
-              })}
+            {filteredScatterData.map((entry, index) => (
+              <Cell
+                key={`scatter-point-${index}`}
+                fill={entry.fill}
+                fillOpacity={entry.opacity}
+              />
+            ))}
           </Scatter>
         </ScatterChart>
       </ResponsiveContainer>
-      <RangeSlider
+      <RangeSlider className="chart-range-slider"
         min={0}
         max={d3.max(sinkholes, d => Number(d.sinkDepth)) || 100}
         value={depthRange}
         onChange={setDepthRange}
         label={`깊이 범위: ${depthRange[0]}m - ${depthRange[1]}m`}
       />
-      <RangeSlider
+      <RangeSlider className="chart-range-slider"
         min={0}
         max={d3.max(sinkholes, d => Number(d.sinkArea)) || 1000}
         value={areaRange}

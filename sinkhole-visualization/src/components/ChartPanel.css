@@ -34,3 +34,26 @@
   color: #6b7280; /* Gray-500 */
   text-align: left;
 }
+
+.chart-range-slider{
+    background-color: #10b981;
+}
+
+/* 📌 토글 필터 영역 스타일 */
+.filter-toggle-group {
+  margin-top: 20px;
+  font-size: 0.7rem; /* 글자 크기 축소 */
+  margin-bottom: 0;
+}
+
+/* Moved inline styles for filter toggle items and labels into CSS */
+.filter-toggle-item {
+  margin-right: 0.3rem;
+  display: inline-block;
+}
+
+.toggle-label {
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  /* display: inline-block; */
+}
