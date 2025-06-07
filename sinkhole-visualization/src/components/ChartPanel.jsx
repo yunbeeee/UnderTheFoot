@@ -28,9 +28,22 @@ const ChartPanel = ({
           })()
         : []);
 
-  const highlightMonth = (selectedSinkhole?.sagoDate)
-  ? [String(selectedSinkhole.sagoDate).slice(4, 6)]
-  : selectedMonths; 
+  const highlightMonth =
+    selectedMonths.length > 0 && selectedMonths.some(m => m != null)
+      ? selectedMonths
+      : (selectedSinkhole?.sagoDate
+        ? (() => {
+          const raw = selectedSinkhole.sagoDate;
+          const dateStr = typeof raw === 'number' ? String(raw) : (raw ?? '');
+          return dateStr.length >= 6 ? [dateStr.slice(4, 6)] : [];
+        })()
+        : []);
+console.log('📌 selectedSinkhole:', selectedSinkhole);
+console.log('🧭 selectedCauses:', selectedCauses);
+console.log('📅 selectedMonths:', selectedMonths);
+console.log('✅ highlightCauses:', highlightCauses);
+console.log('✅ highlightMonth:', highlightMonth);
+  
   const causeCounts = {};
   sinkholes.forEach(item => {
     let details = item.sagoDetailProcessed;
@@ -95,10 +108,11 @@ const ChartPanel = ({
   
   const handleMonthClick = (month) => {
     setIsReset(false);
-    if (selectedMonths.includes(month)) {
-      setSelectedMonths(selectedMonths.filter(m => m !== month));
+    const padded = String(month).padStart(2, '0'); // '01' ~ '12'
+    if (selectedMonths.includes(padded)) {
+      setSelectedMonths(selectedMonths.filter(m => m !== padded));
     } else {
-      setSelectedMonths([...selectedMonths, month]);
+      setSelectedMonths([...selectedMonths, padded]);
       setSelectedGu(null); // 월 고르면 자치구 선택 초기화
     }
 

@@ -86,7 +86,7 @@ const riskScores = calculateRiskScores(sinkholes);
 
 const colorScale = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, 1]);
 
-const SeoulMap = ({ 
+const SeoulMap = ({
   selectedSinkhole,
   selectedGu, setSelectedGu, mapRef,
   setSelectedSinkhole,
@@ -160,9 +160,9 @@ const SeoulMap = ({
 
       matchCause = selectedCauses.every(cause =>
         details
-        .filter(d => typeof d === 'string')
-        .map(d => d.trim())
-        .includes(cause)
+          .filter(d => typeof d === 'string')
+          .map(d => d.trim())
+          .includes(cause)
       );
     }
 
@@ -183,7 +183,7 @@ const SeoulMap = ({
           ? new Date(`${sagoStr.slice(0, 4)}-${sagoStr.slice(4, 6)}-${sagoStr.slice(6, 8)}`)
           : null;
 
-      matchDate = 
+      matchDate =
         dateFormatted &&
         dateFormatted >= startDate &&
         dateFormatted <= endDate;
@@ -192,21 +192,21 @@ const SeoulMap = ({
     return withinArea && withinDepth && matchCause && matchMonth && matchDate; // 모두 만족해야 마커 표시
   });
 
-    const styleFeature = (feature) => {
+  const styleFeature = (feature) => {
     const fullName = feature.properties.SGG_NM;
     const guName = fullName.replace('서울특별시 ', '').trim();
     const risk = riskScores[guName];
     const isSelected = selectedGu === guName;
 
-     // 현재 선택된 구인지 확인
+    // 현재 선택된 구인지 확인
     // console.log('guName:', guName, 'risk:', riskScores[guName]);
     return {
       fillColor: risk !== undefined ? colorScale(risk) : '#ccc',
       weight: isSelected ? 4 : 2.0,
       color: isSelected ? '#000' : '#888',
       fillOpacity: selectedGu
-      ? isSelected ? 0.7 : 0.4 // ✅ 선택된 구만 강조
-      : 0.9
+        ? isSelected ? 0.7 : 0.4 // ✅ 선택된 구만 강조
+        : 0.9
     };
   };
   
@@ -239,12 +239,12 @@ const SeoulMap = ({
             selected={startDate}
             onChange={(date) => setDateRange([date, endDate])}
             dateFormat="yyyy-MM-dd"
-            minDate={MIN_DATE} 
+            minDate={MIN_DATE}
             maxDate={MAX_DATE}
             placeholderText="시작일 선택"
             className="p-1 border rounded text-sm"
             popperClassName="datepicker-popper"
-            popperPlacement="bottom-start" 
+            popperPlacement="bottom-start"
           />
           <label className="-8 px-2 py-1 text-sm">종료일:</label>
           <DatePicker
@@ -256,9 +256,9 @@ const SeoulMap = ({
             placeholderText="종료일 선택"
             className="p-1 border rounded text-sm"
             popperClassName="datepicker-popper"
-            popperPlacement="bottom-start" 
+            popperPlacement="bottom-start"
           />
-        </div>  
+        </div>
       </div>
 
       <MapContainer
@@ -277,92 +277,91 @@ const SeoulMap = ({
           data={seoulGeoJson}
           style={styleFeature}
           onEachFeature={handleFeatureClick}
-          />
-          {/* 자치구 이름 텍스트 표시 */}
-          {seoulGeoJson.features.map((feature, idx) => {
-            const bounds = L.geoJSON(feature).getBounds();
-            // const center = bounds.getCenter();      
-            const center = centroid(feature).geometry.coordinates;
-            const guName = feature.properties.SGG_NM.replace('서울특별시 ', '');
+        />
+        {/* 자치구 이름 텍스트 표시 */}
+        {seoulGeoJson.features.map((feature, idx) => {
+          const bounds = L.geoJSON(feature).getBounds();
+          // const center = bounds.getCenter();      
+          const center = centroid(feature).geometry.coordinates;
+          const guName = feature.properties.SGG_NM.replace('서울특별시 ', '');
 
-            return (
-              <Marker
-                key={`label-${idx}`}
-                // position={center}
-                position={[center[1], center[0]]}
-                icon={L.divIcon({
-                  className: 'gu-label',
-                  html: `<div>${guName}</div>`,
-                  iconSize: [80, 24],
-                  iconAnchor: [20, 5],
-                })}
-                interactive={false}
+          return (
+            <Marker
+              key={`label-${idx}`}
+              // position={center}
+              position={[center[1], center[0]]}
+              icon={L.divIcon({
+                className: 'gu-label',
+                html: `<div>${guName}</div>`,
+                iconSize: [80, 24],
+                iconAnchor: [20, 5],
+              })}
+              interactive={false}
 
-              />
-            );
-          })}
+            />
+          );
+        })}
 
-          {sinkholes.map((item, idx) => {
-            const guName = item.sigungu?.replace('서울특별시 ', '');
-            const isInSelectedGu = selectedGu && guName === selectedGu;
-            const isInFilteredList = filteredSinkholes.some(f => f.sagoNo === item.sagoNo);
+        {sinkholes.map((item, idx) => {
+          const guName = item.sigungu?.replace('서울특별시 ', '');
+          const isInSelectedGu = selectedGu && guName === selectedGu;
+          const isInFilteredList = filteredSinkholes.some(f => f.sagoNo === item.sagoNo);
+
+          const isSelected = selectedSinkhole?.sagoNo === item.sagoNo;
+
+          const shouldShow =
+            selectedSinkhole
+              ? isSelected
+              : (
+                !isReset && (
+                  (selectedGu === null && isInFilteredList) ||
+                  (selectedGu && isInSelectedGu) ||
+                  selectedGu === 'ALL'
+                )
+              );
+
+          const isHighlighted =
+            selectedGu === 'ALL' ||
+            (selectedGu === null && isInFilteredList) ||
+            isInSelectedGu;
             
-            const isChartPanelActive = selectedCauses.length > 0 || selectedMonths.length > 0;
-
-            const isSelected = selectedSinkhole?.sagoNo === item.sagoNo;
-
-            const shouldShow =
-              selectedSinkhole
-                ? isSelected
-                : (
-                    !isReset && (
-                      (selectedGu === null && isInFilteredList) ||
-                      (selectedGu && isInSelectedGu) ||
-                      selectedGu === 'ALL'
-                    )
-                  ); 
-
-            const isHighlighted =
-              selectedGu === 'ALL' ||
-              (selectedGu === null && isInFilteredList) ||
-              isInSelectedGu;
+          if (!shouldShow) return null;
             
-            if (!shouldShow) return null;
-            
-            return (
+          return (
 
-              <Marker
-                key={idx}
-                position={[item.sagoLat, item.sagoLon]}
-                icon={L.icon({
-                  ...redIcon.options, // redIcon의 설정 재사용
-                  className: isHighlighted ? '' : 'dimmed-pin' // ✅ 강조되지 않은 핀만 흐리게
-                })}
-                eventHandlers={{
-                  click: () => {
-                    setSelectedSinkhole(prev =>
-                      prev && prev.sagoNo === item.sagoNo ? null : item
-                    );
-                  }
-                }}
-              />
-            );
-          })}
-            <MapControlButtons
-              onReset={() => {
-                setSelectedGu(null); 
-                setSelectedCauses([]);
-                setSelectedMonths([]);
-                setDateRange([null, null]);
-                setIsReset(true);
-                mapRef.current?.setView([37.5665, 126.9780], 11);
+            <Marker
+              key={idx}
+              position={[item.sagoLat, item.sagoLon]}
+              icon={L.icon({
+                ...redIcon.options, // redIcon의 설정 재사용
+                className: isHighlighted ? '' : 'dimmed-pin' // ✅ 강조되지 않은 핀만 흐리게
+              })}
+              eventHandlers={{
+                click: () => {
+                  setSelectedSinkhole(prev =>
+                    prev && prev.sagoNo === item.sagoNo ? null : item
+                  );
+                }
               }}
-              onShowAll={() => {
-                setSelectedGu('ALL');
-                setIsReset(false);
-                mapRef.current?.setView([37.5665, 126.9780], 11);
-              }}
-            />   
+            />
+          );
+        })}
+        <MapControlButtons
+          onReset={() => {
+            setSelectedSinkhole(null);
+            setSelectedGu(null);
+            setSelectedCauses([]);
+            setSelectedMonths([]);
+            setDateRange([null, null]);
+            setIsReset(true);
+            mapRef.current?.setView([37.5665, 126.9780], 11);
+          }}
+          onShowAll={() => {
+            setSelectedGu('ALL');
+            setIsReset(false);
+            mapRef.current?.setView([37.5665, 126.9780], 11);
+          }}
+        />
       </MapContainer>
     </div>
   );

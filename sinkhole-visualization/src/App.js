@@ -19,11 +19,16 @@ function App() {
   const [isReset, setIsReset] = useState(true); // 초기화 여부
 
   const handleSinkholeSelect = (sinkhole) => {
-    // 같은 핀을 클릭해서 해제하는 경우
-    if (selectedSinkhole && selectedSinkhole.sagoNo === sinkhole.sagoNo) {
+    if (!sinkhole) {
+      // 초기화 시 사용됨
       setSelectedSinkhole(null);
       setSelectedCauses([]);
       setSelectedMonths([]);
+      return;
+    }
+    // 같은 핀을 클릭해서 해제하는 경우
+    if (selectedSinkhole && selectedSinkhole.sagoNo === sinkhole.sagoNo) {
+      setSelectedSinkhole(null);
       return;
     }
 
@@ -50,7 +55,7 @@ function App() {
     // 발생 월 처리
     const dateStr = sinkhole.sagoDate?.toString();
     const month = dateStr && dateStr.length >= 6 ? dateStr.substring(4, 6) : null;
-    setSelectedMonths([month]);
+    setSelectedMonths(month ? [month] : []);
     
   };
 
