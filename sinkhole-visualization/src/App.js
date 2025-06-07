@@ -19,13 +19,13 @@ function App() {
   const [isReset, setIsReset] = useState(true); // 초기화 여부
 
   const handleSinkholeSelect = (sinkhole) => {
-    if (!sinkhole) {
-      // 초기화 시 사용됨
-      setSelectedSinkhole(null);
-      setSelectedCauses([]);
-      setSelectedMonths([]);
-      return;
-    }
+  if (!sinkhole) {
+    // 초기화 시 사용됨
+    setSelectedSinkhole(null);
+    setSelectedCauses([]);
+    setSelectedMonths([]);
+    return;
+  }
     // 같은 핀을 클릭해서 해제하는 경우
     if (selectedSinkhole && selectedSinkhole.sagoNo === sinkhole.sagoNo) {
       setSelectedSinkhole(null);

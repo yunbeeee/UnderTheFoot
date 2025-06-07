@@ -237,7 +237,10 @@ const SeoulMap = ({
           <label className="h-8 px-2 py-1 text-sm">시작일:</label>
           <DatePicker
             selected={startDate}
-            onChange={(date) => setDateRange([date, endDate])}
+            onChange={(date) => {
+              setDateRange([date, endDate]);
+              setIsReset(false); // ✅ 이게 핵심!
+            }}
             dateFormat="yyyy-MM-dd"
             minDate={MIN_DATE}
             maxDate={MAX_DATE}
@@ -245,11 +248,15 @@ const SeoulMap = ({
             className="p-1 border rounded text-sm"
             popperClassName="datepicker-popper"
             popperPlacement="bottom-start"
+            
           />
           <label className="-8 px-2 py-1 text-sm">종료일:</label>
           <DatePicker
             selected={endDate}
-            onChange={(date) => setDateRange([startDate, date])}
+            onChange={(date) => {
+              setDateRange([startDate, date]);
+              setIsReset(false); // ✅ 이것도!
+            }}
             dateFormat="yyyy-MM-dd"
             minDate={startDate}
             maxDate={MAX_DATE}
@@ -309,13 +316,22 @@ const SeoulMap = ({
 
           const isSelected = selectedSinkhole?.sagoNo === item.sagoNo;
 
+          const hasFilters =
+            selectedCauses.length > 0 ||
+            selectedMonths.length > 0 ||
+            (startDate && endDate);
+          
           const shouldShow =
             selectedSinkhole
               ? isSelected
               : (
-                !isReset && (
-                  (selectedGu === null && isInFilteredList) ||
+                !isReset &&
+                (
+                  // 1. 자치구를 선택하지 않았지만 필터가 존재하는 경우 → 필터 기준으로 표시
+                  (selectedGu === null && (hasFilters ? isInFilteredList : true)) ||
+                  // 2. 자치구 선택됨 → 그 구에 속한 것만 표시
                   (selectedGu && isInSelectedGu) ||
+                  // 3. 전체 핀 보기
                   selectedGu === 'ALL'
                 )
               );
