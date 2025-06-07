@@ -18,12 +18,15 @@ const KakaoMap = () => {
   // SDK load 완료 여부 확인
   const [isMapLoaded, setIsMapLoaded] = useState(false);
 
-  // ✅ 마커 상태 추가
+  // 출발지, 도착지 마커 상태
   const [startMarker, setStartMarker] = useState(null);
   const [endMarker, setEndMarker] = useState(null);
 
-  // 싱크홀 마커 상태
-  const [sinkholeMarkers, setSinkholeMarkers] = useState([]);
+  // 싱크홀 마커 상태 (marker + polygon 통합)
+  const [sinkholeObjects, setSinkholeObjects] = useState([]);
+
+  // 반경 상태 추가
+  const [radiusRange, setRadiusRange] = useState(100); // 초기 반경 100m
 
   useEffect(() => {
     const JS_KEY = process.env.REACT_APP_KAKAO_JAVASCRIPT_KEY
@@ -42,7 +45,7 @@ const KakaoMap = () => {
           };
           const kakaoMap = new window.kakao.maps.Map(container, options);
           setMap(kakaoMap);
-          setIsMapLoaded(true); // ✅ SDK 로드 완료
+          setIsMapLoaded(true); // SDK 로드 완료
         });
       } else {
         console.error('Kakao Maps SDK 로드 실패');
@@ -133,7 +136,15 @@ const KakaoMap = () => {
     });
 
     if (polyline) polyline.setMap(null); // 이전 경로 제거
-    sinkholeMarkers.forEach(marker => marker.setMap(null)); // 이전 경로에 대한 싱크홀 제거
+    // 이전 경로에 대한 싱크홀 마커 초기화화
+    if (sinkholeObjects) {
+      sinkholeObjects.forEach(({ marker, donut }) => {
+        marker.setMap(null);
+        donut.setMap(null);
+      });
+      setSinkholeObjects([]);
+    }
+
 
     const newPolyline = new window.kakao.maps.Polyline({
       path: linePath,
@@ -146,7 +157,7 @@ const KakaoMap = () => {
     newPolyline.setMap(map);
     setPolyline(newPolyline);
 
-    // 경로 상의 위경도 리스트 추출 (console)
+    // 경로상의 위경도 리스트 추출 (console)
     const latLngList = linePath.map(latlng => ({
       lat: latlng.getLat(),
       lng: latlng.getLng()
@@ -197,8 +208,8 @@ const KakaoMap = () => {
     };
 
     // 싱크홀 필터링 및 마커 표시
-    const nearSinkholes = filterSinkholesNearRoute(latLngList, 100); // 근처 싱크홀 리스트
-    const markers = nearSinkholes.map((item) => {
+    const nearSinkholes = filterSinkholesNearRoute(latLngList, radiusRange); // 근처 싱크홀 리스트
+    const newSinkholeObjects = nearSinkholes.map((item) => {
       const marker = new window.kakao.maps.Marker({
         map,
         position: new window.kakao.maps.LatLng(item.sagoLat, item.sagoLon),
@@ -238,7 +249,7 @@ const KakaoMap = () => {
       const center = new window.kakao.maps.LatLng(item.sagoLat, item.sagoLon);
 
       // 바깥 원, 안쪽 원 생성 -> 도넛 모양양
-      const outerPath = generateCirclePath(center, 100);
+      const outerPath = generateCirclePath(center, radiusRange); // 반경 슬라이더 반영
       const innerHole = generateCirclePath(center, 30);
 
       // 도넛형 폴리곤 생성
@@ -254,11 +265,11 @@ const KakaoMap = () => {
         fillOpacity: 0.4
       });
 
-      return marker;
+      return {marker, donut};
     });
 
     // 마커 업데이트
-    setSinkholeMarkers(markers);
+    setSinkholeObjects(newSinkholeObjects);
 
     const bounds = new window.kakao.maps.LatLngBounds();
     bounds.extend(new window.kakao.maps.LatLng(startCoord.lat, startCoord.lng));
@@ -352,6 +363,29 @@ const KakaoMap = () => {
           </div>
         )}
       
+      <div style={{ margin: '1rem 0' }}>
+        <label className="font-medium text-gray-700">
+          경로 반경 (m):
+          <span style={{ fontWeight: 'bold', color: '#2563eb', marginLeft: '0.5rem' }}>
+            {radiusRange}m
+          </span>
+        </label>
+
+        <input
+          type="range"
+          min={50}
+          max={300}
+          step={50}
+          value={radiusRange}
+          onChange={(e) => setRadiusRange(Number(e.target.value))}
+          style={{
+            width: '100%',
+            marginTop: '0.5rem',
+            accentColor: '#2563eb',
+            cursor: 'pointer'
+          }}
+        />
+      </div>
 
       <button onClick={getCarDirection} disabled={!startCoord || !endCoord} className="search-button"> 
         최적 경로 보기
