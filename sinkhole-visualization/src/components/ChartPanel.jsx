@@ -252,9 +252,10 @@ const ChartPanel = ({
           </Bar>
         </BarChart>
       </ResponsiveContainer>
+
       <h3 className="chart-section-title" /* mt-8 text-base font-semibold */>📅 월별 사고 건수</h3>
       <ResponsiveContainer width="100%" height={200}>
-        <BarChart className='chart-area'
+        <ComposedChart className='chart-area'
           data={monthChartData} 
         >
           <XAxis 
@@ -292,16 +293,37 @@ const ChartPanel = ({
                 key={`month-cell-${index}`}
                 cursor="pointer"
                 fillOpacity={
-                  selectedMonths.length === 0 || selectedMonths.includes(entry.month)
-                    ? 1
-                    : 0.4
+                  selectedSinkhole
+                    ? sinkholes.some(s => String(s.sagoDate)?.slice(4, 6) === entry.month && s.sagoNo === selectedSinkhole.sagoNo)
+                      ? 1
+                      : 0.3
+                    : (clickedFromMap || selectedMonths.length === 0 || selectedMonths.includes(entry.month))
+                      ? 1
+                      : 0.4
                 }
-                onClick={() => handleMonthClick(entry.month)}
+                onClick={() => {
+                  setClickedFromMap(false);
+                  setSelectedSinkhole(null);
+                  if (selectedMonths.includes(entry.month)) {
+                    setSelectedMonths(selectedMonths.filter(m => m !== entry.month));
+                  } else {
+                    setSelectedMonths([...selectedMonths, entry.month]);
+                  }
+                }}
               />
             ))}
           </Bar>
-        </BarChart>
+          <Line 
+            yAxisId="right" 
+            type="monotone" 
+            dataKey="avgTemps" 
+            stroke="#f97316" 
+            strokeWidth={1} 
+            dot={{ r: 2 }}
+          />
+        </ComposedChart>
       </ResponsiveContainer>
+
       <h3 className="chart-section-title" /* text-base font-semibold mb-2 */>📍 면적(m²) vs. 깊이(m) 산점도</h3>
       <ResponsiveContainer width="100%" height={250}>
         <ScatterChart className='chart-area'
@@ -359,6 +381,7 @@ const ChartPanel = ({
           </Scatter>
         </ScatterChart>
       </ResponsiveContainer>
+      
       <RangeSlider className="chart-range-slider"
         min={0}
         max={d3.max(sinkholes, d => Number(d.sinkDepth)) || 100}
@@ -373,17 +396,6 @@ const ChartPanel = ({
         onChange={setAreaRange}
         label={`면적 범위: ${areaRange[0]}m² - ${areaRange[1]}m²`}
       />
-
-          <Line 
-            yAxisId="right" 
-            type="monotone" 
-            dataKey="avgTemps" 
-            stroke="#f97316" 
-            strokeWidth={1} 
-            dot={{ r: 2 }}
-          />
-        </ComposedChart>
-      </ResponsiveContainer>
     </div>
   );
 };
