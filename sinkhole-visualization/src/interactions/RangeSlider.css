@@ -18,4 +18,30 @@
     background: #93c5fd;
     height: 8px;
   }
-  
+
+  .vertical-slider {
+    writing-mode: bt-lr; /* Bottom to top, left to right */
+    -webkit-appearance: slider-vertical;
+    height: 200px;
+    width: 8px;
+  }
+
+  .vertical-slider .custom-track {
+    width: 8px;
+    height: 100%;
+  }
+
+  .vertical-slider .custom-thumb {
+    width: 16px;
+    height: 16px;
+    margin-left: -4px;
+    margin-top: -8px;
+  }
+
+  .vertical-slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 240px;
+    margin-right: 8px;
+  }

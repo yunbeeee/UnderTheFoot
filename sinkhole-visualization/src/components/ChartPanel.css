@@ -1,0 +1,36 @@
+/* * {
+  border: 1px solid red;
+} */
+/* 📊 차트 패널 전체 컨테이너 */
+.chart-panel-container {
+  width: 100%;
+  /* padding: 1rem; restored from w-full p-4 */
+  background-color: white;
+  border-radius: 0.5rem;
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
+  max-height: 800px;
+  overflow-y: auto;
+  text-align: left;
+}
+.chart-panel-title-main {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 1rem; /* mb-4 */
+}
+.chart-section-title {
+  margin-top: 2rem; /* mt-8 */
+  font-size: 0.9rem; /* text-base */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 0.5rem; /* optional as seen in one case */
+  margin-left: 5px;
+}
+
+.chart-area{
+    margin : 10px 0 5px 0;
+}
+
+.chart-header-note {
+  font-size: 0.5rem; /* text-sm */
+  color: #6b7280; /* Gray-500 */
+  text-align: left;
+}

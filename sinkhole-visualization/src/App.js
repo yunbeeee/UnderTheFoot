@@ -72,14 +72,16 @@ function App() {
         {/* 오른쪽 (차트) */}
         <div className="w-60 h-[806px] bg-white p-4 rounded shadow overflow-auto">
           <ChartPanel 
-          selectedCauses={selectedCauses} 
-          setSelectedCauses={setSelectedCauses}
-          selectedMonths={selectedMonths}
-          setSelectedMonths={setSelectedMonths}
-          depthRange={depthRange} 
-          setDepthRange={setDepthRange}
-          areaRange={areaRange}
-          setAreaRange={setAreaRange}
+            selectedCauses={selectedCauses} 
+            setSelectedCauses={setSelectedCauses}
+            selectedMonths={selectedMonths}
+            setSelectedMonths={setSelectedMonths}
+            depthRange={depthRange} 
+            setDepthRange={setDepthRange}
+            areaRange={areaRange}
+            setAreaRange={setAreaRange}
+            selectedSinkhole={selectedSinkhole}
+            setSelectedSinkhole={setSelectedSinkhole}
           />
         </div>
       </div>

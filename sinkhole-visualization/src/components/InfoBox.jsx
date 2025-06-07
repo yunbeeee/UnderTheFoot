@@ -25,16 +25,13 @@ export default function InfoBox({ sinkhole }) {
       <p><strong>깊이:</strong> {sinkhole.sinkDepth}</p>
       
 
-      {sinkhole.deathCnt > 0 || sinkhole.injuryCnt > 0 || sinkhole.vehicleCnt > 0 ? (
-        <div>
-          <p><strong>피해정도:</strong></p>
-          {sinkhole.deathCnt > 0 && <p>사망자 {sinkhole.deathCnt}명</p>}
-          {sinkhole.injuryCnt > 0 && <p>부상자 {sinkhole.injuryCnt}명</p>}
-          {sinkhole.vehicleCnt > 0 && <p>피해 차량 {sinkhole.vehicleCnt}대</p>}
-        </div>
-      ) : (
-        <p><strong>피해정도:</strong> -</p>
-      )}
+      <p><strong>피해정도:</strong> {
+        [
+          `사망자 ${sinkhole.deathCnt > 0 ? `${sinkhole.deathCnt}명` : '-'}`,
+          `부상자 ${sinkhole.injuryCnt > 0 ? `${sinkhole.injuryCnt}명` : '-'}`,
+          `피해 차량 ${sinkhole.vehicleCnt > 0 ? `${sinkhole.vehicleCnt}대` : '-'}`
+        ].join(' | ')
+      }</p>
     </div>
   );
 }
