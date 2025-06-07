@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import RangeSlider from '../interactions/RangeSlider';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, Line, ComposedChart, Legend } from 'recharts';
 import sinkholes from '../sinkholes.json';
 import * as d3 from 'd3';
 import { parse } from 'json5';
@@ -61,12 +61,29 @@ const ChartPanel = ({
     }
   });
 
+  // 월별 평균 기온 데이터
+  const avgTemps = {
+    '01': -2.54286,
+    '02': 0.257143,
+    '03': 6.942857,
+    '04': 12.54286,
+    '05': 17.48571,
+    '06': 22.22857,
+    '07': 25.32857,
+    '08': 25.84286,
+    '09': 21.38571,
+    '10': 14.14286,
+    '11': 7.371429,
+    '12': -1.21429,
+  };
+
   // 차트용 데이터로 변환
   const monthChartData = monthCounts.map((count, index) => {
     const paddedMonth = (index + 1).toString().padStart(2, '0'); // '01' ~ '12'
     return {
       month: paddedMonth,
       count,
+      avgTemps: avgTemps[paddedMonth] ?? null,
     };
   });
   
@@ -78,7 +95,6 @@ const ChartPanel = ({
     }
   };
   
-
   return (
     <div className="w-full p-4 bg-white rounded shadow overflow-y-auto max-h-[800px]">
       <h2 className="text-lg font-semibold mb-4">📊 싱크홀 데이터 분석</h2>
@@ -139,9 +155,9 @@ const ChartPanel = ({
 
       <h3 className="mt-8 text-base font-semibold">📅 월별 사고 건수</h3>
       <ResponsiveContainer width="100%" height={200}>
-        <BarChart 
+        <ComposedChart 
           data={monthChartData} 
-          margin={{ top: 10, right: 20, left: 0, bottom: 30 }}
+          margin={{ top: 10, right: 0, left: 0, bottom: 30 }}
         >
           <XAxis 
             dataKey="month" 
@@ -151,13 +167,32 @@ const ChartPanel = ({
             angle={-30}
             textAnchor="end"
           />
+          <YAxis 
+            yAxisId="left"
+            tick={{ fontSize: 6 }}
+            width={20}
+          />
+          <YAxis 
+            yAxisId="right"
+            orientation="right"
+            tick={{ fontSize: 6 }}
+            width={30}
+            tickFormatter={(value) => `${value}°C`}
+          />
           <Tooltip />
-          <Bar dataKey="count">
+          <Legend
+            content={() => (
+              <div style={{ fontSize: '9px', marginTop: -10, marginLeft: 20 }}>
+                <span style={{ color: '#60a5fa', marginRight: 10 }}>■ Sinkholes</span>
+                <span style={{ color: '#f97316' }}>━ Avg Temp (°C)</span>
+              </div>
+            )}
+          />
+          <Bar yAxisId="left" dataKey="count" fill="#60a5fa">
             {monthChartData.map((entry, index) => (
               <Cell
                 key={`month-cell-${index}`}
                 cursor="pointer"
-                fill="#60a5fa"
                 fillOpacity={
                   selectedMonths.length === 0 || selectedMonths.includes(entry.month)
                     ? 1
@@ -167,7 +202,15 @@ const ChartPanel = ({
               />
             ))}
           </Bar>
-        </BarChart>
+          <Line 
+            yAxisId="right" 
+            type="monotone" 
+            dataKey="avgTemps" 
+            stroke="#f97316" 
+            strokeWidth={1} 
+            dot={{ r: 2 }}
+          />
+        </ComposedChart>
       </ResponsiveContainer>
 
 

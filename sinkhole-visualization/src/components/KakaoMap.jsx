@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './KakaoMap.css';
+import sinkholes from '../sinkholes.json'; // 싱크홀 데이터
+import { filter } from 'd3';
 
 const REST_API_KEY = process.env.REACT_APP_KAKAO_REST_API_KEY; // Kakao REST API Key
 
@@ -19,6 +21,9 @@ const KakaoMap = () => {
   // ✅ 마커 상태 추가
   const [startMarker, setStartMarker] = useState(null);
   const [endMarker, setEndMarker] = useState(null);
+
+  // 싱크홀 마커 상태
+  const [sinkholeMarkers, setSinkholeMarkers] = useState([]);
 
   useEffect(() => {
     const JS_KEY = process.env.REACT_APP_KAKAO_JAVASCRIPT_KEY
@@ -128,6 +133,7 @@ const KakaoMap = () => {
     });
 
     if (polyline) polyline.setMap(null); // 이전 경로 제거
+    sinkholeMarkers.forEach(marker => marker.setMap(null)); // 이전 경로에 대한 싱크홀 제거
 
     const newPolyline = new window.kakao.maps.Polyline({
       path: linePath,
@@ -139,13 +145,135 @@ const KakaoMap = () => {
 
     newPolyline.setMap(map);
     setPolyline(newPolyline);
+
+    // 경로 상의 위경도 리스트 추출 (console)
+    const latLngList = linePath.map(latlng => ({
+      lat: latlng.getLat(),
+      lng: latlng.getLng()
+    }));
+    console.log("📍위경도 리스트:", latLngList);
+
+    // 경로 지점과 싱크홀 거리 계산 함수 (Haversine)
+    const getDistance = (lat1, lon1, lat2, lon2) => {
+      const R = 6371000;
+      const toRad = deg => deg * Math.PI / 180;
+      const dLat = toRad(lat2 - lat1);
+      const dLon = toRad(lon2 - lon1);
+      const a = Math.sin(dLat / 2) ** 2 +
+                Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+                Math.sin(dLon / 2) ** 2;
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      return R * c;
+    };
+
+    // 경로의 위경도 리스트를 기준으로 반경 내 싱크홀 필터링
+    const filterSinkholesNearRoute = (latLngList, radius) => {
+      return sinkholes.filter(item => {
+        const lat = parseFloat(item.sagoLat); // 싱크홀 위도
+        const lon = parseFloat(item.sagoLon); // 싱크홀 경도
+        // 반경 m 내에 있는 싱크홀 필터링링
+        return latLngList.some(({ lat: rLat, lng: rLng }) => getDistance(lat, lon, rLat, rLng) <= radius);
+      });
+    };
+
+    
+    // 중심 좌표 기준 반지름 m 단위 원형 좌표 생성성
+    const generateCirclePath = (center, radius, points = 60) => {
+      const path = [];
+      const degToRad = Math.PI / 180;
+      const lat = center.getLat();
+      const lng = center.getLng();
+    
+      for (let i = 0; i <= points; i++) {
+        const angle = (i * 360) / points;
+        const dx = radius * Math.cos(angle * degToRad);
+        const dy = radius * Math.sin(angle * degToRad);
+        const newLat = lat + (dy / 111320);  // 위도 1도 ≈ 111.32km
+        const newLng = lng + (dx / (111320 * Math.cos(lat * degToRad)));
+        path.push(new window.kakao.maps.LatLng(newLat, newLng));
+      }
+    
+      return path;
+    };
+
+    // 싱크홀 필터링 및 마커 표시
+    const nearSinkholes = filterSinkholesNearRoute(latLngList, 100); // 근처 싱크홀 리스트
+    const markers = nearSinkholes.map((item) => {
+      const marker = new window.kakao.maps.Marker({
+        map,
+        position: new window.kakao.maps.LatLng(item.sagoLat, item.sagoLon),
+        image: new window.kakao.maps.MarkerImage(
+          'sinksign.png', //
+          new window.kakao.maps.Size(30, 30)
+        )
+      });
+
+      // 싱크홀 정보 표시
+      const infoWindow = new window.kakao.maps.InfoWindow({
+        content: `
+          <div style="
+            padding: 8px;
+            font-size: 12px;
+            line-height: 1.5;
+            width: 160px;
+            white-space: normal;
+          ">
+            📍 <strong>${item.addr}</strong><br/>
+            📅 ${item.sagoDate}
+          </div>
+        `
+      });
+      
+
+      // 마우스 이벤트 등록
+      window.kakao.maps.event.addListener(marker, 'mouseover', () => {
+        infoWindow.open(map, marker);
+      });
+
+      window.kakao.maps.event.addListener(marker, 'mouseout', () => {
+        infoWindow.close();
+      });
+
+      // 싱크홀 중심 좌표
+      const center = new window.kakao.maps.LatLng(item.sagoLat, item.sagoLon);
+
+      // 바깥 원, 안쪽 원 생성 -> 도넛 모양양
+      const outerPath = generateCirclePath(center, 100);
+      const innerHole = generateCirclePath(center, 30);
+
+      // 도넛형 폴리곤 생성
+      const donut = new window.kakao.maps.Polygon({
+        map: map,
+        path: [outerPath],        // 외곽 경로
+        holes: [innerHole],       // 구멍
+        strokeWeight: 1,
+        strokeColor: '#d06d1d',
+        strokeOpacity: 0.6,
+        strokeStyle: 'solid',
+        fillColor: '#d06d1d',
+        fillOpacity: 0.4
+      });
+
+      return marker;
+    });
+
+    // 마커 업데이트
+    setSinkholeMarkers(markers);
+
+    const bounds = new window.kakao.maps.LatLngBounds();
+    bounds.extend(new window.kakao.maps.LatLng(startCoord.lat, startCoord.lng));
+    bounds.extend(new window.kakao.maps.LatLng(endCoord.lat, endCoord.lng));
+    linePath.forEach((latlng) => bounds.extend(latlng));
+    map.setBounds(bounds);
   };
+
+
 
   return (
     <div>
       <h2>🚗 출발지/도착지 경로 검색</h2>
 
-      <div id="map" style={{ height: '560px', marginTop: '1rem', marginBottom: '1rem' }} />
+      <div id="map" style={{ height: '560px', marginTop: '1rem', marginBottom: '1rem'}} />
 
       <div className="flex items-center">
         <label className="w-20 font-medium text-gray-700 pb-[11px]">출발지:</label>

@@ -40,7 +40,7 @@ const SeoulMap = ({
     let depth = item.sinkDepth;
 
     // 공백 또는 비정상적 값 처리
-    if (typeof depth === 'string') {
+    if (typeof depth === 'string') {  
       depth = depth.trim();
     }
     if (depth === '' || depth === null || depth === undefined) {
