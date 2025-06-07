@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import { format, setISODay } from 'date-fns';
 import 'react-datepicker/dist/react-datepicker.css';
-import { MapContainer, TileLayer, GeoJSON, Marker, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, GeoJSON, Marker, useMap, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
 import seoulGeoJson from '../data/seoul_gu_boundary.json'
 import sinkholes from '../sinkholes.json';
@@ -87,6 +87,7 @@ const riskScores = calculateRiskScores(sinkholes);
 const colorScale = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, 1]);
 
 const SeoulMap = ({ 
+  selectedSinkhole,
   selectedGu, setSelectedGu, mapRef,
   setSelectedSinkhole,
   setSelectedCauses, selectedCauses,
@@ -94,7 +95,6 @@ const SeoulMap = ({
   depthRange, areaRange,
   dateRange, setDateRange,
   isReset, setIsReset,
-  setHighlightedCauses, setHighlightedMonths
 }) => {
   const [startDate, endDate] = dateRange;
 
@@ -159,7 +159,10 @@ const SeoulMap = ({
       }
 
       matchCause = selectedCauses.every(cause =>
-        details.map(d => d.trim()).includes(cause)
+        details
+        .filter(d => typeof d === 'string')
+        .map(d => d.trim())
+        .includes(cause)
       );
     }
 
@@ -188,36 +191,7 @@ const SeoulMap = ({
 
     return withinArea && withinDepth && matchCause && matchMonth && matchDate; // 모두 만족해야 마커 표시
   });
-  // useEffect(() => {
-  //   const causesSet = new Set();
-  //   const monthsSet = new Set();
 
-  //   filteredSinkholes.forEach(item => {
-  //     const detailsRaw = item.sagoDetailProcessed;
-  //     let details = [];
-
-  //     try {
-  //       if (typeof detailsRaw === 'string') {
-  //         details = JSON.parse(detailsRaw.replace(/'/g, '"'));
-  //       }
-  //     } catch {
-  //       details = [detailsRaw];
-  //     }
-
-  //     details.forEach(d => causesSet.add(d.trim()));
-
-  //     const dateStr = item.sagoDate?.toString();
-  //     if (dateStr?.length === 8) {
-  //       const month = dateStr.slice(4, 6);
-  //       monthsSet.add(month);
-  //     }
-  //   });
-
-  //   setHighlightedCauses(Array.from(causesSet));
-  //   setHighlightedMonths(Array.from(monthsSet));
-  // }, [filteredSinkholes]); 
-  // console.log('filteredSinkholes:', filteredSinkholes);
-  
     const styleFeature = (feature) => {
     const fullName = feature.properties.SGG_NM;
     const guName = fullName.replace('서울특별시 ', '').trim();
@@ -259,8 +233,8 @@ const SeoulMap = ({
         <h1>🕳️ 싱크홀 발생 현황</h1>
 
         {/* 날짜 선택 영역 – 지도 상단 흰 공간 */}
-        <div className="relative z-[1000] flex gap-2 items-center p-2 bg-white rounded shadow mb-2" style={{ width: 'fit-content' }}>
-          <label className="relative z-[10000]">시작일:</label>
+        <div className="relative z-[1000] flex gap-1 items-center p-* bg-white rounded shadow" style={{ width: 'fit-content' }}>
+          <label className="h-8 px-2 py-1 text-sm">시작일:</label>
           <DatePicker
             selected={startDate}
             onChange={(date) => setDateRange([date, endDate])}
@@ -272,7 +246,7 @@ const SeoulMap = ({
             popperClassName="datepicker-popper"
             popperPlacement="bottom-start" 
           />
-          <label className="relative z-50">종료일:</label>
+          <label className="-8 px-2 py-1 text-sm">종료일:</label>
           <DatePicker
             selected={endDate}
             onChange={(date) => setDateRange([startDate, date])}
@@ -331,16 +305,22 @@ const SeoulMap = ({
           {sinkholes.map((item, idx) => {
             const guName = item.sigungu?.replace('서울특별시 ', '');
             const isInSelectedGu = selectedGu && guName === selectedGu;
-            const isInFilteredList = filteredSinkholes.includes(item);
+            const isInFilteredList = filteredSinkholes.some(f => f.sagoNo === item.sagoNo);
             
             const isChartPanelActive = selectedCauses.length > 0 || selectedMonths.length > 0;
 
+            const isSelected = selectedSinkhole?.sagoNo === item.sagoNo;
+
             const shouldShow =
-              !isReset && (
-                (selectedGu === null && isInFilteredList) ||
-                (selectedGu && isInSelectedGu) ||
-                selectedGu === 'ALL'
-              );    
+              selectedSinkhole
+                ? isSelected
+                : (
+                    !isReset && (
+                      (selectedGu === null && isInFilteredList) ||
+                      (selectedGu && isInSelectedGu) ||
+                      selectedGu === 'ALL'
+                    )
+                  ); 
 
             const isHighlighted =
               selectedGu === 'ALL' ||
@@ -359,7 +339,11 @@ const SeoulMap = ({
                   className: isHighlighted ? '' : 'dimmed-pin' // ✅ 강조되지 않은 핀만 흐리게
                 })}
                 eventHandlers={{
-                  click: () => setSelectedSinkhole(item)
+                  click: () => {
+                    setSelectedSinkhole(prev =>
+                      prev && prev.sagoNo === item.sagoNo ? null : item
+                    );
+                  }
                 }}
               />
             );

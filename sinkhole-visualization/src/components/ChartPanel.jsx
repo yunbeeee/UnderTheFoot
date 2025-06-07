@@ -6,15 +6,31 @@ import sinkholes from '../sinkholes.json';
 // import { parse } from 'json5';
 
 const ChartPanel = ({ 
+  selectedSinkhole,
   selectedCauses, setSelectedCauses, 
   selectedMonths, setSelectedMonths,
   depthRange, setDepthRange, 
   areaRange, setAreaRange,
   setSelectedGu, setIsReset, 
-  highlightedCauses, highlightedMonths
 }) => {
+  const highlightCauses = selectedCauses.length > 0
+    ? selectedCauses
+    : (selectedSinkhole?.sagoDetailProcessed
+        ? (() => {
+            let raw = selectedSinkhole.sagoDetailProcessed;
+            try {
+              if (typeof raw === 'string') raw = JSON.parse(raw.replace(/'/g, '"'));
+              raw = Array.isArray(raw) ? raw : [raw];
+            } catch {
+              raw = typeof raw === 'string' ? [raw] : [];
+            }
+            return raw.map(d => typeof d === 'string' ? d.trim() : '').filter(Boolean);
+          })()
+        : []);
 
-  // 원인 카테고리별 카운트
+  const highlightMonth = (selectedSinkhole?.sagoDate)
+  ? [String(selectedSinkhole.sagoDate).slice(4, 6)]
+  : selectedMonths; 
   const causeCounts = {};
   sinkholes.forEach(item => {
     let details = item.sagoDetailProcessed;
@@ -31,9 +47,11 @@ const ChartPanel = ({
     }
 
     details.forEach(cause => {
-      const cleaned = cause.trim();
-      if (cleaned) {
-        causeCounts[cleaned] = (causeCounts[cleaned] || 0) + 1;
+      if (typeof cause === 'string') {
+        const cleaned = cause.trim();
+        if (cleaned) {
+          causeCounts[cleaned] = (causeCounts[cleaned] || 0) + 1;
+        }
       }
     });
   });
@@ -83,6 +101,7 @@ const ChartPanel = ({
       setSelectedMonths([...selectedMonths, month]);
       setSelectedGu(null); // 월 고르면 자치구 선택 초기화
     }
+
   };
   
 
@@ -132,10 +151,10 @@ const ChartPanel = ({
                 key={`cell-${index}`}
                 cursor="pointer"
                 fill="#ef4444"
-                fillOpacity={
-                  selectedCauses.length > 0
-                    ? selectedCauses.includes(entry.name) ? 1 : 0.4
-                    : highlightedCauses.includes(entry.name) ? 1 : 0.4
+                fillOpacity={ 
+                  highlightCauses.length === 0 || highlightCauses.includes(entry.name)
+                    ? 1
+                    : 0.4
                 }
                 onClick={() => handleClick(entry.name)}
               />            
@@ -166,9 +185,9 @@ const ChartPanel = ({
                 cursor="pointer"
                 fill="#60a5fa"
                 fillOpacity={
-                  selectedMonths.length > 0
-                    ? selectedMonths.includes(entry.month) ? 1 : 0.4
-                    : highlightedMonths.includes(entry.month) ? 1 : 0.4
+                  highlightMonth.length === 0 || highlightMonth.includes(entry.month)
+                    ? 1
+                    : 0.4
                 }
                 onClick={() => handleMonthClick(entry.month)}
               />

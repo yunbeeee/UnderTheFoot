@@ -13,15 +13,21 @@ function App() {
 
   const [dateRange, setDateRange] = useState([null, null]); // [startDate, endDate]
   
-  const [highlightedCauses, setHighlightedCauses] = useState([]); // 강조 표시된 원인
-  const [highlightedMonths, setHighlightedMonths] = useState([]); // 강조 표시된 월
-
   const [selectedGu, setSelectedGu] = useState(null);
 
   const mapRef = useRef(); // leaflet Map 인스턴스 접근용
   const [isReset, setIsReset] = useState(true); // 초기화 여부
 
   const handleSinkholeSelect = (sinkhole) => {
+    // 같은 핀을 클릭해서 해제하는 경우
+    if (selectedSinkhole && selectedSinkhole.sagoNo === sinkhole.sagoNo) {
+      setSelectedSinkhole(null);
+      setSelectedCauses([]);
+      setSelectedMonths([]);
+      return;
+    }
+
+    // 새로운 핀을 선택하는 경우
     setSelectedSinkhole(sinkhole);
   
     // 원인을 배열로 파싱
@@ -36,13 +42,16 @@ function App() {
     }
   
     // 항상 배열 형태로 trim 적용 후 저장 <- 단일 원인에도 적용하기 위함
-    const causes = parsed.map(d => d.trim()).filter(Boolean);
+    const causes = parsed
+      .map(d => (typeof d === 'string' ? d.trim() : ''))
+      .filter(Boolean);   // 빈 문자열 제거
     setSelectedCauses(causes);
 
     // 발생 월 처리
     const dateStr = sinkhole.sagoDate?.toString();
     const month = dateStr && dateStr.length >= 6 ? dateStr.substring(4, 6) : null;
     setSelectedMonths([month]);
+    
   };
 
 
@@ -93,6 +102,7 @@ function App() {
               selectedGu={selectedGu}
               setSelectedGu={setSelectedGu}
               mapRef={mapRef}
+              selectedSinkhole={selectedSinkhole}
               setSelectedSinkhole={handleSinkholeSelect} 
               selectedCauses={selectedCauses} 
               setSelectedCauses={setSelectedCauses}
@@ -104,8 +114,6 @@ function App() {
               setDateRange={setDateRange}
               isReset={isReset}
               setIsReset={setIsReset}
-              setHighlightedCauses={setHighlightedCauses}
-              setHighlightedMonths={setHighlightedMonths} 
             />
           </div>
           <InfoBox sinkhole={selectedSinkhole} />
@@ -113,6 +121,7 @@ function App() {
         {/* 오른쪽 (차트) */}
         <div className="w-60 h-[806px] bg-white p-4 rounded shadow overflow-auto">
           <ChartPanel 
+            selectedSinkhole={selectedSinkhole}
             selectedCauses={selectedCauses} 
             setSelectedCauses={setSelectedCauses}
             selectedMonths={selectedMonths}
@@ -123,8 +132,6 @@ function App() {
             setAreaRange={setAreaRange}
             setSelectedGu={setSelectedGu}
             setIsReset={setIsReset}
-            highlightedCauses={highlightedCauses}
-            highlightedMonths={highlightedMonths}
           />
         </div>
       </div>
