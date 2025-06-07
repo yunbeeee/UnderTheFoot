@@ -14,9 +14,8 @@ import centroid from '@turf/centroid';
 // 커스텀 빨간 핀 아이콘 정의
 const redIcon = new L.Icon({
   iconUrl: redPinImg,
-  iconSize: [30, 42],        // 적당히 조절 가능
-  iconAnchor: [15, 42],      // 마커의 "끝"이 좌표 중심에 위치하도록
-  popupAnchor: [0, -35],     // 팝업 위치 조절
+  iconSize: [30, 30],        // 적당히 조절 가능
+  iconAnchor: [15, 30],      // 마커의 "끝"이 좌표 중심에 위치하도록
   shadowUrl: null,
   shadowSize: null,
   shadowAnchor: null,
@@ -325,11 +324,9 @@ const SeoulMap = ({
               <Marker
                 key={idx}
                 position={[item.sagoLat, item.sagoLon]}
-                icon={L.divIcon({
-                  html: `<img src="${redPinImg}" style="width: 30px; opacity: ${isHighlighted ? 1 : 0.3}" />`,
-                  className: '',
-                  iconSize: [30, 42],
-                  iconAnchor: [15, 42],
+                icon={L.icon({
+                  ...redIcon.options, // redIcon의 설정 재사용
+                  className: isHighlighted ? '' : 'dimmed-pin' // ✅ 강조되지 않은 핀만 흐리게
                 })}
                 eventHandlers={{
                   click: () => setSelectedSinkhole(item)

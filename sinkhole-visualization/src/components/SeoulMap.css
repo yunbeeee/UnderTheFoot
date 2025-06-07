@@ -14,3 +14,6 @@
 .datepicker-popper {
   z-index: 1500000 !important;
 }
+.leaflet-marker-icon.dimmed-pin {
+  opacity: 0.3;
+}
