@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import RangeSlider from '../interactions/RangeSlider';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, ScatterChart, Scatter, Line, ComposedChart, Legend } from 'recharts';
 import sinkholes from '../sinkholes.json';
@@ -7,6 +7,7 @@ import { parse } from 'json5';
 import './ChartPanel.css';
 
 const ChartPanel = ({ 
+  selectedSinkhole,
   selectedCauses, setSelectedCauses, 
   selectedMonths, setSelectedMonths,
   depthRange, setDepthRange, 
@@ -17,9 +18,40 @@ const ChartPanel = ({
   showRepaired = false, setShowRepaired,
   showDamaged = false, setShowDamaged,
   weatherMap,
+  setSelectedGu, setIsReset, 
 }) => {
+  //윤희 함수 
+  const highlightCauses = selectedCauses.length > 0
+    ? selectedCauses
+    : (selectedSinkhole?.sagoDetailProcessed
+        ? (() => {
+            let raw = selectedSinkhole.sagoDetailProcessed;
+            try {
+              if (typeof raw === 'string') raw = JSON.parse(raw.replace(/'/g, '"'));
+              raw = Array.isArray(raw) ? raw : [raw];
+            } catch {
+              raw = typeof raw === 'string' ? [raw] : [];
+            }
+            return raw.map(d => typeof d === 'string' ? d.trim() : '').filter(Boolean);
+          })()
+        : []);
 
-  // 원인 카테고리별 카운트
+  const highlightMonth =
+    selectedMonths.length > 0 && selectedMonths.some(m => m != null)
+      ? selectedMonths
+      : (selectedSinkhole?.sagoDate
+        ? (() => {
+          const raw = selectedSinkhole.sagoDate;
+          const dateStr = typeof raw === 'number' ? String(raw) : (raw ?? '');
+          return dateStr.length >= 6 ? [dateStr.slice(4, 6)] : [];
+        })()
+        : []);
+console.log('📌 selectedSinkhole:', selectedSinkhole);
+console.log('🧭 selectedCauses:', selectedCauses);
+console.log('📅 selectedMonths:', selectedMonths);
+console.log('✅ highlightCauses:', highlightCauses);
+console.log('✅ highlightMonth:', highlightMonth);
+  
   const causeCounts = {};
   sinkholes.forEach(item => {
     let details = item.sagoDetailProcessed;
@@ -36,9 +68,11 @@ const ChartPanel = ({
     }
 
     details.forEach(cause => {
-      const cleaned = cause.trim();
-      if (cleaned) {
-        causeCounts[cleaned] = (causeCounts[cleaned] || 0) + 1;
+      if (typeof cause === 'string') {
+        const cleaned = cause.trim();
+        if (cleaned) {
+          causeCounts[cleaned] = (causeCounts[cleaned] || 0) + 1;
+        }
       }
     });
   });
@@ -50,13 +84,17 @@ const ChartPanel = ({
   })).sort((a, b) => b.count - a.count);
 
   const handleClick = (name) => {
+    // 이지 세줄
     setClickedFromMap(false);
     setSelectedSinkhole(null);
     console.log("[ChartPanel] Cause clicked, clickedFromMap set to false");
+    //윤희 한줄
+    setIsReset(false);
     if (selectedCauses.includes(name)) {
       setSelectedCauses(selectedCauses.filter(cause => cause !== name));
     } else {
       setSelectedCauses([...selectedCauses, name]);
+      setSelectedGu(null); // 원인 선택 시 자치구 선택 초기화
     }
   };
 
@@ -101,12 +139,19 @@ const ChartPanel = ({
   const handleMonthClick = (month) => {
     setClickedFromMap(false);
     setSelectedSinkhole(null);
+    setIsReset(false);
     console.log("[ChartPanel] Month clicked, clickedFromMap set to false");
     if (selectedMonths.includes(month)) {
       setSelectedMonths(selectedMonths.filter(m => m !== month));
+    
+    // const padded = String(month).padStart(2, '0'); // '01' ~ '12'
+    // if (selectedMonths.includes(padded)) {
+    //   setSelectedMonths(selectedMonths.filter(m => m !== padded));
     } else {
-      setSelectedMonths([...selectedMonths, month]);
+      setSelectedMonths([...selectedMonths, padded]);
+      setSelectedGu(null); // 월 고르면 자치구 선택 초기화
     }
+
   };
 
   // 산점도 데이터 필터링 및 선택 상태 설정
@@ -245,6 +290,11 @@ const ChartPanel = ({
                     : (selectedCauses.length === 0 || selectedCauses.includes(entry.name))
                       ? 1
                       : 0.4
+                // fillOpacity 설정이슈: selectedCauses랑 highlightCauses가 충돌하는 것 같음
+                // fillOpacity={ 
+                //   highlightCauses.length === 0 || highlightCauses.includes(entry.name)
+                //     ? 1
+                //     : 0.4
                 }
                 onClick={() => handleClick(entry.name)}
               />            
@@ -300,6 +350,10 @@ const ChartPanel = ({
                     : (clickedFromMap || selectedMonths.length === 0 || selectedMonths.includes(entry.month))
                       ? 1
                       : 0.4
+                  // 설정이슈: selectedMonth랑 highlightMonth가 충돌하는 것 같음
+                  // highlightMonth.length === 0 || highlightMonth.includes(entry.month)
+                  //   ? 1
+                  //   : 0.4
                 }
                 onClick={() => {
                   setClickedFromMap(false);

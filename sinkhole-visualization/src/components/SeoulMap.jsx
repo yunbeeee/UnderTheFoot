@@ -1,17 +1,21 @@
-import React from 'react';
-import { MapContainer, TileLayer, GeoJSON, Marker, Popup } from 'react-leaflet';
+import React, { useState, useRef, useEffect } from 'react';
+import DatePicker from 'react-datepicker';
+import { format, setISODay } from 'date-fns';
+import 'react-datepicker/dist/react-datepicker.css';
+import { MapContainer, TileLayer, GeoJSON, Marker, useMap, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
-import seoulGeoJson from '../data/seoul_municipalities_geo_simple.json';
+import seoulGeoJson from '../data/seoul_gu_boundary.json'
 import sinkholes from '../sinkholes.json';
 import redPinImg from '../asset/redpin.png'; // 이미지 경로에 맞게 import
 import * as d3 from 'd3';
+import centroid from '@turf/centroid';
+// import { point } from '@turf/helpers';
 
 // 커스텀 빨간 핀 아이콘 정의
 const redIcon = new L.Icon({
   iconUrl: redPinImg,
-  iconSize: [30, 42],        // 적당히 조절 가능
-  iconAnchor: [15, 42],      // 마커의 "끝"이 좌표 중심에 위치하도록
-  popupAnchor: [0, -35],     // 팝업 위치 조절
+  iconSize: [30, 30],        // 적당히 조절 가능
+  iconAnchor: [15, 30],      // 마커의 "끝"이 좌표 중심에 위치하도록
   shadowUrl: null,
   shadowSize: null,
   shadowAnchor: null,
@@ -28,21 +32,98 @@ const fadedBlueIcon = new L.Icon({
 });
 
 // 위험도 예시값
-const riskScores = {
-  종로구: 0.12, 중구: 0.45, 용산구: 0.81, 성동구: 0.34, 광진구: 0.58,
-  동대문구: 0.67, 중랑구: 0.23, 성북구: 0.75, 강북구: 0.19, 도봉구: 0.11,
-  노원구: 0.29, 은평구: 0.63, 서대문구: 0.72, 마포구: 0.38, 양천구: 0.26,
-  강서구: 0.44, 구로구: 0.53, 금천구: 0.36, 영등포구: 0.69, 동작구: 0.77,
-  관악구: 0.55, 서초구: 0.49, 강남구: 0.95, 송파구: 0.41, 강동구: 0.33
+// const riskScores = {
+//   종로구: 0.12, 중구: 0.45, 용산구: 0.81, 성동구: 0.34, 광진구: 0.58,
+//   동대문구: 0.67, 중랑구: 0.23, 성북구: 0.75, 강북구: 0.19, 도봉구: 0.11,
+//   노원구: 0.29, 은평구: 0.63, 서대문구: 0.72, 마포구: 0.38, 양천구: 0.26,
+//   강서구: 0.44, 구로구: 0.53, 금천구: 0.36, 영등포구: 0.69, 동작구: 0.77,
+//   관악구: 0.55, 서초구: 0.49, 강남구: 0.95, 송파구: 0.41, 강동구: 0.33
+// };
+
+const MapControlButtons = ({ onReset, onShowAll }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    const control = L.control({ position: 'topleft' });
+
+    control.onAdd = () => {
+      const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+      container.style.display = 'flex';
+      container.style.flexDirection = 'row';
+      container.style.gap = '4px';
+
+      const resetBtn = L.DomUtil.create('button', '', container);
+      resetBtn.innerHTML = '🧭 초기화';
+      resetBtn.style.padding = '6px';
+      resetBtn.style.background = 'white';
+      resetBtn.onclick = () => onReset();
+
+      const allBtn = L.DomUtil.create('button', '', container);
+      allBtn.innerHTML = '🔍 전체 핀';
+      allBtn.style.padding = '6px';
+      allBtn.style.background = 'white';
+      allBtn.onclick = () => onShowAll();
+
+      return container;
+    };
+
+    control.addTo(map);
+    return () => control.remove();
+  }, [map, onReset, onShowAll]);
+
+  return null;
 };
+
+function calculateRiskScores(data) {
+  const countByDistrict = {};
+
+  // 1. 각 자치구별로 발생 건수 세기
+  data.forEach((entry) => {
+    const district = entry.sigungu;
+    if (!district) return; // null 값 제외
+    countByDistrict[district] = (countByDistrict[district] || 0) + 1;
+  });
+
+  // 2. 건수 기준으로 정규화 (0 ~ 1)
+  const values = Object.values(countByDistrict);
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+
+  const normalizedScores = {};
+  Object.entries(countByDistrict).forEach(([district, count]) => {
+    // min == max인 경우 모두 1로 처리 (예외 방지)
+    const score = (max === min) ? 1 : (count - min) / (max - min);
+    normalizedScores[district] = parseFloat(score.toFixed(2));
+  });
+
+  return normalizedScores;
+}
+
+// 사용 예시
+const riskScores = calculateRiskScores(sinkholes);
 
 const colorScale = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, 1]);
 
 const SeoulMap = ({ 
-  setSelectedSinkhole, selectedSinkhole, selectedCauses, selectedMonths,
+  setSelectedSinkhole, selectedSinkhole, 
+  selectedGu, setSelectedGu, mapRef,
+  setSelectedCauses, selectedCauses,
+  setSelectedMonths, selectedMonths,
   depthRange, areaRange, clickedFromMap, setClickedFromMap,
-  showRain, showRepaired, showDamaged
+  showRain, showRepaired, showDamaged,
+  dateRange, setDateRange,
+  isReset, setIsReset,
 }) => {
+  const [startDate, endDate] = dateRange;
+
+  useEffect(() => {
+    const isChartPanelActive = selectedCauses.length > 0 || selectedMonths.length > 0 || (startDate && endDate);
+    
+    if (selectedGu === null && isChartPanelActive) {
+      mapRef.current?.setView([37.5665, 126.9780], 11); // 서울 전체 보기
+    }
+  }, [selectedGu, selectedCauses, selectedMonths, startDate, endDate]);
+
   // 해당 원인을 포함하는 싱크홀만 필터링
   const filteredSinkholes = sinkholes.filter(item => {
 
@@ -96,7 +177,10 @@ const SeoulMap = ({
       }
 
       matchCause = selectedCauses.every(cause =>
-        details.map(d => d.trim()).includes(cause)
+        details
+          .filter(d => typeof d === 'string')
+          .map(d => d.trim())
+          .includes(cause)
       );
     }
 
@@ -106,6 +190,21 @@ const SeoulMap = ({
       const dateStr = item.sagoDate?.toString();
       const month = dateStr && dateStr.length >= 6 ? dateStr.substring(4, 6) : null;
       matchMonth = month && selectedMonths.includes(month);
+    }
+    
+    // 날짜 picker
+    let matchDate = true;
+    if (startDate && endDate) {
+      const sagoStr = item.sagoDate?.toString();
+      const dateFormatted =
+        sagoStr && sagoStr.length === 8
+          ? new Date(`${sagoStr.slice(0, 4)}-${sagoStr.slice(4, 6)}-${sagoStr.slice(6, 8)}`)
+          : null;
+
+      matchDate =
+        dateFormatted &&
+        dateFormatted >= startDate &&
+        dateFormatted <= endDate;
     }
 
     // 강수량 필터 (있음 only)
@@ -134,24 +233,94 @@ const SeoulMap = ({
       // console.log('[SeoulMap Filter] Damage total:'ㄴ, totalDamage, '=>', matchDamaged);
     }
 
-    return withinArea && withinDepth && matchCause && matchMonth && matchRain && matchRepaired && matchDamaged; // 모두 만족해야 마커 표시
+
+
+
+    return withinArea && withinDepth && matchCause && matchMonth && matchDate && matchRain && matchRepaired && matchDamaged; // 모두 만족해야 마커 표시
   });
 
   const styleFeature = (feature) => {
-    const guName = feature.properties.name;
-    const risk = riskScores[guName] ?? 0;
+    const fullName = feature.properties.SGG_NM;
+    const guName = fullName.replace('서울특별시 ', '').trim();
+    const risk = riskScores[guName];
+    const isSelected = selectedGu === guName;
+
+    // 현재 선택된 구인지 확인
+    // console.log('guName:', guName, 'risk:', riskScores[guName]);
     return {
-      fillColor: colorScale(risk),
-      weight: 1,
-      color: 'white',
-      fillOpacity: 0.7,
+      fillColor: risk !== undefined ? colorScale(risk) : '#ccc',
+      weight: isSelected ? 4 : 2.0,
+      color: isSelected ? '#000' : '#888',
+      fillOpacity: selectedGu
+        ? isSelected ? 0.7 : 0.4 // ✅ 선택된 구만 강조
+        : 0.9
     };
   };
+  
+  const handleFeatureClick = (feature, layer) => {
+    layer.on({
+      click: () => {
+        setIsReset(false);
+        const bounds = layer.getBounds();
+        // const center = bounds.getCenter();
+        setSelectedGu(feature.properties.SGG_NM.replace('서울특별시 ', '').trim());
+       
+        console.log('mapRef:', mapRef.current);  // 클릭 이벤트 안에서
 
+        mapRef.current?.fitBounds(bounds, { padding: [15, 15] });
+
+      }
+    });
+  };
+  const MIN_DATE = new Date('2018-01-01');
+  const MAX_DATE = new Date('2025-12-31');
   return (
     <div>
-      <h1>🕳️ 싱크홀 발생 현황</h1>
-      <MapContainer center={[37.5665, 126.9780]} zoom={11} style={{ height: "560px", marginTop: '1rem' }} >
+      <div className="flex justify-between items-center mb-2">
+        <h1>🕳️ 싱크홀 발생 현황</h1>
+
+        {/* 날짜 선택 영역 – 지도 상단 흰 공간 */}
+        <div className="relative z-[1000] flex gap-1 items-center p-* bg-white rounded shadow" style={{ width: 'fit-content' }}>
+          <label className="h-8 px-2 py-1 text-sm">시작일:</label>
+          <DatePicker
+            selected={startDate}
+            onChange={(date) => {
+              setDateRange([date, endDate]);
+              setIsReset(false); // ✅ 이게 핵심!
+            }}
+            dateFormat="yyyy-MM-dd"
+            minDate={MIN_DATE}
+            maxDate={MAX_DATE}
+            placeholderText="시작일 선택"
+            className="p-1 border rounded text-sm"
+            popperClassName="datepicker-popper"
+            popperPlacement="bottom-start"
+            
+          />
+          <label className="-8 px-2 py-1 text-sm">종료일:</label>
+          <DatePicker
+            selected={endDate}
+            onChange={(date) => {
+              setDateRange([startDate, date]);
+              setIsReset(false); // ✅ 이것도!
+            }}
+            dateFormat="yyyy-MM-dd"
+            minDate={startDate}
+            maxDate={MAX_DATE}
+            placeholderText="종료일 선택"
+            className="p-1 border rounded text-sm"
+            popperClassName="datepicker-popper"
+            popperPlacement="bottom-start"
+          />
+        </div>
+      </div>
+
+      <MapContainer
+        center={[37.5665, 126.9780]}
+        zoom={11}
+        style={{ height: "560px", marginTop: '1rem' }}
+        ref={mapRef} // MapContainer에 ref 추가
+      >
         <TileLayer
           attribution='&copy; OpenStreetMap contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -192,6 +361,8 @@ const SeoulMap = ({
           filter: hue-rotate(180deg) saturate(50%) brightness(1.2) opacity(0.7);
         }
       `}</style>
+
+      //하영
         {/* {filteredSinkholes.map((item, idx) => (
         <Marker
           key={idx}
@@ -204,6 +375,107 @@ const SeoulMap = ({
         </Marker>
       ))}
       </MapContainer> */}
+      //윤희
+        <GeoJSON
+          key={selectedGu || 'all'}
+          data={seoulGeoJson}
+          style={styleFeature}
+          onEachFeature={handleFeatureClick}
+        />
+        {/* 자치구 이름 텍스트 표시 */}
+        {seoulGeoJson.features.map((feature, idx) => {
+          const bounds = L.geoJSON(feature).getBounds();
+          // const center = bounds.getCenter();      
+          const center = centroid(feature).geometry.coordinates;
+          const guName = feature.properties.SGG_NM.replace('서울특별시 ', '');
+
+          return (
+            <Marker
+              key={`label-${idx}`}
+              // position={center}
+              position={[center[1], center[0]]}
+              icon={L.divIcon({
+                className: 'gu-label',
+                html: `<div>${guName}</div>`,
+                iconSize: [80, 24],
+                iconAnchor: [20, 5],
+              })}
+              interactive={false}
+
+            />
+          );
+        })}
+
+        {sinkholes.map((item, idx) => {
+          const guName = item.sigungu?.replace('서울특별시 ', '');
+          const isInSelectedGu = selectedGu && guName === selectedGu;
+          const isInFilteredList = filteredSinkholes.some(f => f.sagoNo === item.sagoNo);
+
+          const isSelected = selectedSinkhole?.sagoNo === item.sagoNo;
+
+          const hasFilters =
+            selectedCauses.length > 0 ||
+            selectedMonths.length > 0 ||
+            (startDate && endDate);
+          
+          const shouldShow =
+            selectedSinkhole
+              ? isSelected
+              : (
+                !isReset &&
+                (
+                  // 1. 자치구를 선택하지 않았지만 필터가 존재하는 경우 → 필터 기준으로 표시
+                  (selectedGu === null && (hasFilters ? isInFilteredList : true)) ||
+                  // 2. 자치구 선택됨 → 그 구에 속한 것만 표시
+                  (selectedGu && isInSelectedGu) ||
+                  // 3. 전체 핀 보기
+                  selectedGu === 'ALL'
+                )
+              );
+
+          const isHighlighted =
+            selectedGu === 'ALL' ||
+            (selectedGu === null && isInFilteredList) ||
+            isInSelectedGu;
+            
+          if (!shouldShow) return null;
+            
+          return (
+
+            <Marker
+              key={idx}
+              position={[item.sagoLat, item.sagoLon]}
+              icon={L.icon({
+                ...redIcon.options, // redIcon의 설정 재사용
+                className: isHighlighted ? '' : 'dimmed-pin' // ✅ 강조되지 않은 핀만 흐리게
+              })}
+              eventHandlers={{
+                click: () => {
+                  setSelectedSinkhole(prev =>
+                    prev && prev.sagoNo === item.sagoNo ? null : item
+                  );
+                }
+              }}
+            />
+          );
+        })}
+        <MapControlButtons
+          onReset={() => {
+            setSelectedSinkhole(null);
+            setSelectedGu(null);
+            setSelectedCauses([]);
+            setSelectedMonths([]);
+            setDateRange([null, null]);
+            setIsReset(true);
+            mapRef.current?.setView([37.5665, 126.9780], 11);
+          }}
+          onShowAll={() => {
+            setSelectedGu('ALL');
+            setIsReset(false);
+            mapRef.current?.setView([37.5665, 126.9780], 11);
+          }}
+        />
+      </MapContainer>
     </div>
   );
 };
