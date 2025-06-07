@@ -355,27 +355,6 @@ const SeoulMap = ({
             }}
           />
         ))}
-      </MapContainer>
-      <style>{`
-        .leaflet-marker-icon.faded-blue-marker {
-          filter: hue-rotate(180deg) saturate(50%) brightness(1.2) opacity(0.7);
-        }
-      `}</style>
-
-      //하영
-        {/* {filteredSinkholes.map((item, idx) => (
-        <Marker
-          key={idx}
-          position={[item.sagoLat, item.sagoLon]}
-          icon={redIcon}
-          eventHandlers={{
-            click: () => setSelectedSinkhole(item)
-          }}
-        >
-        </Marker>
-      ))}
-      </MapContainer> */}
-      //윤희
         <GeoJSON
           key={selectedGu || 'all'}
           data={seoulGeoJson}
@@ -405,7 +384,6 @@ const SeoulMap = ({
             />
           );
         })}
-
         {sinkholes.map((item, idx) => {
           const guName = item.sigungu?.replace('서울특별시 ', '');
           const isInSelectedGu = selectedGu && guName === selectedGu;
@@ -476,6 +454,24 @@ const SeoulMap = ({
           }}
         />
       </MapContainer>
+      <style>{`
+        .leaflet-marker-icon.faded-blue-marker {
+          filter: hue-rotate(180deg) saturate(50%) brightness(1.2) opacity(0.7);
+        }
+      `}</style>
+
+      {/*
+      {filteredSinkholes.map((item, idx) => (
+        <Marker
+          key={idx}
+          position={[item.sagoLat, item.sagoLon]}
+          icon={redIcon}
+          eventHandlers={{
+            click: () => setSelectedSinkhole(item)
+          }}
+        />
+      ))}
+      */}
     </div>
   );
 };

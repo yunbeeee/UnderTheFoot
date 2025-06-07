@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import KakaoMap from './components/KakaoMap';
 import SeoulMap from './components/SeoulMap';
 import ChartPanel from './components/ChartPanel';
@@ -42,16 +42,7 @@ function App() {
     });
   }, []);
 
-  const handleSinkholeSelect = (sinkhole) => {
-    if (clickedFromMap) {
-      setSelectedSinkhole(sinkhole);
-      return;
-    }
-
   // 윤희
-  const [depthRange, setDepthRange] = useState([0, 20]);
-  const [areaRange, setAreaRange] = useState([0, 300]);
-
   const [dateRange, setDateRange] = useState([null, null]); // [startDate, endDate]
   
   const [selectedGu, setSelectedGu] = useState(null);
@@ -60,13 +51,13 @@ function App() {
   const [isReset, setIsReset] = useState(true); // 초기화 여부
 
   const handleSinkholeSelect = (sinkhole) => {
-  if (!sinkhole) {
-    // 초기화 시 사용됨
-    setSelectedSinkhole(null);
-    setSelectedCauses([]);
-    setSelectedMonths([]);
-    return;
-  }
+    if (!sinkhole) {
+      // 초기화 시 사용됨
+      setSelectedSinkhole(null);
+      setSelectedCauses([]);
+      setSelectedMonths([]);
+      return;
+    }
     // 같은 핀을 클릭해서 해제하는 경우
     if (selectedSinkhole && selectedSinkhole.sagoNo === sinkhole.sagoNo) {
       setSelectedSinkhole(null);
@@ -102,9 +93,6 @@ function App() {
     // setSelectedMonths(month ? [month] : []);
     
   };
-
-
-  
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
@@ -148,20 +136,6 @@ function App() {
         <div className="flex flex-col w-[701px] bg-white p-4 rounded shadow">
           <div className="h-[596px]">
             <SeoulMap 
-<<<<<<< HEAD
-              setSelectedSinkhole={setSelectedSinkhole}
-              // setSelectedSinkhole={handleSinkholeSelect} 
-              selectedCauses={selectedCauses}
-              selectedMonths={selectedMonths}
-              depthRange={depthRange}
-              areaRange={areaRange}
-              selectedSinkhole={selectedSinkhole}
-              clickedFromMap={clickedFromMap}
-              setClickedFromMap={setClickedFromMap}
-              showRain={showRain}
-              showRepaired={showRepaired}
-              showDamaged={showDamaged}
-=======
               selectedGu={selectedGu}
               setSelectedGu={setSelectedGu}
               mapRef={mapRef}
@@ -177,7 +151,11 @@ function App() {
               setDateRange={setDateRange}
               isReset={isReset}
               setIsReset={setIsReset}
->>>>>>> yoonhee
+              clickedFromMap={clickedFromMap}
+              setClickedFromMap={setClickedFromMap}
+              showRain={showRain}
+              showRepaired={showRepaired}
+              showDamaged={showDamaged}
             />
           </div>
           <InfoBox sinkhole={selectedSinkhole} weatherMap={weatherMap} />
@@ -185,10 +163,8 @@ function App() {
         {/* 오른쪽 (차트) */}
         <div className="w-60 h-[806px] bg-white p-4 rounded shadow overflow-auto">
           <ChartPanel 
-<<<<<<< HEAD
-=======
             selectedSinkhole={selectedSinkhole}
->>>>>>> yoonhee
+            setSelectedSinkhole={setSelectedSinkhole}
             selectedCauses={selectedCauses} 
             setSelectedCauses={setSelectedCauses}
             selectedMonths={selectedMonths}
@@ -197,9 +173,6 @@ function App() {
             setDepthRange={setDepthRange}
             areaRange={areaRange}
             setAreaRange={setAreaRange}
-<<<<<<< HEAD
-            selectedSinkhole={selectedSinkhole}
-            setSelectedSinkhole={setSelectedSinkhole}
             clickedFromMap={clickedFromMap}
             setClickedFromMap={setClickedFromMap}
             showRain={showRain}
@@ -209,10 +182,8 @@ function App() {
             showDamaged={showDamaged}
             setShowDamaged={setShowDamaged}
             weatherMap={weatherMap}
-=======
             setSelectedGu={setSelectedGu}
             setIsReset={setIsReset}
->>>>>>> yoonhee
           />
         </div>
       </div>

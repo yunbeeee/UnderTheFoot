@@ -12,14 +12,18 @@ const ChartPanel = ({
   selectedMonths, setSelectedMonths,
   depthRange, setDepthRange, 
   areaRange, setAreaRange,
-  selectedSinkhole, setSelectedSinkhole,
+  setSelectedSinkhole,
   clickedFromMap, setClickedFromMap, // fixed
-  showRain = false, setShowRain,
-  showRepaired = false, setShowRepaired,
-  showDamaged = false, setShowDamaged,
+  showRain, setShowRain,
+  showRepaired, setShowRepaired,
+  showDamaged, setShowDamaged,
   weatherMap,
   setSelectedGu, setIsReset, 
 }) => {
+  const isRainShown = showRain ?? false;
+  const isRepairedShown = showRepaired ?? false;
+  const isDamagedShown = showDamaged ?? false;
+
   //윤희 함수 
   const highlightCauses = selectedCauses.length > 0
     ? selectedCauses
@@ -128,7 +132,7 @@ console.log('✅ highlightMonth:', highlightMonth);
 
   // 차트용 데이터로 변환
   const monthChartData = monthCounts.map((count, index) => {
-    const paddedMonth = (index + 1).toString().padStart(2, '0'); // '01' ~ '12'
+  const paddedMonth = (index + 1).toString().padStart(2, '0'); // '01' ~ '12'
     return {
       month: paddedMonth,
       count,
@@ -141,12 +145,12 @@ console.log('✅ highlightMonth:', highlightMonth);
     setSelectedSinkhole(null);
     setIsReset(false);
     console.log("[ChartPanel] Month clicked, clickedFromMap set to false");
-    if (selectedMonths.includes(month)) {
-      setSelectedMonths(selectedMonths.filter(m => m !== month));
+    // if (selectedMonths.includes(month)) {
+    //   setSelectedMonths(selectedMonths.filter(m => m !== month));
     
-    // const padded = String(month).padStart(2, '0'); // '01' ~ '12'
-    // if (selectedMonths.includes(padded)) {
-    //   setSelectedMonths(selectedMonths.filter(m => m !== padded));
+    const padded = String(month).padStart(2, '0'); // '01' ~ '12'
+    if (selectedMonths.includes(padded)) {
+      setSelectedMonths(selectedMonths.filter(m => m !== padded));
     } else {
       setSelectedMonths([...selectedMonths, padded]);
       setSelectedGu(null); // 월 고르면 자치구 선택 초기화
@@ -160,9 +164,9 @@ console.log('✅ highlightMonth:', highlightMonth);
       const area = Number(hole.sinkArea);
       const depth = Number(hole.sinkDepth);
 
-      // 강수량 필터 (showRain이 true일 경우에만 적용)
+      // 강수량 필터 (isRainShown이 true일 경우에만 적용)
       let matchRain = true;
-      if (showRain) {
+      if (isRainShown) {
         const dateStr = hole.sagoDate?.toString().slice(0, 8);
         const region = hole.sigungu;
         const key = `${dateStr}_${region}`;
@@ -174,7 +178,7 @@ console.log('✅ highlightMonth:', highlightMonth);
 
       // 복구 여부 필터
       let matchRepaired = true;
-      if (showRepaired) {
+      if (isRepairedShown) {
         const status = hole.trStatus;
         matchRepaired = typeof status === 'string' && status.includes('복구완료');
         // console.log('[ChartPanel Filter] Repaired condition:', status, '=>', matchRepaired);
@@ -182,7 +186,7 @@ console.log('✅ highlightMonth:', highlightMonth);
 
       // 피해 여부 필터
       let matchDamaged = true;
-      if (showDamaged) {
+      if (isDamagedShown) {
         const totalDamage = (parseInt(hole.deathCnt) || 0) + (parseInt(hole.injuryCnt) || 0) + (parseInt(hole.vehicleCnt) || 0);
         matchDamaged = totalDamage > 0;
         // console.log('[ChartPanel Filter] Damaged condition:', totalDamage, '=>', matchDamaged);
@@ -225,9 +229,9 @@ console.log('✅ highlightMonth:', highlightMonth);
         <label className="toggle-label">
           <input
             type="checkbox"
-            checked={showRain}
+            checked={isRainShown}
             onChange={() => {
-              setShowRain(!showRain);
+              setShowRain(!isRainShown);
               setClickedFromMap(false);
             }}
           />{' '}
@@ -236,9 +240,9 @@ console.log('✅ highlightMonth:', highlightMonth);
         <label className="toggle-label">
           <input
             type="checkbox"
-            checked={showRepaired}
+            checked={isRepairedShown}
             onChange={() => {
-              const nextValue = !showRepaired;
+              const nextValue = !isRepairedShown;
               setShowRepaired(nextValue);
               setClickedFromMap(false);
               console.log('[Toggle] showRepaired changed to:', nextValue);
@@ -249,9 +253,9 @@ console.log('✅ highlightMonth:', highlightMonth);
         <label className="toggle-label">
           <input
             type="checkbox"
-            checked={showDamaged}
+            checked={isDamagedShown}
             onChange={() => {
-              setShowDamaged(!showDamaged);
+              setShowDamaged(!isDamagedShown);
               setClickedFromMap(false);
             }}
           />{' '}
