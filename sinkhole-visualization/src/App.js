@@ -103,11 +103,11 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       {/* 타이틀 */}
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex items-center mb-6">
         <h1 className="text-3xl font-bold">
           Under the foot: <span className="text-black">당신의 발 밑은 안전한가요?</span>
         </h1>
-        <div className="flex space-x-4 text-sm">
+        <div className="w-[45%] flex justify-end space-x-4 text-sm">
           <a
             href="https://www.safekorea.go.kr/idsiSFK/neo/main/main.html"
             target="_blank"
@@ -130,15 +130,12 @@ function App() {
       {/* 3단 고정 레이아웃 */}
       <div className="flex gap-4 mx-auto max-w-[2000px]">
         {/* 왼쪽 (검색 + 카카오맵) */}
-        <div className="w-96 h-[806px] bg-white p-4 rounded shadow overflow-auto">
+        <div className="w-96 h-[903px] bg-white p-4 rounded shadow overflow-auto">
           <KakaoMap />
         </div>
 
         {/* 가운데 (서울 지도) */}
-        {/* <div className="w-[701px] h-[596px] bg-white p-4 rounded shadow">
-          <SeoulMap />
-          <InfoBox />
-        </div> */}
+
         <div className="flex flex-col w-[701px] bg-white p-4 rounded shadow">
           <div className="h-[596px]">
             <SeoulMap 
@@ -165,10 +162,19 @@ function App() {
               setIsReset={setIsReset}
             />
           </div>
-          <InfoBox sinkhole={selectedSinkhole} weatherMap={weatherMap} />
+
+          <div className="mt-3">
+            <h2 className="text-base font-semibold mb-2 mt-4">
+              🗂️ 싱크홀 상세 정보
+              <span className="text-gray-500 text-sm font-normal ml-2">
+                (지도의 핀을 클릭하면 정보가 표시됩니다)
+              </span>
+            </h2>
+            <InfoBox sinkhole={selectedSinkhole} weatherMap={weatherMap} />
+          </div>
         </div>
         {/* 오른쪽 (차트) */}
-        <div className="w-60 h-[806px] bg-white p-4 rounded shadow overflow-auto">
+        <div className="w-100 h-[903px] bg-white p-4 rounded shadow overflow-auto">
           <ChartPanel 
             selectedCauses={selectedCauses} 
             setSelectedCauses={setSelectedCauses}

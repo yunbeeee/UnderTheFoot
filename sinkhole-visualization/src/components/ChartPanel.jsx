@@ -209,9 +209,7 @@ console.log('✅ highlightMonth:', highlightMonth);
   return (
     <div className="chart-panel-container" /* w-full p-4 bg-white rounded shadow overflow-y-auto max-h-[800px] */>
       <h2 className="chart-panel-title-main" /* text-lg font-semibold mb-4 */>📊 싱크홀 데이터 분석</h2>
-      <div className="chart-header-note" /* text-sm text-gray-500 */>
-        ※ 차트는 선택한 범위에 따라 동적으로 렌더링됩니다.
-      </div>
+
       <div className="toggle-filters filter-toggle-group" /* moved to CSS */>
         <label className="toggle-label">
           <input
@@ -251,7 +249,7 @@ console.log('✅ highlightMonth:', highlightMonth);
       </div>
       {/* 여기에 차트 넣기 */}
       <h3 className="chart-section-title" /* mt-8 text-base font-semibold */>🧭 발생 원인별 카운트</h3>
-      <ResponsiveContainer width="100%" height={200}>
+      <ResponsiveContainer width="100%" height={180}>
         <BarChart className='chart-area'
           data={chartData}         >
           <XAxis 
@@ -286,7 +284,7 @@ console.log('✅ highlightMonth:', highlightMonth);
       </ResponsiveContainer>
 
       <h3 className="chart-section-title" /* mt-8 text-base font-semibold */>📅 월별 사고 건수</h3>
-      <ResponsiveContainer width="100%" height={200}>
+      <ResponsiveContainer width="100%" height={180}>
         <ComposedChart className='chart-area'
           data={monthChartData} 
         >
@@ -353,7 +351,7 @@ console.log('✅ highlightMonth:', highlightMonth);
       </ResponsiveContainer>
 
       <h3 className="chart-section-title" /* text-base font-semibold mb-2 */>📍 면적(m²) vs. 깊이(m) 산점도</h3>
-      <ResponsiveContainer width="100%" height={250}>
+      <ResponsiveContainer width="100%" height={180}>
         <ScatterChart className='chart-area'
         >
           <XAxis 
