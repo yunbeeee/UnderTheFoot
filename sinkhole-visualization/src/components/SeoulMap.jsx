@@ -354,7 +354,8 @@ const SeoulMap = ({
           const hasFilters =
             selectedCauses.length > 0 ||
             selectedMonths.length > 0 ||
-            (startDate && endDate);
+            (startDate && endDate) ||
+            showRain || showRepaired || showDamaged;
           
           const shouldShow =
             selectedSinkhole
@@ -362,12 +363,13 @@ const SeoulMap = ({
               : (
                 !isReset &&
                 (
-                  // 1. 자치구를 선택하지 않았지만 필터가 존재하는 경우 → 필터 기준으로 표시
-                  (selectedGu === null && (hasFilters ? isInFilteredList : true)) ||
-                  // 2. 자치구 선택됨 → 그 구에 속한 것만 표시
-                  (selectedGu && isInSelectedGu) ||
-                  // 3. 전체 핀 보기
-                  selectedGu === 'ALL'
+                  hasFilters
+                    ? (isInFilteredList && (!selectedGu || isInSelectedGu || selectedGu === 'ALL')) // 필터 + 자치구 일치
+                    : (
+                        selectedGu === 'ALL' ||
+                        (!selectedGu && true) || // 자치구 선택 안 된 경우 전체
+                        (selectedGu && isInSelectedGu) // 자치구 선택된 경우
+                      )
                 )
               );
 
