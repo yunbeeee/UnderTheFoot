@@ -22,6 +22,7 @@ function App() {
   const mapRef = useRef(); // leaflet Map 인스턴스 접근용
   const [isReset, setIsReset] = useState(true); // 초기화 여부
   const [weatherMap, setWeatherMap] = useState({});
+
   const [clickedFromMap, setClickedFromMap] = useState(false);
   const [showRain, setShowRain] = useState(false);
   const [showRepaired, setShowRepaired] = useState(false);
@@ -141,13 +142,15 @@ function App() {
         <div className="flex flex-col w-[701px] bg-white p-4 rounded shadow">
           <div className="h-[596px]">
             <SeoulMap 
-              setSelectedSinkhole={setSelectedSinkhole}
-              // setSelectedSinkhole={handleSinkholeSelect} 
+              // setSelectedSinkhole={setSelectedSinkhole}
+              setSelectedSinkhole={handleSinkholeSelect} 
               selectedGu={selectedGu}
               setSelectedGu={setSelectedGu}
               mapRef={mapRef}
               selectedCauses={selectedCauses}
+              setSelectedCauses={setSelectedCauses}
               selectedMonths={selectedMonths}
+              setSelectedMonths={setSelectedMonths}
               depthRange={depthRange}
               areaRange={areaRange}
               selectedSinkhole={selectedSinkhole}
