@@ -1,0 +1,19 @@
+.gu-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 12px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.7); /* 배경이 필요하면 */
+  border-radius: 4px;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+/* 지도 위에 올리기 위해 z-축 조절 */
+.datepicker-popper {
+  z-index: 1500000 !important;
+}
+.leaflet-marker-icon.dimmed-pin {
+  opacity: 0.3;
+}

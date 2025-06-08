@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import KakaoMap from './components/KakaoMap';
 import SeoulMap from './components/SeoulMap';
 import ChartPanel from './components/ChartPanel';
@@ -15,6 +15,12 @@ function App() {
   const [selectedMonths, setSelectedMonths] = useState([]);
   const [depthRange, setDepthRange] = useState([0, 20])
   const [areaRange, setAreaRange] = useState([0, 300])
+    const [dateRange, setDateRange] = useState([null, null]); // [startDate, endDate]
+  
+  const [selectedGu, setSelectedGu] = useState(null);
+
+  const mapRef = useRef(); // leaflet Map 인스턴스 접근용
+  const [isReset, setIsReset] = useState(true); // 초기화 여부
   const [weatherMap, setWeatherMap] = useState({});
   const [clickedFromMap, setClickedFromMap] = useState(false);
   const [showRain, setShowRain] = useState(false);
@@ -42,10 +48,25 @@ function App() {
   }, []);
 
   const handleSinkholeSelect = (sinkhole) => {
+  if (!sinkhole) {
+    // 초기화 시 사용됨
+    setSelectedSinkhole(null);
+    setSelectedCauses([]);
+    setSelectedMonths([]);
+    return;
+    }
+    // 아래 3줄 이지지
     if (clickedFromMap) {
       setSelectedSinkhole(sinkhole);
       return;
     }
+    // 같은 핀을 클릭해서 해제하는 경우
+    if (selectedSinkhole && selectedSinkhole.sagoNo === sinkhole.sagoNo) {
+      setSelectedSinkhole(null);
+      return;
+    }
+
+    // 새로운 핀을 선택하는 경우
     setSelectedSinkhole(sinkhole);
   
     // 원인을 배열로 파싱
@@ -60,14 +81,19 @@ function App() {
     }
   
     // 항상 배열 형태로 trim 적용 후 저장 <- 단일 원인에도 적용하기 위함
-    const causes = parsed.map(d => d.trim()).filter(Boolean);
+    const causes = parsed
+      .map(d => (typeof d === 'string' ? d.trim() : ''))
+      .filter(Boolean);   // 빈 문자열 제거
     setSelectedCauses(causes);
 
     // 발생 월 처리
     const dateStr = sinkhole.sagoDate?.toString();
     const month = dateStr && dateStr.length >= 6 ? dateStr.substring(4, 6) : null;
-    setSelectedMonths([month]);
+    setSelectedMonths(month ? [month] : []);
+    // 아래 두 줄 이지지
+    // setSelectedMonths([month]);
     setClickedFromMap(false);
+    
   };
 
 
@@ -76,9 +102,29 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       {/* 타이틀 */}
-      <h1 className="text-3xl font-bold mb-6">
-        Under the foot: <span className="text-black">당신의 발 밑은 안전한가요?</span>
-      </h1>
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="text-3xl font-bold">
+          Under the foot: <span className="text-black">당신의 발 밑은 안전한가요?</span>
+        </h1>
+        <div className="flex space-x-4 text-sm">
+          <a
+            href="https://www.safekorea.go.kr/idsiSFK/neo/main/main.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            📩 신고하기
+          </a>
+          <a
+            href="https://www.safekorea.go.kr/idsiSFK/neo/bbs/docs/view.do?bbs_cd=1005&seq=14127"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            📘 대처법 보기
+          </a>
+        </div>
+      </div>
 
       {/* 3단 고정 레이아웃 */}
       <div className="flex gap-4 mx-auto max-w-[2000px]">
@@ -97,6 +143,9 @@ function App() {
             <SeoulMap 
               setSelectedSinkhole={setSelectedSinkhole}
               // setSelectedSinkhole={handleSinkholeSelect} 
+              selectedGu={selectedGu}
+              setSelectedGu={setSelectedGu}
+              mapRef={mapRef}
               selectedCauses={selectedCauses}
               selectedMonths={selectedMonths}
               depthRange={depthRange}
@@ -107,6 +156,10 @@ function App() {
               showRain={showRain}
               showRepaired={showRepaired}
               showDamaged={showDamaged}
+              dateRange={dateRange}
+              setDateRange={setDateRange}
+              isReset={isReset}
+              setIsReset={setIsReset}
             />
           </div>
           <InfoBox sinkhole={selectedSinkhole} weatherMap={weatherMap} />
@@ -133,6 +186,8 @@ function App() {
             showDamaged={showDamaged}
             setShowDamaged={setShowDamaged}
             weatherMap={weatherMap}
+            setSelectedGu={setSelectedGu}
+            setIsReset={setIsReset}
           />
         </div>
       </div>
