@@ -327,11 +327,46 @@ const SeoulMap = ({
           const center = centroid(feature).geometry.coordinates;
           const guName = feature.properties.SGG_NM.replace('서울특별시 ', '');
 
+
+          const guOffsets = {
+            '종로구': [0, -0.2],
+            '중구': [9, 3],
+            '용산구': [5, -8],
+            '성동구': [5, -5],
+            '광진구': [8, -7],
+            '동대문구': [-1, -0.1],
+            '중랑구': [8, -1],
+            '성북구': [-3, -2],
+            '강북구': [0.05, 0.1],
+            '도봉구': [0.02, 8],
+            '노원구': [6, 9],
+            '은평구': [10, 5],
+            '서대문구': [-3, -0.06],
+            '마포구': [-15, 1],
+            '양천구': [-3, -2],
+            '강서구': [20, 3],
+            '구로구': [-10, 3],
+            '금천구': [4, 0],
+            '영등포구': [7, 6],
+            '동작구': [9, 8],
+            '관악구': [9, -3],
+            '서초구': [0.1, 5],
+            '강남구': [-12, 10],
+            '송파구': [-10, 9],
+            '강동구': [-17, 0.06],
+          };          
+
+          const offset = guOffsets[guName] || [0, 0];
+          const adjustedPosition = [
+            center[1] + offset[1] * 0.001,
+            center[0] + offset[0] * 0.001
+          ];
+
           return (
             <Marker
               key={`label-${idx}`}
               // position={center}
-              position={[center[1], center[0]]}
+              position={adjustedPosition}
               icon={L.divIcon({
                 className: 'gu-label',
                 html: `<div>${guName}</div>`,
