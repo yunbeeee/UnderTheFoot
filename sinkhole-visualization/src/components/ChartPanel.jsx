@@ -416,7 +416,7 @@ console.log('✅ highlightMonth:', highlightMonth);
       />
       <RangeSlider className="chart-range-slider"
         min={0}
-        max={d3.max(sinkholes, d => Number(d.sinkArea)) || 1000}
+        max={300}
         value={areaRange}
         onChange={setAreaRange}
         label={`면적 범위: ${areaRange[0]}m² - ${areaRange[1]}m²`}

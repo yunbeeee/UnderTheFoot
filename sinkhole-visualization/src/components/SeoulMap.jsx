@@ -390,7 +390,9 @@ const SeoulMap = ({
             selectedCauses.length > 0 ||
             selectedMonths.length > 0 ||
             (startDate && endDate) ||
-            showRain || showRepaired || showDamaged;
+            showRain || showRepaired || showDamaged ||
+            depthRange[0] > 0 || depthRange[1] < Infinity ||
+            areaRange[0] > 0 || areaRange[1] < Infinity;
           
           const shouldShow =
             selectedSinkhole
