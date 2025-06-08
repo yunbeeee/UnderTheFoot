@@ -91,7 +91,6 @@ console.log('✅ highlightMonth:', highlightMonth);
       setSelectedCauses(selectedCauses.filter(cause => cause !== name));
     } else {
       setSelectedCauses([...selectedCauses, name]);
-      setSelectedGu(null); // 원인 선택 시 자치구 선택 초기화
     }
   };
 
