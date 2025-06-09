@@ -5,6 +5,7 @@ import sinkholes from '../sinkholes.json';
 import * as d3 from 'd3';
 import { parse } from 'json5';
 import './ChartPanel.css';
+import { useEffect } from 'react';
 
 const ChartPanel = ({ 
   selectedSinkhole, setSelectedSinkhole,
@@ -49,6 +50,32 @@ console.log('🧭 selectedCauses:', selectedCauses);
 console.log('📅 selectedMonths:', selectedMonths);
 console.log('✅ highlightCauses:', highlightCauses);
 console.log('✅ highlightMonth:', highlightMonth);
+
+// 선택된 sinkhole 핀에 대한 체크박스 반영
+useEffect(() => {
+  if (selectedSinkhole) {
+    const sago = selectedSinkhole;
+    const dateStr = sago.sagoDate?.toString()?.slice(0, 8);
+    const region = sago.sigungu;
+    const key = `${dateStr}_${region}`;
+    const weather = key && weatherMap?.[key];
+    const rain = parseFloat(weather?.rain);
+    const status = (sago.trStatus || '').trim();
+    const totalDamage = (parseInt(sago.deathCnt) || 0)
+                      + (parseInt(sago.injuryCnt) || 0)
+                      + (parseInt(sago.vehicleCnt) || 0);
+
+    setShowRain(rain > 0);
+    setShowRepaired(!status.includes('복구완료'));
+    setShowDamaged(totalDamage > 0);
+  } else {
+    // 선택된 핀이 없을 때는 초기화
+    setShowRain(false);
+    setShowRepaired(false);
+    setShowDamaged(false);
+  }
+}, [selectedSinkhole]);
+
   
   const causeCounts = {};
   sinkholes.forEach(item => {

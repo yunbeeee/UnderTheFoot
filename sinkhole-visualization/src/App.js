@@ -156,6 +156,9 @@ function App() {
               showRain={showRain}
               showRepaired={showRepaired}
               showDamaged={showDamaged}
+              setShowRain={setShowRain}
+              setShowRepaired={setShowRepaired}
+              setShowDamaged={setShowDamaged}
               dateRange={dateRange}
               setDateRange={setDateRange}
               isReset={isReset}

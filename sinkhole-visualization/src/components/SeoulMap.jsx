@@ -105,7 +105,8 @@ const SeoulMap = ({
   dateRange, setDateRange,
   isReset, setIsReset,
   clickedFromMap, setClickedFromMap,
-  showRain, showRepaired, showDamaged
+  showRain, showRepaired, showDamaged,
+  setShowRain, setShowRepaired, setShowDamaged
 }) => {
   const [startDate, endDate] = dateRange;
 
@@ -443,6 +444,12 @@ const SeoulMap = ({
             setSelectedCauses([]);
             setSelectedMonths([]);
             setDateRange([null, null]);
+
+            // 체크박스도 초기화
+            setShowDamaged(false);
+            setShowRepaired(false);
+            setShowRain(false);
+            
             setIsReset(true);
             mapRef.current?.setView([37.5665, 126.9780], 11);
           }}
