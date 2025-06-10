@@ -118,7 +118,11 @@ const KakaoMap = () => {
       'Content-Type': 'application/json',
     };
 
-    const queryParams = new URLSearchParams({ origin, destination });
+    const queryParams = new URLSearchParams({ 
+      origin, 
+      destination,
+      priority: 'DISTANCE'
+    });
 
     const response = await fetch(`${url}?${queryParams}`, { headers });
     const data = await response.json();
