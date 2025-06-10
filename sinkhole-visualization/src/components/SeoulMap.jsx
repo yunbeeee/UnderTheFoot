@@ -50,7 +50,7 @@ const MapControlButtons = ({ onReset, onShowAll }) => {
       resetBtn.onclick = () => onReset();
 
       const allBtn = L.DomUtil.create('button', '', container);
-      allBtn.innerHTML = '🔍 전체 핀';
+      allBtn.innerHTML = '🔍 핀 보기';
       allBtn.style.padding = '6px';
       allBtn.style.background = 'white';
       allBtn.onclick = () => onShowAll();
@@ -106,7 +106,8 @@ const SeoulMap = ({
   isReset, setIsReset,
   clickedFromMap, setClickedFromMap,
   showRain, showRepaired, showDamaged,
-  setShowRain, setShowRepaired, setShowDamaged
+  setShowRain, setShowRepaired, setShowDamaged,
+  setDepthRange, setAreaRange
 }) => {
   const [startDate, endDate] = dateRange;
 
@@ -170,12 +171,10 @@ const SeoulMap = ({
         details = [details];
       }
 
-      matchCause = selectedCauses.every(cause =>
-        details
-          .filter(d => typeof d === 'string')
-          .map(d => d.trim())
-          .includes(cause)
-      );
+      matchCause = details
+        .filter(d => typeof d === 'string')
+        .map(d => d.trim())
+        .some(cause => selectedCauses.includes(cause));
     }
 
     // 월 조건
@@ -449,6 +448,10 @@ const SeoulMap = ({
             setShowDamaged(false);
             setShowRepaired(false);
             setShowRain(false);
+
+            // 슬라이더도 초기화
+            setDepthRange([0, 20]);     // 또는 최대값 기준 설정
+            setAreaRange([0, 300]);
             
             setIsReset(true);
             mapRef.current?.setView([37.5665, 126.9780], 11);

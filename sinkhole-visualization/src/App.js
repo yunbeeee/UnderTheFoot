@@ -163,6 +163,8 @@ function App() {
               setDateRange={setDateRange}
               isReset={isReset}
               setIsReset={setIsReset}
+              setAreaRange={setAreaRange}
+              setDepthRange={setDepthRange}
             />
           </div>
 
