@@ -176,7 +176,6 @@ useEffect(() => {
     .filter(hole => {
       const area = Number(hole.sinkArea);
       const depth = Number(hole.sinkDepth);
-  
 
       // 강수량 필터 (showRain이 true일 경우에만 적용)
       let matchRain = true;

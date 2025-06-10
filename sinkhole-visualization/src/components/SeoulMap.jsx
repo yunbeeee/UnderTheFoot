@@ -50,7 +50,7 @@ const MapControlButtons = ({ onReset, onShowAll }) => {
       resetBtn.onclick = () => onReset();
 
       const allBtn = L.DomUtil.create('button', '', container);
-      allBtn.innerHTML = '🔍 전체 핀';
+      allBtn.innerHTML = '🔍 핀 보기';
       allBtn.style.padding = '6px';
       allBtn.style.background = 'white';
       allBtn.onclick = () => onShowAll();
@@ -171,12 +171,10 @@ const SeoulMap = ({
         details = [details];
       }
 
-      matchCause = selectedCauses.every(cause =>
-        details
-          .filter(d => typeof d === 'string')
-          .map(d => d.trim())
-          .includes(cause)
-      );
+      matchCause = details
+        .filter(d => typeof d === 'string')
+        .map(d => d.trim())
+        .some(cause => selectedCauses.includes(cause));
     }
 
     // 월 조건
