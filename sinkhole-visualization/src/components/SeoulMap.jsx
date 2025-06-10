@@ -106,7 +106,8 @@ const SeoulMap = ({
   isReset, setIsReset,
   clickedFromMap, setClickedFromMap,
   showRain, showRepaired, showDamaged,
-  setShowRain, setShowRepaired, setShowDamaged
+  setShowRain, setShowRepaired, setShowDamaged,
+  setDepthRange, setAreaRange
 }) => {
   const [startDate, endDate] = dateRange;
 
@@ -449,6 +450,10 @@ const SeoulMap = ({
             setShowDamaged(false);
             setShowRepaired(false);
             setShowRain(false);
+
+            // 슬라이더도 초기화
+            setDepthRange([0, 20]);     // 또는 최대값 기준 설정
+            setAreaRange([0, 300]);
             
             setIsReset(true);
             mapRef.current?.setView([37.5665, 126.9780], 11);

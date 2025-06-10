@@ -450,7 +450,7 @@ if (
       
       <RangeSlider className="chart-range-slider"
         min={0}
-        max={d3.max(sinkholes, d => Number(d.sinkDepth)) || 100}
+        max={20}
         value={depthRange}
         onChange={setDepthRange}
         label={`깊이 범위: ${depthRange[0]}m - ${depthRange[1]}m`}
