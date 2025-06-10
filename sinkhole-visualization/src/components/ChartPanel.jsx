@@ -172,10 +172,11 @@ useEffect(() => {
   };
 
   // 산점도 데이터 필터링 및 선택 상태 설정
-  const filteredScatterData = sinkholes
+  let filteredScatterData = sinkholes
     .filter(hole => {
       const area = Number(hole.sinkArea);
       const depth = Number(hole.sinkDepth);
+  
 
       // 강수량 필터 (showRain이 true일 경우에만 적용)
       let matchRain = true;
@@ -186,7 +187,7 @@ useEffect(() => {
         const weather = weatherMap?.[key];
         const rainValue = parseFloat(weather?.rain);
         matchRain = !isNaN(rainValue) && rainValue > 0;
-        console.log('[ChartPanel Filter] Rain condition:', rainValue, '=>', matchRain);
+        // console.log('[ChartPanel Filter] Rain condition:', rainValue, '=>', matchRain);
       }
 
       // 복구 여부 필터
@@ -231,6 +232,19 @@ useEffect(() => {
       };
     })
     .sort((a, b) => (a.isSelected ? 1 : 0) - (b.isSelected ? 1 : 0));
+
+  // 클릭된 점이 필터링 결과에 없으면 강제로 추가
+if (
+  selectedSinkhole &&
+  !filteredScatterData.some(hole => hole.sagoNo === selectedSinkhole.sagoNo)
+) {
+  filteredScatterData.push({
+    ...selectedSinkhole,
+    isSelected: true,
+    fill: "#10b981",
+    opacity: 1,
+  });
+}
   
   return (
     <div className="chart-panel-container" /* w-full p-4 bg-white rounded shadow overflow-y-auto max-h-[800px] */>
@@ -443,7 +457,7 @@ useEffect(() => {
       />
       <RangeSlider className="chart-range-slider"
         min={0}
-        max={300}
+        max={d3.max(sinkholes, d => Number(d.sinkArea)) || 1000}
         value={areaRange}
         onChange={setAreaRange}
         label={`면적 범위: ${areaRange[0]}m² - ${areaRange[1]}m²`}
