@@ -21,6 +21,8 @@
 - **기타 라이브러리**: Turf.js (지도 중심좌표 계산), rc-slider
 
 ## 📁 폴더 구조
+<pre>
+``` 
 sinkhole-visualization/
 ├── public/
 │   └── index.html
@@ -44,6 +46,8 @@ sinkhole-visualization/
 ├── tailwind.config.js
 ├── package.json
 └── README.md
+```
+</pre>
 
 ## 📊 주요 시각화 구성
 
