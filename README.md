@@ -1,7 +1,6 @@
 # Under The Foot (서울 싱크홀 시각화 프로젝트)
 
 **Under The Foot**은 서울시 싱크홀 사고 데이터를 지도와 다양한 차트로 시각화하여, 시민과 연구자가 사고 위치, 원인, 규모, 시기, 피해 여부 등을 직관적으로 탐색할 수 있도록 만든 인터랙티브 웹 애플리케이션입니다.
-🗂️ 프로젝트 개요
 
 ## 🗂 프로젝트 개요
 
@@ -22,28 +21,7 @@
 - **기타 라이브러리**: Turf.js (지도 중심좌표 계산), rc-slider
 
 ## 📁 폴더 구조
-sinkhole-visualization/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── ChartPanel.jsx      # 오른쪽 통계 그래프 패널
-│   │   ├── SeoulMap.jsx        # 중심 지도 영역
-│   │   ├── KakaoMap.jsx        # 출발지-도착지 경로 탐색
-│   │   ├── interactions/       # RangeSlider 등 상호작용 UI
-│   │   ├── InfoBox.jsx         # 정보 요약 박스
-│   │   └── ...                 # 기타 UI 컴포넌트
-│   ├── data/
-│   │   ├── sinkholes.json      # 싱크홀 데이터
-│   │   └── seoul_gu_boundary.json  # 서울시 자치구 GeoJSON
-│   ├── asset/
-│   │   └── redpin.png          # 지도 핀 이미지
-│   ├── App.jsx                 # 전체 페이지 컴포넌트 구성
-│   ├── index.css
-│   └── main.jsx
-├── tailwind.config.js
-├── package.json
-└── README.md
+<pre><code> ## 📁 폴더 구조 sinkhole-visualization/ ├── public/ │ └── index.html ├── src/ │ ├── components/ │ │ ├── ChartPanel.jsx # 오른쪽 통계 그래프 패널 │ │ ├── SeoulMap.jsx # 중심 지도 영역 │ │ ├── KakaoMap.jsx # 출발지-도착지 경로 탐색 │ │ ├── interactions/ │ │ ├── RangeSlider.jsx # RangeSlider 등 상호작용 UI │ │ ├── InfoBox.jsx # 정보 요약 박스 │ │ └── ... # 기타 UI 컴포넌트 │ │ ├── data/ │ │ ├── sinkholes.json # 싱크홀 데이터 │ │ └── seoul_gu_boundary.json # 서울시 자치구 GeoJSON │ │ ├── asset/ │ │ └── redpin.png # 지도 핀 이미지 │ │ ├── App.jsx # 전체 페이지 컴포넌트 구성 │ ├── index.css │ └── main.jsx │ ├── tailwind.config.js ├── package.json └── README.md </code></pre>
 
 ## 📊 주요 시각화 구성
 
@@ -67,10 +45,10 @@ sinkhole-visualization/
     ```
 
 3. 환경 변수 설정 (카카오 API 키 필요)
-   - `.env` 파일 생성 후 아래와 같이 입력:
-     ```
-     REACT_APP_KAKAO_REST_API_KEY=카카오_API_키_입력
-     ```
+   `.env` 파일 생성 후 아래와 같이 입력:
+   ```
+   REACT_APP_KAKAO_REST_API_KEY=카카오_API_키_입력
+   ```
 
 4. 개발 서버 실행
     ```
