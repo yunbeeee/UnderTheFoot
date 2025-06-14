@@ -1,17 +1,76 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import RangeSlider from '../interactions/RangeSlider';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, ScatterChart, Scatter, Line, ComposedChart, Legend } from 'recharts';
 import sinkholes from '../sinkholes.json';
 import * as d3 from 'd3';
-import { parse } from 'json5';
+import './ChartPanel.css';
+import { useEffect } from 'react';
 
 const ChartPanel = ({ 
+  selectedSinkhole, setSelectedSinkhole,
   selectedCauses, setSelectedCauses, 
   selectedMonths, setSelectedMonths,
   depthRange, setDepthRange, 
-  areaRange, setAreaRange }) => {
+  clickedFromMap, setClickedFromMap, // fixed
+  showRain = false, setShowRain,
+  showRepaired = false, setShowRepaired,
+  showDamaged = false, setShowDamaged,
+  weatherMap,
+  areaRange, setAreaRange,
+  setSelectedGu, setIsReset, 
+}) => {
+  const highlightCauses = selectedCauses.length > 0
+    ? selectedCauses
+    : (selectedSinkhole?.sagoDetailProcessed
+        ? (() => {
+            let raw = selectedSinkhole.sagoDetailProcessed;
+            try {
+              if (typeof raw === 'string') raw = JSON.parse(raw.replace(/'/g, '"'));
+              raw = Array.isArray(raw) ? raw : [raw];
+            } catch {
+              raw = typeof raw === 'string' ? [raw] : [];
+            }
+            return raw.map(d => typeof d === 'string' ? d.trim() : '').filter(Boolean);
+          })()
+        : []);
 
-  // 원인 카테고리별 카운트
+  const highlightMonth =
+    selectedMonths.length > 0 && selectedMonths.some(m => m != null)
+      ? selectedMonths
+      : (selectedSinkhole?.sagoDate
+        ? (() => {
+          const raw = selectedSinkhole.sagoDate;
+          const dateStr = typeof raw === 'number' ? String(raw) : (raw ?? '');
+          return dateStr.length >= 6 ? [dateStr.slice(4, 6)] : [];
+        })()
+        : []);
+
+// 선택된 sinkhole 핀에 대한 체크박스 반영
+useEffect(() => {
+  if (selectedSinkhole) {
+    const sago = selectedSinkhole;
+    const dateStr = sago.sagoDate?.toString()?.slice(0, 8);
+    const region = sago.sigungu;
+    const key = `${dateStr}_${region}`;
+    const weather = key && weatherMap?.[key];
+    const rain = parseFloat(weather?.rain);
+    const status = (sago.trStatus || '').trim();
+    const totalDamage = (parseInt(sago.deathCnt) || 0)
+                      + (parseInt(sago.injuryCnt) || 0)
+                      + (parseInt(sago.vehicleCnt) || 0);
+
+    setShowRain(rain > 0);
+    setShowRepaired(!status.includes('복구완료'));
+    setShowDamaged(totalDamage > 0);
+  } else {
+    // 선택된 핀이 없을 때는 초기화
+    setShowRain(false);
+    setShowRepaired(false);
+    setShowDamaged(false);
+  }
+}, [selectedSinkhole]);
+
+  
   const causeCounts = {};
   sinkholes.forEach(item => {
     let details = item.sagoDetailProcessed;
@@ -28,9 +87,11 @@ const ChartPanel = ({
     }
 
     details.forEach(cause => {
-      const cleaned = cause.trim();
-      if (cleaned) {
-        causeCounts[cleaned] = (causeCounts[cleaned] || 0) + 1;
+      if (typeof cause === 'string') {
+        const cleaned = cause.trim();
+        if (cleaned) {
+          causeCounts[cleaned] = (causeCounts[cleaned] || 0) + 1;
+        }
       }
     });
   });
@@ -42,6 +103,8 @@ const ChartPanel = ({
   })).sort((a, b) => b.count - a.count);
 
   const handleClick = (name) => {
+    setIsReset(false);
+
     if (selectedCauses.includes(name)) {
       setSelectedCauses(selectedCauses.filter(cause => cause !== name));
     } else {
@@ -61,51 +124,152 @@ const ChartPanel = ({
     }
   });
 
+  // 월별 평균 기온 데이터
+  const avgTemps = {
+    '01': -2.54286,
+    '02': 0.257143,
+    '03': 6.942857,
+    '04': 12.54286,
+    '05': 17.48571,
+    '06': 22.22857,
+    '07': 25.32857,
+    '08': 25.84286,
+    '09': 21.38571,
+    '10': 14.14286,
+    '11': 7.371429,
+    '12': -1.21429,
+  };
+
   // 차트용 데이터로 변환
   const monthChartData = monthCounts.map((count, index) => {
     const paddedMonth = (index + 1).toString().padStart(2, '0'); // '01' ~ '12'
     return {
       month: paddedMonth,
       count,
+      avgTemps: avgTemps[paddedMonth] ?? null,
     };
   });
-  
-  const handleMonthClick = (month) => {
-    if (selectedMonths.includes(month)) {
-      setSelectedMonths(selectedMonths.filter(m => m !== month));
-    } else {
-      setSelectedMonths([...selectedMonths, month]);
-    }
-  };
-  
 
+  // 산점도 데이터 필터링 및 선택 상태 설정
+  let filteredScatterData = sinkholes
+    .filter(hole => {
+      const area = Number(hole.sinkArea);
+      const depth = Number(hole.sinkDepth);
+
+      // 강수량 필터 (showRain이 true일 경우에만 적용)
+      let matchRain = true;
+      if (showRain) {
+        const dateStr = hole.sagoDate?.toString().slice(0, 8);
+        const region = hole.sigungu;
+        const key = `${dateStr}_${region}`;
+        const weather = weatherMap?.[key];
+        const rainValue = parseFloat(weather?.rain);
+        matchRain = !isNaN(rainValue) && rainValue > 0;
+        // console.log('[ChartPanel Filter] Rain condition:', rainValue, '=>', matchRain);
+      }
+
+      // 복구 여부 필터
+      let matchRepaired = true;
+      if (showRepaired) {
+        const status = hole.trStatus;
+        matchRepaired = typeof status === 'string' && status.includes('복구완료');
+        // console.log('[ChartPanel Filter] Repaired condition:', status, '=>', matchRepaired);
+      }
+
+      // 피해 여부 필터
+      let matchDamaged = true;
+      if (showDamaged) {
+        const totalDamage = (parseInt(hole.deathCnt) || 0) + (parseInt(hole.injuryCnt) || 0) + (parseInt(hole.vehicleCnt) || 0);
+        matchDamaged = totalDamage > 0;
+        // console.log('[ChartPanel Filter] Damaged condition:', totalDamage, '=>', matchDamaged);
+      }
+
+      return (
+        !isNaN(area) &&
+        !isNaN(depth) &&
+        area >= areaRange[0] &&
+        area <= areaRange[1] &&
+        depth >= depthRange[0] &&
+        depth <= depthRange[1] &&
+        matchRain &&
+        matchRepaired &&
+        matchDamaged
+      );
+    })
+    .map(hole => {
+      const isSelected = selectedSinkhole && hole.sagoNo === selectedSinkhole.sagoNo;
+      return {
+        ...hole,
+        isSelected,
+        fill: selectedSinkhole
+          ? (isSelected ? "#10b981" : "#a3a3a3")
+          : "#10b981",
+        opacity: selectedSinkhole
+          ? (isSelected ? 1 : 0.4)
+          : 1,
+      };
+    })
+    .sort((a, b) => (a.isSelected ? 1 : 0) - (b.isSelected ? 1 : 0));
+
+  // 클릭된 점이 필터링 결과에 없으면 강제로 추가
+if (
+  selectedSinkhole &&
+  !filteredScatterData.some(hole => hole.sagoNo === selectedSinkhole.sagoNo)
+) {
+  filteredScatterData.push({
+    ...selectedSinkhole,
+    isSelected: true,
+    fill: "#10b981",
+    opacity: 1,
+  });
+}
+  
   return (
-    <div className="w-full p-4 bg-white rounded shadow overflow-y-auto max-h-[800px]">
-      <h2 className="text-lg font-semibold mb-4">📊 싱크홀 데이터 분석</h2>
+    <div className="chart-panel-container" /* w-full p-4 bg-white rounded shadow overflow-y-auto max-h-[800px] */>
+      <h2 className="chart-panel-title-main" /* text-lg font-semibold mb-4 */>📊 싱크홀 데이터 분석</h2>
 
-      <RangeSlider
-        min={0}
-        max={300}
-        value={areaRange}
-        onChange={setAreaRange}
-        label="면적 범위"
-      />
-
-      <RangeSlider
-        min={0}
-        max={20}
-        value={depthRange}
-        onChange={setDepthRange}
-        label="깊이 범위"
-      />
-
+      <div className="toggle-filters filter-toggle-group" /* moved to CSS */>
+        <label className="toggle-label">
+          <input
+            type="checkbox"
+            checked={showRain}
+            onChange={() => {
+              setShowRain(!showRain);
+              setClickedFromMap(false);
+            }}
+          />{' '}
+          강수 유무
+        </label>
+        <label className="toggle-label">
+          <input
+            type="checkbox"
+            checked={showRepaired}
+            onChange={() => {
+              const nextValue = !showRepaired;
+              setShowRepaired(nextValue);
+              setClickedFromMap(false);
+              console.log('[Toggle] showRepaired changed to:', nextValue);
+            }}
+          />{' '}
+          복구 미완료
+        </label>
+        <label className="toggle-label">
+          <input
+            type="checkbox"
+            checked={showDamaged}
+            onChange={() => {
+              setShowDamaged(!showDamaged);
+              setClickedFromMap(false);
+            }}
+          />{' '}
+          피해 유무
+        </label>
+      </div>
       {/* 여기에 차트 넣기 */}
-      <h3 className="mt-8 text-base font-semibold">🧭 발생 원인별 카운트</h3>
-      <ResponsiveContainer width="100%" height={200}>
-        <BarChart 
-          data={chartData} 
-          margin={{ top: 10, right: 20, left: 0, bottom: 30 }}
-        >
+      <h3 className="chart-section-title" /* mt-8 text-base font-semibold */>🧭 발생 원인별 카운트</h3>
+      <ResponsiveContainer width="100%" height={180}>
+        <BarChart className='chart-area'
+          data={chartData}         >
           <XAxis 
             dataKey="name" 
             tick={{ fontSize: 7 }} 
@@ -115,7 +279,7 @@ const ChartPanel = ({
           />
           <YAxis 
             type="number" 
-            tick={{ fontSize: 9 }} 
+            tick={{ fontSize: 7 }} 
             width={20}
           />
           <Tooltip />
@@ -126,7 +290,7 @@ const ChartPanel = ({
                 cursor="pointer"
                 fill="#ef4444"
                 fillOpacity={ 
-                  selectedCauses.length === 0 || selectedCauses.includes(entry.name)
+                  highlightCauses.length === 0 || highlightCauses.includes(entry.name)
                     ? 1
                     : 0.4
                 }
@@ -137,11 +301,10 @@ const ChartPanel = ({
         </BarChart>
       </ResponsiveContainer>
 
-      <h3 className="mt-8 text-base font-semibold">📅 월별 사고 건수</h3>
-      <ResponsiveContainer width="100%" height={200}>
-        <BarChart 
+      <h3 className="chart-section-title" /* mt-8 text-base font-semibold */>📅 월별 사고 건수</h3>
+      <ResponsiveContainer width="100%" height={180}>
+        <ComposedChart className='chart-area'
           data={monthChartData} 
-          margin={{ top: 10, right: 20, left: 0, bottom: 30 }}
         >
           <XAxis 
             dataKey="month" 
@@ -151,30 +314,132 @@ const ChartPanel = ({
             angle={-30}
             textAnchor="end"
           />
+          <YAxis 
+            yAxisId="left"
+            tick={{ fontSize: 6 }}
+            width={20}
+          />
+          <YAxis 
+            yAxisId="right"
+            orientation="right"
+            tick={{ fontSize: 6 }}
+            width={30}
+            tickFormatter={(value) => `${value}°C`}
+          />
           <Tooltip />
-          <Bar dataKey="count">
+          <Legend
+            content={() => (
+              <div style={{ fontSize: '9px', marginTop: -10, marginLeft: 20 }}>
+                <span style={{ color: '#60a5fa', marginRight: 10 }}>■ Sinkholes</span>
+                <span style={{ color: '#f97316' }}>━ Avg Temp (°C)</span>
+              </div>
+            )}
+          />
+          <Bar yAxisId="left" dataKey="count" fill="#60a5fa">
             {monthChartData.map((entry, index) => (
               <Cell
                 key={`month-cell-${index}`}
                 cursor="pointer"
-                fill="#60a5fa"
                 fillOpacity={
-                  selectedMonths.length === 0 || selectedMonths.includes(entry.month)
+                  highlightMonth.length === 0 || highlightMonth.includes(entry.month)
                     ? 1
                     : 0.4
                 }
-                onClick={() => handleMonthClick(entry.month)}
+                onClick={() => {
+                  setClickedFromMap(false);
+                  setSelectedSinkhole(null);
+                  if (selectedMonths.includes(entry.month)) {
+                    setSelectedMonths(selectedMonths.filter(m => m !== entry.month));
+                  } else {
+                    setSelectedMonths([...selectedMonths, entry.month]);
+                  }
+                }}
               />
             ))}
           </Bar>
-        </BarChart>
+          <Line 
+            yAxisId="right" 
+            type="monotone" 
+            dataKey="avgTemps" 
+            stroke="#f97316" 
+            strokeWidth={1} 
+            dot={{ r: 2 }}
+          />
+        </ComposedChart>
       </ResponsiveContainer>
 
-
+      <h3 className="chart-section-title" /* text-base font-semibold mb-2 */>📍 면적(m²) vs. 깊이(m) 산점도</h3>
+      <ResponsiveContainer width="100%" height={180}>
+        <ScatterChart className='chart-area'
+        >
+          <XAxis 
+            type="number" 
+            dataKey="sinkArea" 
+            name="면적" 
+            tick={{ fontSize: 7 }}
+            axisLine={true}
+            interval={0}
+            // unit='m²'
+            angle={-30}
+            tickMargin={4}
+          />
+          {/* XAxis label for 면적 (m²) */}
+          {/* <XAxis
+            hide
+            label={{ value: '면적 (m²)', position: 'insideBottomRight', offset: -10 }}
+          /> */}
+          <YAxis 
+            type="number" 
+            dataKey="sinkDepth" 
+            name="깊이" 
+            tick={{ fontSize: 7 }}
+            axisLine={true}
+            // unit='m'
+            tickMargin={4}
+            width={20}
+          />
+          {/* YAxis label for 깊이 (m) */}
+          {/* <YAxis
+            hide
+            label={{ value: '깊이 (m)', angle: -90, position: 'insideLeft' }}
+          /> */}
+          <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+          <Scatter
+            name="싱크홀"
+            data={filteredScatterData}
+            fill="#10b981"
+            onClick={(e) => {
+              if (e && e.payload) {
+                setSelectedSinkhole(e.payload);
+                setClickedFromMap(true); // set to true so map reflects the clicked point 이름이 거시기 한데 scatter에서 클릭했을 때만 true로 설정
+              }
+            }}
+          >
+            {filteredScatterData.map((entry, index) => (
+              <Cell
+                key={`scatter-point-${index}`}
+                fill={entry.fill}
+                fillOpacity={entry.opacity}
+              />
+            ))}
+          </Scatter>
+        </ScatterChart>
+      </ResponsiveContainer>
       
-      <div className="mt-8 text-sm text-gray-500">
-        ※ 차트는 선택한 범위에 따라 동적으로 렌더링됩니다.
-      </div>
+      <RangeSlider className="chart-range-slider"
+        min={0}
+        max={20}
+        value={depthRange}
+        onChange={setDepthRange}
+        label={`깊이 범위: ${depthRange[0]}m - ${depthRange[1]}m`}
+      />
+      <RangeSlider className="chart-range-slider"
+        min={0}
+        max={d3.max(sinkholes, d => Number(d.sinkArea)) || 1000}
+        value={areaRange}
+        onChange={setAreaRange}
+        label={`면적 범위: ${areaRange[0]}m² - ${areaRange[1]}m²`}
+      />
     </div>
   );
 };
