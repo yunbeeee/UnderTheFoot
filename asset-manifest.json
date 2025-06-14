@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sinkhole-visualization/static/css/main.54b6667f.css",
+    "main.js": "/sinkhole-visualization/static/js/main.ad03ed41.js",
+    "static/media/weather_with_sigungu.csv": "/sinkhole-visualization/static/media/weather_with_sigungu.e1d3dfceb9401fa35ad6.csv",
+    "static/media/redpin.png": "/sinkhole-visualization/static/media/redpin.8f511d05fb6bdd4c061c.png",
+    "index.html": "/sinkhole-visualization/index.html",
+    "main.54b6667f.css.map": "/sinkhole-visualization/static/css/main.54b6667f.css.map",
+    "main.ad03ed41.js.map": "/sinkhole-visualization/static/js/main.ad03ed41.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54b6667f.css",
+    "static/js/main.ad03ed41.js"
+  ]
+}
