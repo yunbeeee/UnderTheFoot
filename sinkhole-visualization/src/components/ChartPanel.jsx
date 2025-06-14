@@ -3,7 +3,6 @@ import RangeSlider from '../interactions/RangeSlider';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, ScatterChart, Scatter, Line, ComposedChart, Legend } from 'recharts';
 import sinkholes from '../sinkholes.json';
 import * as d3 from 'd3';
-import { parse } from 'json5';
 import './ChartPanel.css';
 import { useEffect } from 'react';
 
@@ -45,11 +44,6 @@ const ChartPanel = ({
           return dateStr.length >= 6 ? [dateStr.slice(4, 6)] : [];
         })()
         : []);
-console.log('📌 selectedSinkhole:', selectedSinkhole);
-console.log('🧭 selectedCauses:', selectedCauses);
-console.log('📅 selectedMonths:', selectedMonths);
-console.log('✅ highlightCauses:', highlightCauses);
-console.log('✅ highlightMonth:', highlightMonth);
 
 // 선택된 sinkhole 핀에 대한 체크박스 반영
 useEffect(() => {
@@ -110,10 +104,7 @@ useEffect(() => {
 
   const handleClick = (name) => {
     setIsReset(false);
-    // 이지 아래 세 줄줄
-    // setClickedFromMap(false);
-    // setSelectedSinkhole(null);
-    // console.log("[ChartPanel] Cause clicked, clickedFromMap set to false");
+
     if (selectedCauses.includes(name)) {
       setSelectedCauses(selectedCauses.filter(cause => cause !== name));
     } else {
@@ -158,18 +149,6 @@ useEffect(() => {
       avgTemps: avgTemps[paddedMonth] ?? null,
     };
   });
-  
-  const handleMonthClick = (month) => {
-    setIsReset(false);
-    const padded = String(month).padStart(2, '0'); // '01' ~ '12'
-    if (selectedMonths.includes(padded)) {
-      setSelectedMonths(selectedMonths.filter(m => m !== padded));
-    } else {
-      setSelectedMonths([...selectedMonths, padded]);
-      setSelectedGu(null);
-    }
-
-  };
 
   // 산점도 데이터 필터링 및 선택 상태 설정
   let filteredScatterData = sinkholes

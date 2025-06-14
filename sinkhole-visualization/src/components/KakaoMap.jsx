@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './KakaoMap.css';
 import sinkholes from '../sinkholes.json'; // 싱크홀 데이터
-import { filter } from 'd3';
 
 const REST_API_KEY = process.env.REACT_APP_KAKAO_REST_API_KEY; // Kakao REST API Key
 

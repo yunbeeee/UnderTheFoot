@@ -1,34 +1,23 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 import DatePicker from 'react-datepicker';
-import { format, setISODay } from 'date-fns';
 import 'react-datepicker/dist/react-datepicker.css';
-import { MapContainer, TileLayer, GeoJSON, Marker, useMap, Tooltip } from 'react-leaflet';
+import { MapContainer, TileLayer, GeoJSON, Marker, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import seoulGeoJson from '../data/seoul_gu_boundary.json'
 import sinkholes from '../sinkholes.json';
-import redPinImg from '../asset/redpin.png'; // 이미지 경로에 맞게 import
+import redPinImg from '../asset/redpin.png';
 import * as d3 from 'd3';
 import centroid from '@turf/centroid';
-// import { point } from '@turf/helpers';
 
 // 커스텀 빨간 핀 아이콘 정의
 const redIcon = new L.Icon({
   iconUrl: redPinImg,
-  iconSize: [30, 30],        // 적당히 조절 가능
+  iconSize: [30, 30],        
   iconAnchor: [15, 30],      // 마커의 "끝"이 좌표 중심에 위치하도록
   shadowUrl: null,
   shadowSize: null,
   shadowAnchor: null,
   className: ''
-});
-
-// 커스텀 페이드 블루 아이콘 정의 (faded-blue-marker 스타일 적용)
-const fadedBlueIcon = new L.Icon({
-  iconUrl: redPinImg,
-  iconSize: [30, 42],
-  iconAnchor: [15, 42],
-  popupAnchor: [0, -35],
-  className: 'faded-blue-marker'
 });
 
 const MapControlButtons = ({ onReset, onShowAll }) => {
@@ -321,9 +310,7 @@ const SeoulMap = ({
           onEachFeature={handleFeatureClick}
         />
         {/* 자치구 이름 텍스트 표시 */}
-        {seoulGeoJson.features.map((feature, idx) => {
-          const bounds = L.geoJSON(feature).getBounds();
-          // const center = bounds.getCenter();      
+        {seoulGeoJson.features.map((feature, idx) => { 
           const center = centroid(feature).geometry.coordinates;
           const guName = feature.properties.SGG_NM.replace('서울특별시 ', '');
 

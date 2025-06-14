@@ -15,7 +15,7 @@ function App() {
   const [selectedMonths, setSelectedMonths] = useState([]);
   const [depthRange, setDepthRange] = useState([0, 20])
   const [areaRange, setAreaRange] = useState([0, 300])
-    const [dateRange, setDateRange] = useState([null, null]); // [startDate, endDate]
+  const [dateRange, setDateRange] = useState([null, null]); // [startDate, endDate]
   
   const [selectedGu, setSelectedGu] = useState(null);
 
@@ -107,7 +107,7 @@ function App() {
         <h1 className="text-3xl font-bold">
           Under the foot: <span className="text-black">당신의 발 밑은 안전한가요?</span>
         </h1>
-        <div className="w-[43%] flex justify-end space-x-4 text-sm">
+        <div className="w-[55%] flex justify-end space-x-4 text-sm">
           <a
             href="https://www.safekorea.go.kr/idsiSFK/neo/main/main.html"
             target="_blank"
