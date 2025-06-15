@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/UnderTheFoot/sinkhole-visualization/static/css/main.54b6667f.css",
-    "main.js": "/UnderTheFoot/sinkhole-visualization/static/js/main.e6f77355.js",
-    "static/media/weather_with_sigungu.csv": "/UnderTheFoot/sinkhole-visualization/static/media/weather_with_sigungu.e1d3dfceb9401fa35ad6.csv",
-    "static/media/redpin.png": "/UnderTheFoot/sinkhole-visualization/static/media/redpin.8f511d05fb6bdd4c061c.png",
-    "index.html": "/UnderTheFoot/sinkhole-visualization/index.html",
-    "main.54b6667f.css.map": "/UnderTheFoot/sinkhole-visualization/static/css/main.54b6667f.css.map",
-    "main.e6f77355.js.map": "/UnderTheFoot/sinkhole-visualization/static/js/main.e6f77355.js.map"
+    "main.css": "/UnderTheFoot/static/css/main.54b6667f.css",
+    "main.js": "/UnderTheFoot/static/js/main.a6511ea6.js",
+    "static/media/weather_with_sigungu.csv": "/UnderTheFoot/static/media/weather_with_sigungu.e1d3dfceb9401fa35ad6.csv",
+    "static/media/redpin.png": "/UnderTheFoot/static/media/redpin.8f511d05fb6bdd4c061c.png",
+    "index.html": "/UnderTheFoot/index.html",
+    "main.54b6667f.css.map": "/UnderTheFoot/static/css/main.54b6667f.css.map",
+    "main.a6511ea6.js.map": "/UnderTheFoot/static/js/main.a6511ea6.js.map"
   },
   "entrypoints": [
     "static/css/main.54b6667f.css",
-    "static/js/main.e6f77355.js"
+    "static/js/main.a6511ea6.js"
   ]
 }
