@@ -1,6 +1,6 @@
 {
   "name": "sinkhole-visualization",
-  "homepage": "https://kim-yiji.github.io/UnderTheFoot",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
