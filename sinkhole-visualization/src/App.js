@@ -39,12 +39,12 @@ function App() {
         const temp = row['평균기온(°C)'];
         const rain = row['일강수량(mm)'];
         map[key] = { temp, rain };
-        console.log('[App DEBUG] Weather key created:', key, '→', map[key]);
+        //console.log('[App DEBUG] Weather key created:', key, '→', map[key]);
       });
-      console.log('[App DEBUG] Total weatherMap keys:', Object.keys(map).length);
+      //console.log('[App DEBUG] Total weatherMap keys:', Object.keys(map).length);
       setWeatherMap(map);
     }).catch(err => {
-      console.error('[App ERROR] Failed to load weather CSV:', err);
+      //console.error('[App ERROR] Failed to load weather CSV:', err);
     });
   }, []);
 

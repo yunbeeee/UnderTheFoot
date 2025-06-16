@@ -44,7 +44,7 @@ const KakaoMap = () => {
           };
           const kakaoMap = new window.kakao.maps.Map(container, options);
           setMap(kakaoMap);
-          setIsMapLoaded(true); // ✅ SDK 로드 완료
+          setIsMapLoaded(true);
         });
       } else {
         console.error('Kakao Maps SDK 로드 실패');
