@@ -28,9 +28,9 @@ const KakaoMap = () => {
   const [radiusRange, setRadiusRange] = useState(100); // 초기 반경 100m
 
   useEffect(() => {
-    const JS_KEY = process.env.REACT_APP_KAKAO_JAVASCRIPT_KEY
+    const JS_KEY = process.env.REACT_APP_KAKAO_JAVASCRIPT_KEY;
     const script = document.createElement('script');
-    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${JS_KEY}`;
+    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${JS_KEY}&autoload=false`;
     script.async = true;
     document.head.appendChild(script);
 
