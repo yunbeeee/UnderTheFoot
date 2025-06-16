@@ -9,7 +9,7 @@ import * as d3 from 'd3';
 function App() {
   const [selectedSinkhole, setSelectedSinkhole] = useState(null);
   useEffect(() => {
-    console.log("[App] selectedSinkhole 변경:", selectedSinkhole);
+    //console.log("[App] selectedSinkhole 변경:", selectedSinkhole);
   }, [selectedSinkhole]);
   const [selectedCauses, setSelectedCauses] = useState([]); // 중복 선택 허용 -> 배열로 관리
   const [selectedMonths, setSelectedMonths] = useState([]);
@@ -28,7 +28,7 @@ function App() {
   const [showRepaired, setShowRepaired] = useState(false);
   const [showDamaged, setShowDamaged] = useState(false);
   useEffect(() => {
-    console.log("[App] clickedFromMap 상태 변경:", clickedFromMap);
+    //console.log("[App] clickedFromMap 상태 변경:", clickedFromMap);
   }, [clickedFromMap]);
 
   useEffect(() => {

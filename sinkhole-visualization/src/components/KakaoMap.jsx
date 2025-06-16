@@ -35,7 +35,9 @@ const KakaoMap = () => {
     document.head.appendChild(script);
 
     script.onload = () => {
+      console.log(window.kakao);
       if (window.kakao && window.kakao.maps) {
+
         window.kakao.maps.load(() => {
           const container = document.getElementById('map');
           const options = {
